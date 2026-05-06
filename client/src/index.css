@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@theme {
+    /* Primary — Green */
+    --color-primary-50:  #E3F9E5;
+    --color-primary-100: #C1EAC5;
+    --color-primary-200: #A3D9A5;
+    --color-primary-300: #7BC47F;
+    --color-primary-400: #57AE5B;
+    --color-primary-500: #3F9142;
+    --color-primary-600: #2F8132;
+    --color-primary-700: #207227;
+    --color-primary-800: #0E5814;
+    --color-primary-900: #05400A;
+
+    /* Neutral — Grey */
+    --color-neutral-50:  #F7F7F7;
+    --color-neutral-100: #E1E1E1;
+    --color-neutral-200: #CFCFCF;
+    --color-neutral-300: #B1B1B1;
+    --color-neutral-400: #9E9E9E;
+    --color-neutral-500: #7E7E7E;
+    --color-neutral-600: #626262;
+    --color-neutral-700: #515151;
+    --color-neutral-800: #3B3B3B;
+    --color-neutral-900: #222222;
+
+    /* Supporting — Purple */
+    --color-purple-50:  #EAE2F8;
+    --color-purple-100: #CFBCF2;
+    --color-purple-200: #A081D9;
+    --color-purple-300: #8662C7;
+    --color-purple-400: #724BB7;
+    --color-purple-500: #653CAD;
+    --color-purple-600: #51279B;
+    --color-purple-700: #421987;
+    --color-purple-800: #34126F;
+    --color-purple-900: #240754;
+
+    /* Supporting — Red */
+    --color-red-50:  #FFEEEE;
+    --color-red-100: #FACDCD;
+    --color-red-200: #F29B9B;
+    --color-red-300: #E66A6A;
+    --color-red-400: #D64545;
+    --color-red-500: #BA2525;
+    --color-red-600: #A61B1B;
+    --color-red-700: #911111;
+    --color-red-800: #780A0A;
+    --color-red-900: #610404;
+
+    /* Supporting — Yellow */
+    --color-yellow-50:  #FFFAEB;
+    --color-yellow-100: #FCEFC7;
+    --color-yellow-200: #F8E3A3;
+    --color-yellow-300: #F9DA8B;
+    --color-yellow-400: #F7D070;
+    --color-yellow-500: #E9B949;
+    --color-yellow-600: #C99A2E;
+    --color-yellow-700: #A27C1A;
+    --color-yellow-800: #7C5E10;
+    --color-yellow-900: #513C06;
+}
