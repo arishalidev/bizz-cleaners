@@ -3,18 +3,18 @@ import heroImage from '../assets/hero-image.jpg';
 import Button from "./Button.tsx";
 
 function test() {
-    console.log("hi");
+    console.log("test");
 }
 
 function Hero() {
     return (
-        <div className={"relative overflow-hidden"}>
-            <img src={heroImage} alt={"Clean pressed shirts"} className={"w-full object-cover min-h-[420px]"}/>
+        <div className={"relative"}>
+            <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105"}/>
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.7)]"}></div>
 
             <div className={"m-4"}>
                 <div className={"absolute top-24 text-white space-y-2"}>
-                    <h1 className={"text-3xl font-semibold"}>Flower Mound’s<br/> Trusted Dry Cleaners</h1>
+                    <h1 className={"text-3xl font-bold"}>Flower Mound’s<br/> Trusted Dry Cleaners</h1>
                     <h2 className={"text-xl font-medium"}>Same Day Services <br/> Free Pickup and Delivery</h2>
 
                     <div className={"mt-12 flex space-x-4"}>

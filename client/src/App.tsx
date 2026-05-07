@@ -1,8 +1,12 @@
 import Hero from "./components/Hero.tsx";
+import TrustStrip from "./components/TrustStrip.tsx"
 
 function App() {
   return (
-    <Hero/>
+      <div>
+        <Hero/>
+        <TrustStrip/>
+      </div>
   );
 }
  //
