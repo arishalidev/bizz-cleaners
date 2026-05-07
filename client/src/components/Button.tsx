@@ -14,7 +14,7 @@ function Button({children, onClick, variant = "primary"}: ButtonProps) {
 
     return(
         <button
-            className={`mt-12 p-4 rounded-md shadow-sm ${styles[variant]}`}
+            className={`p-4 rounded-md shadow-sm ${styles[variant]}`}
             onClick={onClick}
         >{children}</button>
     )
