@@ -1,12 +1,14 @@
-import Hero from "./components/Hero.tsx";
-import TrustStrip from "./components/TrustStrip.tsx"
+import Home from "./pages/Home.tsx"
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-      <div>
-        <Hero/>
-        <TrustStrip/>
-      </div>
+    <BrowserRouter>
+        <Routes>
+            <Route path={"/"} element={<Home/>} />
+        </Routes>
+    </BrowserRouter>
   );
 }
  //
