@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
     /* Primary — Green */
     --color-primary-50:  #E3F9E5;
     --color-primary-100: #C1EAC5;
