@@ -11,8 +11,8 @@ interface SpecialtyServiceProps {
 function SpecialtyService({title, description, link, image, imageAlt}: SpecialtyServiceProps) {
     return (
         <div className={"mb-8"}>
-            <h3 className={"font-bold text-xl"}>{title}</h3>
-            <p>{description}</p>
+            <h3 className={"font-medium text-lg"}>{title}</h3>
+            <p className={"my-1"}>{description}</p>
             <Link to={link} className={"inline-flex items-center h-full gap-1 text-primary-700 font-semibold relative"}>Learn More<GoArrowRight/>
                 <div className={"absolute h-1 bg-purple-100 w-full bottom-0.5"}></div>
             </Link>
