@@ -2,6 +2,7 @@ import Hero from "../components/Hero.tsx";
 import TrustStrip from "../components/TrustStrip.tsx";
 import Highlights from "../components/Highlights.tsx";
 import SpecialtyServices from "../components/SpecialtyServices.tsx";
+import PickupAndDelivery from "../components/PickupAndDelivery.tsx";
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
                 <TrustStrip/>
                 <Highlights/>
                 <SpecialtyServices/>
+                <PickupAndDelivery/>
             </div>
         </div>
     );
