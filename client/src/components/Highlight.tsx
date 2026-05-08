@@ -1,5 +1,3 @@
-
-
 import type {IconType} from "react-icons";
 
 interface HighlightProps {
@@ -14,7 +12,7 @@ function Highlight({Icon, text}: HighlightProps) {
             <span className={"inline-flex w-16 h-16 bg-primary-100 rounded-full items-center justify-center text-3xl"}>
                 <Icon />
             </span>
-            <span className={"mt-1"}>{text}</span>
+            <span className={"mt-1 font-bold text-base text-primary-500"}>{text}</span>
         </div>
     )
 }
