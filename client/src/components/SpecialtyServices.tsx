@@ -1,4 +1,5 @@
 import SpecialtyService from "../components/SpecialtyService.tsx";
+import Headline from "./Headline.tsx";
 
 import specialty1 from "../assets/specialty1.jpg"
 import specialty2 from "../assets/specialty2.jpg"
@@ -33,7 +34,7 @@ const specialtyServices = [
 function SpecialtyServices() {
     return (
         <div className={"my-8"}>
-            <h2 className={"font-semibold text-2xl text-center mb-4"}> Specialty Services</h2>
+            <Headline> Specialty Services</Headline>
 
             {specialtyServices.map(service =>
                 <SpecialtyService title={service.title}
