@@ -1,11 +1,10 @@
 import * as React from "react";
 
-interface ButtonProps {
-    children: React.ReactNode;
-    onClick: () => void;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: "primary" | "secondary";
 }
-function Button({children, onClick, variant = "primary"}: ButtonProps) {
+
+function Button({children, variant = "primary", className = "", ...rest}: ButtonProps) {
 
     const styles = {
         primary: "bg-primary-500 text-white",
@@ -14,8 +13,8 @@ function Button({children, onClick, variant = "primary"}: ButtonProps) {
 
     return(
         <button
-            className={`p-4 rounded-md shadow-sm ${styles[variant]}`}
-            onClick={onClick}
+            className={`p-4 rounded-md shadow-sm ${styles[variant]} ${className}`}
+            {...rest}
         >{children}</button>
     )
 }

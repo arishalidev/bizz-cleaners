@@ -2,10 +2,6 @@ import '../App.css';
 import heroImage from '../assets/hero-image.jpg';
 import Button from "./Button.tsx";
 
-function test() {
-    console.log("test");
-}
-
 function Hero() {
     return (
         <div className={"relative"}>
@@ -18,8 +14,8 @@ function Hero() {
                     <h2 className={"text-xl font-medium"}>Same Day Services <br/> Free Pickup and Delivery</h2>
 
                     <div className={"mt-12 flex space-x-4"}>
-                        <Button onClick={test} variant={"primary"}>Schedule Pickup</Button>
-                        <Button onClick={test} variant={"secondary"}>Get Directions</Button>
+                        <Button variant={"primary"}>Schedule Pickup</Button>
+                        <Button variant={"secondary"}>Get Directions</Button>
                     </div>
 
                     <div className={"mt-4"}>
