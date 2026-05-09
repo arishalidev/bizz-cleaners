@@ -1,6 +1,6 @@
-import '../App.css';
-import heroImage from '../assets/hero-image.jpg';
-import Button from "./Button.tsx";
+import '../../App.css';
+import heroImage from '../../assets/hero-image.jpg';
+import Button from "../../components/Button.tsx";
 
 function Hero() {
     return (

@@ -1,11 +1,11 @@
-import Headline from "./Headline.tsx";
-import Bullet from "./Bullet.tsx";
+import Headline from "../../components/Headline.tsx";
+import Bullet from "../../components/Bullet.tsx";
 import PickupAndDeliveryStep from "./PickupAndDeliveryStep.tsx";
 
-import step1 from "../assets/step1.png"
-import step2 from "../assets/step2.png"
-import step3 from "../assets/step3.png"
-import Button from "./Button.tsx";
+import step1 from "../../assets/step1.png"
+import step2 from "../../assets/step2.png"
+import step3 from "../../assets/step3.png"
+import Button from "../../components/Button.tsx";
 
 function PickupAndDelivery() {
     return (

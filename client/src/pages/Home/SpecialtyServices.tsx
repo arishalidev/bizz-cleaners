@@ -1,9 +1,9 @@
-import SpecialtyService from "../components/SpecialtyService.tsx";
-import Headline from "./Headline.tsx";
+import SpecialtyService from "./SpecialtyService.tsx";
+import Headline from "../../components/Headline.tsx";
 
-import specialty1 from "../assets/specialty1.jpg"
-import specialty2 from "../assets/specialty2.jpg"
-import specialty3 from "../assets/specialty3.jpg"
+import specialty1 from "../../assets/specialty1.jpg"
+import specialty2 from "../../assets/specialty2.jpg"
+import specialty3 from "../../assets/specialty3.jpg"
 
 const specialtyServices = [
     {

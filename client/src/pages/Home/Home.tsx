@@ -1,8 +1,8 @@
-import Hero from "../components/Hero.tsx";
-import TrustStrip from "../components/TrustStrip.tsx";
-import Highlights from "../components/Highlights.tsx";
-import SpecialtyServices from "../components/SpecialtyServices.tsx";
-import PickupAndDelivery from "../components/PickupAndDelivery.tsx";
+import Hero from "./Hero.tsx";
+import TrustStrip from "./TrustStrip.tsx";
+import Highlights from "./Highlights.tsx";
+import SpecialtyServices from "./SpecialtyServices.tsx";
+import PickupAndDelivery from "./PickupAndDelivery.tsx";
 
 function Home() {
     return (
