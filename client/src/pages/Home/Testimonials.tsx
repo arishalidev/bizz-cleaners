@@ -5,6 +5,7 @@ import Testimonial from "./Testimonial.tsx";
 import Headline from "../../components/Headline.tsx";
 
 import { IoStar } from "react-icons/io5";
+import React from "react";
 
 const testimonials = [
     {
@@ -27,7 +28,12 @@ const testimonials = [
     },
 ]
 
-function Testimonials () {
+interface TestimonialsProps {
+    rating: number | null,
+    userRatingCount: number | null
+}
+
+const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : TestimonialsProps) => {
     return (
         <div className={"mt-8"}>
             <div className={"mx-5"}>
@@ -36,7 +42,7 @@ function Testimonials () {
 
             <span className={"inline-flex items-center gap-3 text-base"}>
                 <span>
-                    <span className={"font-semibold"}>4.7</span> Stars | <span className={"font-semibold"}>148</span> Reviews</span>
+                    <span className={"font-semibold"}>{rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</span>
                 <span className={"inline-flex items-center gap-0.5"}>
                     {Array.from({length:5}, (_, i) => (
                     <IoStar className={"text-[#fedf01] text-2xl"} key={i}/>))}
