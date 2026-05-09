@@ -10,12 +10,14 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({headshot, name, review}: TestimonialProps) => {
     return (
-        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 p-4 relative"}>
+        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 p-4 relative mb-12"}>
             <div className={"flex gap-6"}>
-                <img src={headshot} className={"h-14 rounded-full"}/>
-                <div className={"flex flex-col"}>
-                    <span>{name}</span>
-                    <span className={"inline-flex items-center gap-1 text-[#fedf01] text-3xl"}><IoStar/><IoStar/><IoStar/><IoStar/><IoStar/></span>
+                <img src={headshot} alt={"Image of Happy Customer"} className={"h-14 rounded-full"}/>
+                <div className={"flex flex-col gap-1"}>
+                    <span className={"font-semibold"}>{name}</span>
+                    <span className={"inline-flex items-center gap-1 text-[#fedf01] text-2xl"}>
+                        {Array.from({length:5}, (_, i) => ( <IoStar key={i}/> ))}
+                    </span>
                 </div>
             </div>
 
