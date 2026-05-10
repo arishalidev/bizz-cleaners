@@ -5,7 +5,7 @@ interface headlineProps {
 }
 function Headline({children}: headlineProps) {
     return (
-        <h2 className={"font-bold text-xl text-center mb-4"}>{children}</h2>
+        <h2 className={"font-bold text-xl mb-4"}>{children}</h2>
     )
 }
 

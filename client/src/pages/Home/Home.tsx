@@ -31,8 +31,8 @@ function Home() {
             <div className={"mx-4"}>
                 <TrustStrip rating={rating} userRatingCount={userRatingCount}/>
                 <Highlights/>
-                <SpecialtyServices/>
                 <PickupAndDelivery/>
+                <SpecialtyServices/>
                 <Testimonials rating={rating} userRatingCount={userRatingCount}/>
                 <BusinessInfo/>
             </div>
