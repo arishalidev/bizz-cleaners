@@ -2,14 +2,14 @@ import Headline from "../../components/Headline.tsx";
 import Bullet from "../../components/Bullet.tsx";
 import PickupAndDeliveryStep from "./PickupAndDeliveryStep.tsx";
 
-import step1 from "../../assets/step1.png"
-import step2 from "../../assets/step2.png"
-import step3 from "../../assets/step3.png"
+import step1 from "../../assets/deskWithComputer.png"
+import step2 from "../../assets/deliveryVan.png"
+import step3 from "../../assets/cleanClothes.png"
 import Button from "../../components/Button.tsx";
 
 function PickupAndDelivery() {
     return (
-        <>
+        <div className={"my-12"}>
             <Headline>Pickup & Delivery</Headline>
 
             <p className={"mb-2"}>
@@ -21,19 +21,19 @@ function PickupAndDelivery() {
             <Bullet> No pickup or delivery fees* </Bullet> <br/>
             <Bullet> Get hours of your week back </Bullet>
 
-            <h3 className={"font-medium text-lg my-3"}>How it works</h3>
+            <h3 className={"font-normal text-gray-600 tracking-wider text-sm mt-3 mb-1"}>How It Works</h3>
 
             <div className={"flex flex-col gap-6 mb-12"}>
                 <PickupAndDeliveryStep image={step1}
                                    description={"Pick a time and location that works for you.\n\nTakes less than a minute!"}
                                    title={"1. Schedule a pickup"}
-                                   imageAlt={"Image of multiple locations; home, work, drop off from anywhere"}
+                                   imageAlt={""}
             />
 
             <PickupAndDeliveryStep image={step2}
                                    description={"Set your bag outside on pickup day.\n\nNo need to be home!"}
                                    title={"2. Leave it at the door"}
-                                   imageAlt={"A van indicating fast service"}
+                                   imageAlt={""}
             />
 
             <PickupAndDeliveryStep image={step3}
@@ -45,7 +45,7 @@ function PickupAndDelivery() {
 
             <Button className={"w-full"}>Book Now</Button>
 
-        </>
+        </div>
 
 
     )
