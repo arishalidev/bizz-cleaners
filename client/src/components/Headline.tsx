@@ -2,10 +2,11 @@ import * as React from "react";
 
 interface headlineProps {
     children: React.ReactNode;
+    className?: string
 }
-function Headline({children}: headlineProps) {
+function Headline({children, className=""}: headlineProps) {
     return (
-        <h2 className={"font-bold text-xl mb-4"}>{children}</h2>
+        <h2 className={`font-medium text-2xl ${className}`}>{children}</h2>
     )
 }
 
