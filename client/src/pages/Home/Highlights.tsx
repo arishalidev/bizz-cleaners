@@ -14,8 +14,8 @@ const highlights = [
 ]
 function Highlights() {
     return (
-        <div className={"mt-6"}>
-            <div className={"grid grid-cols-2 justify-center place-items-center gap-y-8"}>
+        <div className={"mt-8 mb-10"}>
+            <div className={"grid grid-cols-2 justify-center place-items-center gap-y-10"}>
                 {highlights.map(highlight =>
                     <Highlight Icon={highlight.icon} text={highlight.text} key={highlight.key}/>
                 )}

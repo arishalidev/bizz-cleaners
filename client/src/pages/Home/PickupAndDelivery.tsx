@@ -9,7 +9,7 @@ import Button from "../../components/Button.tsx";
 
 function PickupAndDelivery() {
     return (
-        <div className={"my-12"}>
+        <div className={"-mx-4 px-4 py-8 bg-white"}>
             <Headline>Pickup & Delivery</Headline>
 
             <p className={"mb-2"}>
