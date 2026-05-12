@@ -1,4 +1,7 @@
 import React from 'react';
+import SecondaryHero from "../../components/SecondaryHero.tsx"
+import Owners from "./Owners.tsx"
+import BizzCleaners from "./BizzCleaners.tsx"
 
 interface AboutProps {
 
@@ -7,7 +10,9 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({}) => {
     return (
         <div>
-            About
+            <SecondaryHero header={"Flower Mound’s Finest Cleaners"} subHeader={"Where every garment is handled with the utmost care"}></SecondaryHero>
+            <Owners/>
+            <BizzCleaners/>
         </div>
     );
 };
