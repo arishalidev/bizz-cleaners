@@ -35,18 +35,14 @@ interface TestimonialsProps {
 
 const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : TestimonialsProps) => {
     return (
-        <div className={"mt-8"}>
-            <div className={"mx-5"}>
+        <div className={"mt-8 mx-4"}>
+            <div className={"w-75"}>
                 <Headline>See Why We are Number One in Flower Mound</Headline>
             </div>
 
             <span className={"inline-flex items-center gap-3 text-base"}>
-                <span>
-                    <span className={"font-semibold"}>{rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</span>
-                <span className={"inline-flex items-center gap-0.5"}>
-                    {Array.from({length:5}, (_, i) => (
-                    <IoStar className={"text-[#fedf01] text-2xl"} key={i}/>))}
-                </span>
+                <span className={"inline-flex gap-1 items-center"}>
+                    <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</span>
             </span>
 
             <div className={"my-10"}></div>
