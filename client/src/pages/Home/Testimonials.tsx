@@ -45,7 +45,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
                     <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</span>
             </span>
 
-            <div className={"my-10"}></div>
+            <div className={"my-6"}></div>
 
             {testimonials.map(testimonial =>
                 <Testimonial headshot={testimonial.headshot}
