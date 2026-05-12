@@ -9,7 +9,7 @@ import Button from "../../components/Button.tsx";
 
 function PickupAndDelivery() {
     return (
-        <div className={"-mx-4 px-4 py-8 bg-white"}>
+        <div className={"px-4 pt-8 pb-18 bg-white"}>
             <Headline>Pickup & Delivery</Headline>
 
             <p className={"mb-2"}>
@@ -17,11 +17,11 @@ function PickupAndDelivery() {
                 on with your life!
             </p>
 
-            <Bullet>No pickup or delivery fees* </Bullet> <br/>
             <Bullet> No pickup or delivery fees* </Bullet> <br/>
-            <Bullet> Get hours of your week back </Bullet>
+            <Bullet> Get hours of your week back </Bullet> <br/>
+            <Bullet> Schedule online in minutes </Bullet>
 
-            <h3 className={"font-normal text-gray-600 tracking-wider text-sm mt-3 mb-1"}>How It Works</h3>
+            <h3 className={"font-normal text-gray-600 tracking-wider text-sm mt-6 mb-2"}>How It Works</h3>
 
             <div className={"flex flex-col gap-6 mb-12"}>
                 <PickupAndDeliveryStep image={step1}

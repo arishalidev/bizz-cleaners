@@ -28,7 +28,7 @@ function Home() {
     return (
         <div>
             <Hero/>
-            <div className={"mx-4"}>
+            <div>
                 <TrustStrip rating={rating} userRatingCount={userRatingCount}/>
                 <Highlights/>
                 <PickupAndDelivery/>

@@ -33,18 +33,19 @@ const specialtyServices = [
 
 function SpecialtyServices() {
     return (
-        <div className={"my-8"}>
+        <div className={"text-white bg-neutral-900 px-4 py-12"}>
             <Headline> Specialty Services</Headline>
 
-            {specialtyServices.map(service =>
-                <SpecialtyService title={service.title}
-                                  description={service.description}
-                                  link={service.link}
-                                  image={service.image}
-                                  imageAlt={service.imageAlt}
-                                  key={service.key}/>
-            )}
-
+            <div className={"flex flex-col gap-12 mt-6"}>
+                {specialtyServices.map(service =>
+                    <SpecialtyService title={service.title}
+                                      description={service.description}
+                                      link={service.link}
+                                      image={service.image}
+                                      imageAlt={service.imageAlt}
+                                      key={service.key}/>
+                )}
+            </div>
         </div>
     )
 }
