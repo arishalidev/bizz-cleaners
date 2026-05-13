@@ -7,13 +7,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 function Button({children, variant = "primary", className = "", ...rest}: ButtonProps) {
 
     const styles = {
-        primary: "bg-primary-500 text-white",
-        secondary: "bg-white text-neutral-900"
+        primary: "bg-primary-500 text-white hover:bg-primary-600",
+        secondary: "bg-white text-neutral-900 hover:bg-neutral-50"
     };
 
     return(
         <button
-            className={`p-4 rounded-md shadow-sm ${styles[variant]} ${className}`}
+            className={`p-4 rounded-md shadow-md active:shadow-2xs ${styles[variant]} ${className}`}
             {...rest}
         >{children}</button>
     )
