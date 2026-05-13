@@ -33,7 +33,7 @@ const specialtyServices = [
 
 function SpecialtyServices() {
     return (
-        <div className={"text-white bg-neutral-900 px-4 py-12"}>
+        <div className={"text-white bg-neutral-900 px-4 pt-12 pb-16"}>
             <Headline> Specialty Services</Headline>
 
             <div className={"flex flex-col gap-12 mt-6"}>

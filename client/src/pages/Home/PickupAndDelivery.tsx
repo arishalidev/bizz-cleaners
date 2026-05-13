@@ -10,20 +10,24 @@ import Button from "../../components/Button.tsx";
 function PickupAndDelivery() {
     return (
         <div className={"px-4 pt-8 pb-18 bg-white"}>
-            <Headline>Pickup & Delivery</Headline>
+            <div className={"flex flex-col gap-3"}>
+                <Headline>Pickup & Delivery</Headline>
 
-            <p className={"mb-2"}>
-                Let us take care of your clothes while you get
-                on with your life!
-            </p>
+                <p>
+                    Let us take care of your clothes while you get
+                    on with your life!
+                </p>
 
-            <Bullet> No pickup or delivery fees* </Bullet> <br/>
-            <Bullet> Get hours of your week back </Bullet> <br/>
-            <Bullet> Schedule online in minutes </Bullet>
+                <div>
+                    <Bullet> No pickup or delivery fees* </Bullet> <br/>
+                    <Bullet> Get hours of your week back </Bullet> <br/>
+                    <Bullet> Schedule online in minutes </Bullet>
+                </div>
+            </div>
 
-            <h3 className={"font-normal text-gray-600 tracking-wider text-sm mt-6 mb-2"}>How It Works</h3>
+            <h3 className={"font-normal text-gray-600 tracking-wider text-sm mt-6 mb-1"}>How It Works</h3>
 
-            <div className={"flex flex-col gap-6 mb-12"}>
+            <div className={"flex flex-col gap-8 mb-12"}>
                 <PickupAndDeliveryStep image={step1}
                                    description={"Pick a time and location that works for you.\n\nTakes less than a minute!"}
                                    title={"1. Schedule a pickup"}

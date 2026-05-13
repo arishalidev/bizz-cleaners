@@ -8,7 +8,7 @@ interface AboutHomeProps {
 
 const AboutHome: React.FC<AboutHomeProps> = ({}) => {
     return (
-        <div className={"bg-white px-4 py-12"}>
+        <div className={"bg-white px-4 pt-12 pb-16"}>
             <div className={"flex gap-3"}>
                 <div className={"w-2 h-auto bg-primary-500"}></div>
                 <div className={"w-fit"}>

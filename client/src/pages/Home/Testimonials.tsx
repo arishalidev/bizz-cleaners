@@ -35,7 +35,7 @@ interface TestimonialsProps {
 
 const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : TestimonialsProps) => {
     return (
-        <div className={"mt-8 mx-4"}>
+        <div className={"mt-8 mx-4 mb-14"}>
             <div className={"w-75"}>
                 <Headline>See Why We are Number One in Flower Mound</Headline>
             </div>

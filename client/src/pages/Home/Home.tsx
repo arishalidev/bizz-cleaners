@@ -6,6 +6,7 @@ import PickupAndDelivery from "./PickupAndDelivery.tsx";
 import Testimonials from "./Testimonials.tsx";
 import BusinessInfo from "./BusinessInfo.tsx";
 import { useEffect, useState } from 'react';
+import AboutHome from "./AboutHome.tsx";
 
 function Home() {
 
@@ -32,6 +33,7 @@ function Home() {
             <Highlights/>
             <PickupAndDelivery/>
             <SpecialtyServices/>
+            <AboutHome/>
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
         </div>
