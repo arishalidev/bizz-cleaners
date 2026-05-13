@@ -11,7 +11,8 @@ function Home() {
 
     const [rating, setRating] = useState<number | null>(null);
     const [userRatingCount, setUserRatingCountCount] = useState<number | null>(null);
-    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([])
+    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
+    const [isOpen, setIsOpen] = useState<boolean | undefined>();
 
     useEffect(() => {
         fetch('http://localhost:3000/get/business-information')
@@ -20,6 +21,7 @@ function Home() {
                 setRating(data.rating);
                 setUserRatingCountCount(data.userRatingCount);
                 setHoursOfOperation(data.hoursOfOperation);
+                setIsOpen(true);
             })
     }, []);
 
@@ -31,7 +33,7 @@ function Home() {
             <PickupAndDelivery/>
             <SpecialtyServices/>
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>
-            <BusinessInfo hoursOfOperation={hoursOfOperation}/>
+            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
         </div>
     );
 }

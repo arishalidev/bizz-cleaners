@@ -3,7 +3,7 @@ import express from 'express';
 import type { Request, Response } from 'express';
 import cors from 'cors';
 
-import { findBusiness, getBusinessDetails} from './getBusinessInformation'
+import {findBusiness, getBusinessDetails, isOpenNow} from './getBusinessInformation'
 
 const app = express();
 app.use(cors());
@@ -23,7 +23,8 @@ let businessInformationCache: BusinessDetailsCache | undefined;
 interface BusinessInformationResponse {
     rating: number,
     userRatingCount: number,
-    hoursOfOperation: object
+    hoursOfOperation: object,
+    isOpen: boolean
 }
 
 app.get("/get/business-information", async (req: Request, res: Response<BusinessInformationResponse>)=> {
@@ -40,7 +41,10 @@ app.get("/get/business-information", async (req: Request, res: Response<Business
 
     res.json({rating: businessInformationCache.rating,
         userRatingCount: businessInformationCache.userRatingCount,
-        hoursOfOperation: businessInformationCache.regularOpeningHours.weekdayDescriptions});
+        hoursOfOperation: businessInformationCache.regularOpeningHours.weekdayDescriptions,
+        isOpen: isOpenNow(businessInformationCache.regularOpeningHours.periods)});
 })
+
+
 
 app.listen(3000, () => console.log('Server on http://localhost:3000'));
