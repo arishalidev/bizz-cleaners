@@ -11,7 +11,7 @@ function Home() {
 
     const [rating, setRating] = useState<number | null>(null);
     const [userRatingCount, setUserRatingCountCount] = useState<number | null>(null);
-    const [hoursOfOperation, setHoursOfOperation] = useState([])
+    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([])
 
     useEffect(() => {
         fetch('http://localhost:3000/get/business-information')
@@ -31,7 +31,7 @@ function Home() {
             <PickupAndDelivery/>
             <SpecialtyServices/>
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>
-            <BusinessInfo/>
+            <BusinessInfo hoursOfOperation={hoursOfOperation}/>
         </div>
     );
 }
