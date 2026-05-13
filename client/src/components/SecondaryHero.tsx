@@ -9,7 +9,7 @@ interface SecondaryHeroProps {
 const SecondaryHero: React.FC<SecondaryHeroProps> = ({header, subHeader} : SecondaryHeroProps) => {
     return (
         <div className={"relative overflow-hidden max-h-72"}>
-            <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-100"}/>
+            <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105"}/>
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.7)]"}></div>
 
             <div className={"m-4"}>
