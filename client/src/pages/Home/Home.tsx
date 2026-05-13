@@ -5,8 +5,6 @@ import SpecialtyServices from "./SpecialtyServices.tsx";
 import PickupAndDelivery from "./PickupAndDelivery.tsx";
 import Testimonials from "./Testimonials.tsx";
 import BusinessInfo from "./BusinessInfo.tsx";
-
-
 import { useEffect, useState } from 'react';
 
 function Home() {
@@ -28,14 +26,12 @@ function Home() {
     return (
         <div>
             <Hero/>
-            <div>
-                <TrustStrip rating={rating} userRatingCount={userRatingCount}/>
-                <Highlights/>
-                <PickupAndDelivery/>
-                <SpecialtyServices/>
-                <Testimonials rating={rating} userRatingCount={userRatingCount}/>
-                <BusinessInfo/>
-            </div>
+            <TrustStrip rating={rating} userRatingCount={userRatingCount}/>
+            <Highlights/>
+            <PickupAndDelivery/>
+            <SpecialtyServices/>
+            <Testimonials rating={rating} userRatingCount={userRatingCount}/>
+            <BusinessInfo/>
         </div>
     );
 }

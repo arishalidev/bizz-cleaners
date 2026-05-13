@@ -1,16 +1,20 @@
 import Home from "./pages/Home/Home.tsx"
 import About from "./pages/About/About.tsx"
+import Navigation from "./components/Navigation.tsx"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-        <Routes>
-            <Route path={"/"} element={<Home/>} />
-            <Route path={"/About"} element={<About/>} />
-        </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+          <Navigation/>
+          <div className={"pt-14"}>
+              <Routes>
+                  <Route path={"/"} element={<Home/>} />
+                  <Route path={"/About"} element={<About/>} />
+              </Routes>
+          </div>
+      </BrowserRouter>
   );
 }
  //
