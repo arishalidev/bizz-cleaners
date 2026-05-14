@@ -7,7 +7,7 @@ interface PickupAndDeliveryStepProps {
     description: string,
 }
 
-const PickupAndDeliveryStep: React.FC<PickupAndDeliveryStepProps> = ({image, title, description, imageAlt}) => {
+const PickupAndDeliveryHomeStep: React.FC<PickupAndDeliveryStepProps> = ({image, title, description, imageAlt}) => {
     return (
         <div>
             <h4 className={"text-primary-500 text-xl font-semibold mb-3"}>{title}</h4>
@@ -19,4 +19,4 @@ const PickupAndDeliveryStep: React.FC<PickupAndDeliveryStepProps> = ({image, tit
     );
 };
 
-export default PickupAndDeliveryStep;
+export default PickupAndDeliveryHomeStep;

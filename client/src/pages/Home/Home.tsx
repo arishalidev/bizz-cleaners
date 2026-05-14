@@ -2,7 +2,7 @@ import Hero from "./Hero.tsx";
 import TrustStrip from "./TrustStrip.tsx";
 import Highlights from "./Highlights.tsx";
 import SpecialtyServices from "./SpecialtyServices.tsx";
-import PickupAndDelivery from "./PickupAndDelivery.tsx";
+import PickupAndDeliveryHome from "./PickupAndDeliveryHome.tsx";
 import Testimonials from "./Testimonials.tsx";
 import BusinessInfo from "./BusinessInfo.tsx";
 import { useEffect, useState } from 'react';
@@ -31,7 +31,7 @@ function Home() {
             <Hero/>
             <TrustStrip rating={rating} userRatingCount={userRatingCount}/>
             <Highlights/>
-            <PickupAndDelivery/>
+            <PickupAndDeliveryHome/>
             <SpecialtyServices/>
             <AboutHome/>
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>
