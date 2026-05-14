@@ -3,6 +3,7 @@ import About from "./pages/About/About.tsx"
 import Navigation from "./components/Navigation.tsx"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
                   <Route path={"/About"} element={<About/>} />
               </Routes>
           </div>
+          <Footer/>
       </BrowserRouter>
   );
 }

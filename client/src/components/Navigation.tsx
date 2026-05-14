@@ -25,9 +25,9 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
         <div className={"fixed z-50 w-full bg-neutral-50"}>
             <nav className={"relative z-10 px-3 py-2 flex items-center"}>
 
-                <Link to={"/"}><img src={"/public/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>
+                <Link to={"/"}><img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>
                 <button className={"ml-auto"} onClick={() => {setIsOpen(!isOpen)}}>
-                    <MdMenu className={"text-4xl"}/>
+                    <MdMenu className={"text-5xl"}/>
                 </button>
             </nav>
 
