@@ -5,6 +5,7 @@ import TopQuote from "./TopQuote.tsx";
 import Introduction from "./Introduction.tsx";
 import DeliveryHighlights from "./DeliveryHighlights.tsx";
 import Steps from "./Steps.tsx";
+//import ServiceArea from "./ServiceArea.tsx";
 
 interface PickupAndDeliveryProps {
 
@@ -17,11 +18,13 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
             <TopQuote/>
             <Introduction/>
             <Steps/>
-
             <DeliveryHighlights/>
 
+            <div className={"px-4 bg-white"}>
+                <Button className={"w-full"}>Book now</Button>
+            </div>
 
-            <div id={"service-area"}></div>
+            {/*<ServiceArea/>*/}
         </div>
     );
 };
