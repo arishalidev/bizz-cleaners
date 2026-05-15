@@ -1,4 +1,4 @@
-const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
+const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 const BASE = "https://places.googleapis.com/v1";
 
 export async function findBusiness(query: string) {

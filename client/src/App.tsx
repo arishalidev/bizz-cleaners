@@ -3,7 +3,7 @@ import About from "./pages/About/About.tsx"
 import Navigation from "./components/Navigation.tsx"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer.tsx";
+//import Footer from "./components/Footer.tsx";
 import PickupAndDelivery from "./pages/PickupAndDelivery/PickupAndDelivery.tsx";
 
 function App() {
