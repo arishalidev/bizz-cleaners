@@ -6,17 +6,20 @@ import step1 from "../../assets/deskWithComputer.png"
 import step2 from "../../assets/deliveryVan.png"
 import step3 from "../../assets/cleanClothes.png"
 import Button from "../../components/Button.tsx";
+import Body from "../../components/Body.tsx";
+import SectionLabel from "../../components/SectionLabel.tsx";
 
 function PickupAndDeliveryHome() {
     return (
         <div className={"px-4 pt-8 pb-18 bg-white"}>
             <div className={"flex flex-col gap-3"}>
-                <Headline>Pickup & Delivery</Headline>
+                <SectionLabel>Pickup & Delivery</SectionLabel>
+                <Headline className={"mt-4"}>Pickup and Delivery Headline</Headline>
 
-                <p>
+                <Body className={"mt-2"}>
                     Let us take care of your clothes while you get
                     on with your life!
-                </p>
+                </Body>
 
                 <div>
                     <Bullet> No pickup or delivery fees* </Bullet> <br/>
@@ -25,9 +28,11 @@ function PickupAndDeliveryHome() {
                 </div>
             </div>
 
-            <h3 className={"font-normal text-gray-600 tracking-wider text-sm mt-6 mb-1"}>How It Works</h3>
+            <h2 className={`font-normal text-gray-600 tracking-wider text-sm mt-6 mb-3`}>
+                How It Works
+            </h2>
 
-            <div className={"flex flex-col gap-8 mb-12"}>
+            <div className={"flex flex-col gap-10 mb-12"}>
                 <PickupAndDeliveryHomeStep image={step1}
                                            description={"Pick a time and location that works for you.\n\nTakes less than a minute!"}
                                            title={"1. Schedule a pickup"}

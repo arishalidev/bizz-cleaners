@@ -12,11 +12,7 @@ interface BizzCleanersProps {
 const BizzCleaners: React.FC<BizzCleanersProps> = ({}) => {
     return (
         <div className={"flex flex-col gap-5 px-4 bg-neutral-900 py-10"}>
-            <div className={"inline-flex items-center gap-3"}>
-                <div className={"rounded-full bg-primary-500 w-3 h-3"}></div>
-
-                <SectionLabel className={"text-neutral-300"}>About Bizz Cleaners</SectionLabel>
-            </div>
+            <SectionLabel className={"text-neutral-300"}>About Bizz Cleaners</SectionLabel>
 
             <img className={"rounded-md"} src={teamPortrait} alt={"Team Portrait of Bizz Cleaners staff."} />
 

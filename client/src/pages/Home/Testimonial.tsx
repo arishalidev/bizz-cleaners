@@ -1,6 +1,7 @@
 import React from 'react';
 import { IoStar } from "react-icons/io5";
 import { FaQuoteRight } from "react-icons/fa";
+import Body from "../../components/Body.tsx";
 
 interface TestimonialProps {
     headshot: string,
@@ -10,7 +11,7 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({headshot, name, review}: TestimonialProps) => {
     return (
-        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 p-4 relative mb-12 shadow-md"}>
+        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 px-4 py-10 relative mb-12 shadow-md"}>
             <div className={"flex gap-6"}>
                 <img src={headshot} alt={"Image of Happy Customer"} className={"h-14 rounded-full"}/>
                 <div className={"flex flex-col gap-1"}>
@@ -21,11 +22,11 @@ const Testimonial: React.FC<TestimonialProps> = ({headshot, name, review}: Testi
                 </div>
             </div>
 
-            <hr className={"text-primary-500"}/>
+            <hr className={"text-primary-500 my-3"}/>
 
-            <p className={"text-base/7 font-normal"}>
+            <Body>
                 {review}
-            </p>
+            </Body>
 
             <span className={"flex text-6xl absolute right-2 -top-6 text-primary-600"}><FaQuoteRight/></span>
 

@@ -4,6 +4,7 @@ import Headline from "../../components/Headline.tsx";
 import specialty1 from "../../assets/specialty1.jpg"
 import specialty2 from "../../assets/specialty2.jpg"
 import specialty3 from "../../assets/specialty3.jpg"
+import SectionLabel from "../../components/SectionLabel.tsx";
 
 const specialtyServices = [
     {
@@ -34,9 +35,11 @@ const specialtyServices = [
 function SpecialtyServices() {
     return (
         <div className={"text-white bg-neutral-900 px-4 pt-12 pb-16"}>
-            <Headline> Specialty Services</Headline>
 
-            <div className={"flex flex-col gap-12 mt-6"}>
+            <SectionLabel className={"text-white"}> Specialty Services</SectionLabel>
+            <Headline className={"mt-4"}>The right service at the right time</Headline>
+
+            <div className={"flex flex-col gap-12 mt-2"}>
                 {specialtyServices.map(service =>
                     <SpecialtyService title={service.title}
                                       description={service.description}

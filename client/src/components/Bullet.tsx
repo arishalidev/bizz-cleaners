@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaCheckCircle} from "react-icons/fa";
+import Body from "./Body.tsx";
 
 interface BulletProps {
     children: React.ReactNode
@@ -7,7 +8,7 @@ interface BulletProps {
 
 const Bullet: React.FC<BulletProps> = ({children}) => {
     return (
-        <span className={"inline-flex items-center gap-3"}> <FaCheckCircle className={"text-primary-500"}/>{children}</span>
+        <Body className={"inline-flex items-center gap-3"}> <FaCheckCircle className={"text-primary-500"}/>{children}</Body>
     );
 };
 

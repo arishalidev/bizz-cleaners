@@ -7,9 +7,12 @@ interface SectionLabelProps {
 
 const SectionLabel: React.FC<SectionLabelProps> = ({children, className = ""} : SectionLabelProps) => {
     return (
-        <h2 className={`font-normal text-gray-600 tracking-wider text-sm ${className}`}>
-            {children}
-        </h2>
+        <div className={"inline-flex items-center gap-3"}>
+            <div className={"rounded-full bg-primary-500 w-3 h-3"}></div>
+            <h2 className={`font-normal text-gray-600 tracking-wider text-sm ${className}`}>
+                {children}
+            </h2>
+        </div>
     );
 };
 
