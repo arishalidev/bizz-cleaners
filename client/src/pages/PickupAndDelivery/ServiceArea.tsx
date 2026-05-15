@@ -42,6 +42,15 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
         return true;
     }
 
+    function zipCodeEntry() {
+        if(!validateZipCode()) return;
+
+        fetch("http://localhost:3000/validate-zip")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+    }
 
     const position = {lat: 33.01602299, lng: -97.07124099};
 
@@ -51,7 +60,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
             <Headline className={"mt-4"}>Are we in your neighborhood?</Headline>
             <Body className={"mt-2"}>We've called North DFW home for six years, and our routes keep growing. Pop in your zip code or share your location to see if we're already coming your way — and if we're not yet, we'd love to know you're waiting.</Body>
 
-            {apiKey && <APIProvider>
+            {apiKey && <APIProvider apiKey={apiKey}>
                 <div className={"w-full h-150 mt-6"}>
                     <Map defaultCenter={position} defaultZoom={10.4} mapId="59b74ff889c3544d96f3646f"></Map>
 
@@ -88,7 +97,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                            value={zipCode}
                            onChange={(e) => setZipCode(e.target.value)}
                            placeholder={"Enter your zip code"} className={"outline p-4 w-full text-lg"}/>
-                    <Button type={"button"} variant={"secondary"} className={"outline-1 w-1/2"} onClick={validateZipCode}>Enter</Button>
+                    <Button type={"button"} variant={"secondary"} className={"outline-1 w-1/2"} onClick={zipCodeEntry}>Enter</Button>
                 </form>
                 {errorMessage && <div className={"text-red-500 mt-1"}>{errorMessage}</div>}
 

@@ -6,6 +6,7 @@ import cors from 'cors';
 import {findBusiness, getBusinessDetails, isOpenNow} from './getBusinessInformation'
 
 const MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
+const CLEANCLOUD_API_KEY = process.env.CLEANCLOUD_API_KEY;
 
 const app = express();
 app.use(cors());
@@ -55,6 +56,31 @@ app.get("/get/google-maps-api-key", (req: Request, res: Response<apiKeyResponse>
     if(MAPS_API_KEY === undefined) throw new Error("Could not find google maps api key!");
     res.json({key: MAPS_API_KEY});
 })
+
+interface validateZipResponse {
+    valid: boolean;
+}
+
+app.get("/validate-zip", async (req: Request, res: Response<validateZipResponse>) => {
+    if(CLEANCLOUD_API_KEY === undefined) throw new Error("Could not find cleancloud api key!");
+
+    const reqBody = {
+        api_token: CLEANCLOUD_API_KEY,
+        lat: 33.01602299,
+        lng: -97.07124099
+    }
+
+    const cleancloudRes = await fetch("https://cleancloudapp.com/api/getRoute", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reqBody),
+    });
+
+    const data = await cleancloudRes.json();
+    console.log('CleanCloud response:', data);
+});
 
 
 
