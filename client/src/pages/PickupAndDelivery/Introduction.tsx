@@ -12,7 +12,7 @@ interface IntroductionProps {
 
 const Introduction: React.FC<IntroductionProps> = ({}) => {
     return (
-        <div className={"px-4 py-3"}>
+        <div className={"px-4 pt-3 pb-8"}>
             <SectionLabel>Pickup and Delivery Service </SectionLabel>
             <Headline className={"mt-4"}>Skip the trip. We'll come to you.</Headline>
             <Body className={"mt-2"}>Between work, school drop-offs, and the dog who somehow always needs something — driving to the cleaners shouldn't be one more thing on your list. We've spent the last six years picking up and dropping off across North DFW, including [Neighborhood names].<br/>
