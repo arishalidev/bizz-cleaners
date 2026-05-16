@@ -156,7 +156,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                         <div>
                             <Headline className={"inline-flex items-center gap-2"}><span
                             className={"text-red-500"}><FaXmark/></span>We dont service this area</Headline>
-                            <Body>Let us know you're waiting</Body>
+                            <Body>Let us know you're waiting:</Body>
                         </div>
                         <Button className={"w-56 outline-2"} variant={"secondary"}>Join Waitlist</Button>
                     </div>

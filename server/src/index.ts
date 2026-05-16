@@ -61,7 +61,7 @@ interface validationResponse {
     valid: boolean;
 }
 
-const validZips = [76205, 76208, 76210, 75065, 75057, 75067, 75019, 75063, 76261, 76039, 76051, 76092, 76262, 76226, 75077, 75028, 75022, 76247]
+const validZips = [76205, 76208, 76210, 75065, 75057, 75067, 75019, 75063, 76039, 76051, 76092, 76262, 76226, 75077, 75028, 75022, 76247]
 
 app.post("/validate-location", async (req: Request, res: Response<validationResponse>) => {
     if(CLEANCLOUD_API_KEY === undefined) throw new Error("Could not find cleancloud api key!");
