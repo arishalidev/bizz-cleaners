@@ -57,11 +57,13 @@ app.get("/get/google-maps-api-key", (req: Request, res: Response<apiKeyResponse>
     res.json({key: MAPS_API_KEY});
 })
 
-interface validateZipResponse {
+interface validationResponse {
     valid: boolean;
 }
 
-app.get("/validate-zip", async (req: Request, res: Response<validateZipResponse>) => {
+const validZips = [76205, 76208, 76210, 75065, 75057, 75067, 75019, 75063, 76261, 76039, 76051, 76092, 76262, 76226, 75077, 75028, 75022, 76247]
+
+app.get("/validate-location", async (req: Request, res: Response<validationResponse>) => {
     if(CLEANCLOUD_API_KEY === undefined) throw new Error("Could not find cleancloud api key!");
 
     const reqBody = {
@@ -82,6 +84,11 @@ app.get("/validate-zip", async (req: Request, res: Response<validateZipResponse>
     console.log('CleanCloud response:', data);
 });
 
+app.post("/validate-zip", (req: Request, res: Response<validationResponse>) => {
+    const { zip } = req.body;
+    const valid = zip?.length === 5 && !isNaN(Number(zip)) && validZips.includes(Number(zip));
+    res.json({ valid });
+});
 
 
 app.listen(3000, () => console.log('Server on http://localhost:3000'));
