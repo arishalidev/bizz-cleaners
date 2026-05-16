@@ -7,6 +7,7 @@ import Steps from "./Steps.tsx";
 import ServiceArea from "./ServiceArea.tsx";
 
 import React, {useEffect, useState} from "react";
+import DeliveryFaq from "./DeliveryFaq.tsx";
 
 interface PickupAndDeliveryProps {
 
@@ -37,6 +38,8 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
             </div>
 
             <ServiceArea apiKey={googleMapsApiKey}/>
+
+            <DeliveryFaq/>
         </div>
     );
 };

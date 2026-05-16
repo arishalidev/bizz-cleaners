@@ -1,0 +1,33 @@
+import { IoIosArrowDown } from "react-icons/io";
+import Body from "../../components/Body.tsx";
+
+interface DeliveryQAProps {
+    question: string,
+    answer: string,
+    expanded: boolean,
+    onToggle: () => void,
+
+}
+
+const DeliveryQA: React.FC<DeliveryQAProps> = ({question, answer, expanded, onToggle}: DeliveryQAProps) => {
+    return (
+        <>
+            <button className={`w-full py-2 hover:bg-neutral-50 ${expanded && "bg-neutral-50"}`} onClick={onToggle}>
+            <span className={"flex items-center"}>
+                <Body className={"text-left w-fit"}>{question}</Body>
+                <span className={"flex-1"}></span>
+                <IoIosArrowDown className={"text-lg"}/>
+                <span className={"w-4"}></span>
+            </span>
+            </button>
+            {expanded &&
+                <div className={"pt-4 pb-8"}>
+                    <Body>{answer}</Body>
+                </div>
+            }
+        </>
+
+    );
+};
+
+export default DeliveryQA;
