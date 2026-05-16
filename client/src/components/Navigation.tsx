@@ -31,23 +31,23 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                 </button>
             </nav>
 
-            {isOpen && (
-                <div className={"absolute top-0 h-screen w-full bg-neutral-50"}>
-                    <div className={"absolute bottom-0"}>
-                        <div className={"text-3xl pb-8"}>
-                            <nav className={"flex flex-col"}>
-                                <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
-                                <hr className={"text-primary-500"}/>
-                                <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
-                                <hr className={"text-primary-500"}/>
-                                <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
-                                <hr className={"text-primary-500"}/>
-                            </nav>
-                        </div>
-                        <div className={"w-screen h-2 bg-primary-500"}></div>
+
+            <div className={`absolute top-0 h-screen w-full bg-neutral-50 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+                <div className={"absolute bottom-0"}>
+                    <div className={"text-3xl pb-8"}>
+                        <nav className={"flex flex-col"}>
+                            <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
+                            <hr className={"text-primary-500"}/>
+                            <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
+                            <hr className={"text-primary-500"}/>
+                            <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
+                            <hr className={"text-primary-500"}/>
+                        </nav>
                     </div>
+                    <div className={"w-screen h-2 bg-primary-500"}></div>
                 </div>
-            )}
+            </div>
+
         </div>
 
     );
