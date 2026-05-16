@@ -16,7 +16,7 @@ function Home() {
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
 
     useEffect(() => {
-        fetch('http://localhost:3000/get/business-information')
+        fetch('/api/get/business-information')
             .then(res => res.json())
             .then(data => {
                 setRating(data.rating);

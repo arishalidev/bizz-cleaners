@@ -30,7 +30,7 @@ interface BusinessInformationResponse {
     isOpen: boolean
 }
 
-app.get("/get/business-information", async (req: Request, res: Response<BusinessInformationResponse>)=> {
+app.get("/api/get/business-information", async (req: Request, res: Response<BusinessInformationResponse>)=> {
     if(businessInformationCache === undefined) {
         console.log("Querying Google Places API for business information.")
         const match = await findBusiness("Bizz Cleaners, Flower Mound Denton TX");
@@ -52,7 +52,7 @@ interface apiKeyResponse {
     key: string;
 }
 
-app.get("/get/google-maps-api-key", (req: Request, res: Response<apiKeyResponse>)=> {
+app.get("/api/get/google-maps-api-key", (req: Request, res: Response<apiKeyResponse>)=> {
     if(MAPS_API_KEY === undefined) throw new Error("Could not find google maps api key!");
     res.json({key: MAPS_API_KEY});
 })
@@ -63,7 +63,7 @@ interface validationResponse {
 
 const validZips = [76205, 76208, 76210, 75065, 75057, 75067, 75019, 75063, 76039, 76051, 76092, 76262, 76226, 75077, 75028, 75022, 76247]
 
-app.post("/validate-location", async (req: Request, res: Response<validationResponse>) => {
+app.post("/api/validate-location", async (req: Request, res: Response<validationResponse>) => {
     if(CLEANCLOUD_API_KEY === undefined) throw new Error("Could not find cleancloud api key!");
 
     const {lat, lng} = req.body;
@@ -90,11 +90,11 @@ app.post("/validate-location", async (req: Request, res: Response<validationResp
 
 });
 
-app.post("/validate-zip", (req: Request, res: Response<validationResponse>) => {
+app.post("/api/validate-zip", (req: Request, res: Response<validationResponse>) => {
     const { zip } = req.body;
     const valid = zip?.length === 5 && !isNaN(Number(zip)) && validZips.includes(Number(zip));
     res.json({ valid });
 });
 
 
-app.listen(3000, () => console.log('Server on http://localhost:3000'));
+app.listen(3000, '0.0.0.0', () => console.log('Server online!'));

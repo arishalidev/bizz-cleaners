@@ -18,7 +18,7 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
     const [googleMapsApiKey, setGoogleMapsApiKey] = useState<string | undefined>();
 
     useEffect(() => {
-        fetch("http://localhost:3000/get/google-maps-api-key")
+        fetch("/api/get/google-maps-api-key")
             .then(res => res.json())
             .then(data => {
                 setGoogleMapsApiKey(data.key)

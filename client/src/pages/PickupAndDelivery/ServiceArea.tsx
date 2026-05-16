@@ -51,7 +51,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
     function zipCodeEntry() {
         if(!validateZipCode()) return;
 
-        fetch("http://localhost:3000/validate-zip", {
+        fetch("/api/validate-zip", {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify({zip: zipCode})
@@ -70,7 +70,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
             (position) => {
                 const coords = { lat: position.coords.latitude, lng: position.coords.longitude };
 
-                fetch("http://localhost:3000/validate-location", {
+                fetch("/api/validate-location", {
                     method: 'POST',
                     headers: { 'content-type': 'application/json'},
                     body: JSON.stringify(coords)
