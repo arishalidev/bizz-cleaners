@@ -20,11 +20,9 @@ const DeliveryQA: React.FC<DeliveryQAProps> = ({question, answer, expanded, onTo
                 <span className={"w-4"}></span>
             </span>
             </button>
-            {expanded &&
-                <div className={"pt-4 pb-8"}>
-                    <Body>{answer}</Body>
-                </div>
-            }
+            <div className={`overflow-hidden transition-all duration-500 ${expanded ? "max-h-96 pt-4 pb-8" : "max-h-0"}`}>
+                <Body>{answer}</Body>
+            </div>
         </>
 
     );
