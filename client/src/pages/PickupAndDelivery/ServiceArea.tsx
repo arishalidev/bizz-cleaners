@@ -2,11 +2,13 @@ import React, {useState} from 'react';
 import SectionLabel from "../../components/SectionLabel.tsx";
 import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
+import deliveryVan from "../../assets/deliveryVan.png"
 
 import {APIProvider, Map, Polygon} from '@vis.gl/react-google-maps';
 import Button from "../../components/Button.tsx";
 import { MdOutlineLocationOn } from "react-icons/md";
-
+import { FaCheck } from "react-icons/fa";
+import {FaXmark} from "react-icons/fa6";
 
 interface ServiceAreaProps {
     apiKey: string | undefined;
@@ -18,6 +20,8 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
     const [zipErrorMessage, setZipErrorMessage] = useState<string>("");
 
     const [locationErrorMessage, setLocationErrorMessage] = useState<string>("");
+
+    const [validZip, setValidZip] = useState<boolean | undefined>();
 
     function validateZipCode() {
         if(zipCode === "") {
@@ -53,9 +57,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
             body: JSON.stringify({zip: zipCode})
         })
             .then(res => res.json())
-            .then(data => {
-                console.log(data)
-            })
+            .then(data => setValidZip(data.valid))
     }
 
     function validateUserLocation() {
@@ -74,7 +76,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                     body: JSON.stringify(coords)
                 })
                     .then(res => res.json())
-                    .then(data => console.log(data))
+                    .then(data => setValidZip(data.valid))
             },
             (err) => setLocationErrorMessage(err.message)
         );
@@ -136,6 +138,29 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                     <div className={"absolute h-1 bg-purple-200 w-full bottom-1"}></div>
                 </button>
                 {locationErrorMessage &&  <div className={"text-red-500 mt-1"}>{locationErrorMessage}</div>}
+            </div>
+
+            <div className={"min-h-64 bg-white mt-4 rounded-md shadow p-4"}>
+                {validZip === undefined ? (
+                    <div className={"flex flex-col items-center gap-8"}>
+                        <Body>Pop in your zip and we'll see if you're on our route.</Body>
+                        <img src={deliveryVan} alt={""} className={"opacity-65 w-3/4"}/>
+                    </div>
+                ) : validZip ? (
+                    <div className={"flex flex-col items-center gap-10 mt-6"}>
+                        <Headline className={"inline-flex items-center gap-2"}><span className={"text-primary-500"}><FaCheck/></span>We Service your area!</Headline>
+                        <Button className={"w-56"}>Book Now</Button>
+                    </div>
+                ) : (
+                    <div className={"flex flex-col items-center gap-8 mt-6"}>
+                        <div>
+                            <Headline className={"inline-flex items-center gap-2"}><span
+                            className={"text-red-500"}><FaXmark/></span>We dont service this area</Headline>
+                            <Body>Let us know you're waiting</Body>
+                        </div>
+                        <Button className={"w-56 outline-2"} variant={"secondary"}>Join Waitlist</Button>
+                    </div>
+                )}
 
             </div>
 
