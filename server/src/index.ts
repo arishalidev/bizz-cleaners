@@ -63,13 +63,15 @@ interface validationResponse {
 
 const validZips = [76205, 76208, 76210, 75065, 75057, 75067, 75019, 75063, 76261, 76039, 76051, 76092, 76262, 76226, 75077, 75028, 75022, 76247]
 
-app.get("/validate-location", async (req: Request, res: Response<validationResponse>) => {
+app.post("/validate-location", async (req: Request, res: Response<validationResponse>) => {
     if(CLEANCLOUD_API_KEY === undefined) throw new Error("Could not find cleancloud api key!");
+
+    const {lat, lng} = req.body;
 
     const reqBody = {
         api_token: CLEANCLOUD_API_KEY,
-        lat: 33.01602299,
-        lng: -97.07124099
+        lat: lat,
+        lng: lng
     }
 
     const cleancloudRes = await fetch("https://cleancloudapp.com/api/getRoute", {
@@ -81,7 +83,11 @@ app.get("/validate-location", async (req: Request, res: Response<validationRespo
     });
 
     const data = await cleancloudRes.json();
-    console.log('CleanCloud response:', data);
+
+    const valid = data?.Success === 'True'
+    res.json({ valid });
+
+
 });
 
 app.post("/validate-zip", (req: Request, res: Response<validationResponse>) => {

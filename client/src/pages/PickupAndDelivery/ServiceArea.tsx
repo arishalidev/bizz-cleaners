@@ -15,30 +15,32 @@ interface ServiceAreaProps {
 const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) => {
 
     const [zipCode, setZipCode] = useState<string>("");
-    const [errorMessage, setErrorMessage] = useState<string>("");
+    const [zipErrorMessage, setZipErrorMessage] = useState<string>("");
+
+    const [locationErrorMessage, setLocationErrorMessage] = useState<string>("");
 
     function validateZipCode() {
         if(zipCode === "") {
-            setErrorMessage("Please enter a zip code")
+            setZipErrorMessage("Please enter a zip code")
             return false;
         }
 
         if(isNaN(Number(zipCode))) {
-            setErrorMessage("Zip code must be digits only")
+            setZipErrorMessage("Zip code must be digits only")
             return false;
         }
 
         if(zipCode.length < 5) {
-            setErrorMessage("Zip code is too short")
+            setZipErrorMessage("Zip code is too short")
             return false;
         }
 
         if(zipCode.length > 5) {
-            setErrorMessage("Zip code is too long")
+            setZipErrorMessage("Zip code is too long")
             return false;
         }
 
-        setErrorMessage("");
+        setZipErrorMessage("");
         return true;
     }
 
@@ -55,6 +57,29 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                 console.log(data)
             })
     }
+
+    function validateUserLocation() {
+        if (!navigator.geolocation) {
+            setLocationErrorMessage("Geolocation is not supported by your browser!");
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const coords = { lat: position.coords.latitude, lng: position.coords.longitude };
+
+                fetch("http://localhost:3000/validate-location", {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json'},
+                    body: JSON.stringify(coords)
+                })
+                    .then(res => res.json())
+                    .then(data => console.log(data))
+            },
+            (err) => setLocationErrorMessage(err.message)
+        );
+    }
+
 
     const position = {lat: 33.01602299, lng: -97.07124099};
 
@@ -103,12 +128,14 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                            placeholder={"Enter your zip code"} className={"outline p-4 w-full text-lg"}/>
                     <Button type={"button"} variant={"secondary"} className={"outline-1 w-1/2"} onClick={zipCodeEntry}>Enter</Button>
                 </form>
-                {errorMessage && <div className={"text-red-500 mt-1"}>{errorMessage}</div>}
+                {zipErrorMessage && <div className={"text-red-500 mt-1"}>{zipErrorMessage}</div>}
 
-                <button className={"mt-2 inline-flex items-center gap-1 text-primary-600 font-semibold relative text-[18px]/8"}>
+                <button className={"mt-2 inline-flex items-center gap-1 text-primary-600 font-semibold relative text-[18px]/8"}
+                        onClick={validateUserLocation}>
                      Use My Location<MdOutlineLocationOn className={"text-xl"}/>
                     <div className={"absolute h-1 bg-purple-200 w-full bottom-1"}></div>
                 </button>
+                {locationErrorMessage &&  <div className={"text-red-500 mt-1"}>{locationErrorMessage}</div>}
 
             </div>
 
