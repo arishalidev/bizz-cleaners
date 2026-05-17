@@ -6,7 +6,7 @@ import Body from "../../components/Body.tsx";
 function Hero() {
     return (
         <div className={"relative"}>
-            <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105 lg:max-h-200"}/>
+            <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105 lg:max-h-180"}/>
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.7)]"}></div>
 
             <div className={"responsive-px limit-size"}>

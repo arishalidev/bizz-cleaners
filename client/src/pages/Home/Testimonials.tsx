@@ -6,6 +6,7 @@ import Headline from "../../components/Headline.tsx";
 
 import { IoStar } from "react-icons/io5";
 import React from "react";
+import SectionLabel from "../../components/SectionLabel.tsx";
 
 const testimonials = [
     {
@@ -35,7 +36,8 @@ interface TestimonialsProps {
 
 const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : TestimonialsProps) => {
     return (
-        <div className={"mt-8 responsive-px limit-size mb-14"}>
+        <div className={"responsive-px limit-size responsive-py"}>
+            <SectionLabel>Testimonials</SectionLabel>
             <div className={"w-75"}>
                 <Headline>See Why We are Number One in Flower Mound</Headline>
             </div>
@@ -47,7 +49,9 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
 
             <div className={"my-6"}></div>
 
-            {testimonials.map(testimonial =>
+
+            <div className={"flex flex-col gap-12"}>
+                {testimonials.map(testimonial =>
                 <Testimonial headshot={testimonial.headshot}
                              name={testimonial.name}
                              review={testimonial.review}
@@ -55,6 +59,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
 
                 />
             )}
+            </div>
+
         </div>
     );
 }

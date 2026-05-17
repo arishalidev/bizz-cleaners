@@ -11,7 +11,7 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({headshot, name, review}: TestimonialProps) => {
     return (
-        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 px-4 py-10 relative mb-12 shadow-md"}>
+        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 px-4 py-10 relative shadow-md"}>
             <div className={"flex gap-6"}>
                 <img src={headshot} alt={"Image of Happy Customer"} className={"h-14 rounded-full"}/>
                 <div className={"flex flex-col gap-1"}>

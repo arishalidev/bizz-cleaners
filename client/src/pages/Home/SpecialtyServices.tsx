@@ -34,7 +34,7 @@ const specialtyServices = [
 
 function SpecialtyServices() {
     return (
-        <div className={"text-white bg-neutral-900 responsive-px limit-size pt-12 pb-16"}>
+        <div className={"text-white bg-neutral-900 responsive-px limit-size responsive-py"}>
 
             <SectionLabel className={"text-white"}> Specialty Services</SectionLabel>
             <Headline className={"mt-4"}>The right service at the right time</Headline>

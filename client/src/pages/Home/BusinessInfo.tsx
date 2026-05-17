@@ -2,6 +2,7 @@ import React from "react"
 import businessInfo from "../../assets/businessInfo.jpg"
 import Headline from "../../components/Headline.tsx";
 import Button from "../../components/Button.tsx";
+import Body from "../../components/Body.tsx";
 
 interface BusinessInfoProps {
     hoursOfOperation: string[],
@@ -11,7 +12,7 @@ interface BusinessInfoProps {
 const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } : BusinessInfoProps) => {
 
     return (
-        <div className={"flex flex-col gap-6 bg-white responsive-px limit-size py-10"}>
+        <div className={"flex flex-col gap-6 bg-white responsive-px limit-size responsive-py"}>
             <Headline>Visit Us Today</Headline>
             <img src={businessInfo} alt={"Font of Bizz Cleaners store"} className={"rounded-md drop-shadow-md"}/>
                 <div className={"flex flex-col gap-2"}>
@@ -28,9 +29,9 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                             {hoursOfOperation.map((day, i) =>
                                 <div key={i} className={"flex flex-col"}>
                                     {(((new Date().getDay() + 6) % 7)) === i ? (
-                                        <p className={"font-semibold"}>{day.split(":")[0]}</p>
+                                        <Body className={"font-semibold"}>{day.split(":")[0]}</Body>
                                     ) : (
-                                        <p>{day.split(":")[0]}</p>
+                                        <Body>{day.split(":")[0]}</Body>
                                     )}
                                 </div>
                             )}
@@ -40,9 +41,9 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                             {hoursOfOperation.map((day, i) =>
                                 <div key={i} className={"flex flex-col"}>
                                     {(((new Date().getDay() + 6) % 7)) === i ? (
-                                        <p className={"font-semibold"}>{day.slice(day.indexOf(":") + 1)}</p>
+                                        <Body className={"font-semibold"}>{day.slice(day.indexOf(":") + 1)}</Body>
                                     ) : (
-                                        <p>{day.slice(day.indexOf(":") + 1)}</p>
+                                        <Body>{day.slice(day.indexOf(":") + 1)}</Body>
                                     )}
                                 </div>
                             )}
@@ -51,9 +52,10 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
 
 
                     <div className={"flex flex-col gap-2 mt-8 mb-4"}>
-                        <a href={"https://maps.app.goo.gl/92ihpSMbvt3e5YLK6"} className={"w-fit"}>2201 Long Prairie Rd <br/> Flower Mound, TX 75022</a>
-                        <a href={"tel:+19723551807"} className={"w-fit"}>+1 972-355-1807</a>
-                        <a href={"mailto:business@bizzclean.com"} className={"w-fit"}>business@bizzclean.com</a>
+                        <Body><a href={"https://maps.app.goo.gl/92ihpSMbvt3e5YLK6"} className={"w-fit"}>2201 Long Prairie
+                            Rd <br/> Flower Mound, TX 75022</a></Body>
+                        <Body><a href={"tel:+19723551807"} className={"w-fit"}>+1 972-355-1807</a></Body>
+                        <Body><a href={"mailto:business@bizzclean.com"} className={"w-fit"}>business@bizzclean.com</a></Body>
                     </div>
             </div>
 

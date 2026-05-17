@@ -10,10 +10,10 @@ interface HighlightProps {
 function Highlight({Icon, text}: HighlightProps) {
     return (
         <div className={`flex flex-col w-fit items-center`}>
-            <span className={"inline-flex w-16 h-16 bg-primary-100 rounded-full items-center justify-center text-3xl"}>
-                <Icon />
+            <span className={"inline-flex w-16 h-16 md:w-24 md:h-24 bg-primary-100 rounded-full items-center justify-center text-3xl"}>
+                <Icon className={"md:text-4xl"}/>
             </span>
-            <Body className={`mt-2 font-semibold text-primary-500`}>{text}</Body>
+            <Body className={`mt-2 font-semibold text-primary-500 lg:text-2xl`}>{text}</Body>
         </div>
     )
 }
