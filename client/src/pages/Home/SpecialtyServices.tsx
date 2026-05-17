@@ -34,20 +34,21 @@ const specialtyServices = [
 
 function SpecialtyServices() {
     return (
-        <div className={"text-white bg-neutral-900 responsive-px limit-size responsive-py"}>
+        <div className={"text-white bg-neutral-900 responsive-px responsive-py"}>
+            <div className={"limit-size"}>
+                <SectionLabel className={"text-white"}> Specialty Services</SectionLabel>
+                <Headline className={"mt-4"}>The right service at the right time</Headline>
 
-            <SectionLabel className={"text-white"}> Specialty Services</SectionLabel>
-            <Headline className={"mt-4"}>The right service at the right time</Headline>
-
-            <div className={"flex flex-col gap-12 mt-2"}>
-                {specialtyServices.map(service =>
-                    <SpecialtyService title={service.title}
-                                      description={service.description}
-                                      link={service.link}
-                                      image={service.image}
-                                      imageAlt={service.imageAlt}
-                                      key={service.key}/>
-                )}
+                <div className={"flex flex-col gap-12 md:gap-18 mt-2 "}>
+                    {specialtyServices.map(service =>
+                        <SpecialtyService title={service.title}
+                                          description={service.description}
+                                          link={service.link}
+                                          image={service.image}
+                                          imageAlt={service.imageAlt}
+                                          key={service.key}/>
+                    )}
+                </div>
             </div>
         </div>
     )
