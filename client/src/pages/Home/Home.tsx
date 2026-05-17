@@ -34,9 +34,8 @@ function Home() {
             <Highlights/>
             <PickupAndDeliveryHome/>
 
-
-             <div className={"bg-white responsive-px pb-15 md:flex md:justify-center"}>
-                 <Button className={"w-full md:w-3/5"}>Book Now</Button>
+            <div className={"bg-white responsive-px pb-15 -mt-4 md:flex md:justify-center"}>
+                <Button className={"w-full md:w-3/5"}>Book Now</Button>
             </div>
 
 

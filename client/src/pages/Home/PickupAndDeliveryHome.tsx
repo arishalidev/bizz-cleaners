@@ -28,7 +28,7 @@ function PickupAndDeliveryHome() {
                     </div>
                 </div>
 
-                <div className={"mt-4 md:mt-8 lg:mt-16 md:mx-auto"}>
+                <div className={"mt-4 md:mt-8 lg:mt-12 md:mx-auto"}>
                     <SectionLabel dot={false} className={"mb-4 md:mb-6"}>How It Works</SectionLabel>
 
                     <div className={"flex flex-col gap-10 md:gap-16 lg:flex-row"}>
