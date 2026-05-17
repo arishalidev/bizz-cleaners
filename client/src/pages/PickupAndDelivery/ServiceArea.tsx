@@ -86,7 +86,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
     const position = {lat: 33.01602299, lng: -97.07124099};
 
     return (
-        <div id={"service-area"} className={"px-4 py-8"}>
+        <div id={"service-area"} className={"responsive-px limit-size py-8"}>
             <SectionLabel>Service Area</SectionLabel>
             <Headline className={"mt-4"}>Are we in your neighborhood?</Headline>
             <Body className={"mt-2"}>We've called North DFW home for six years, and our routes keep growing. Pop in your zip code or share your location to see if we're already coming your way — and if we're not yet, we'd love to know you're waiting.</Body>

@@ -12,7 +12,7 @@ interface IntroductionProps {
 
 const Introduction: React.FC<IntroductionProps> = ({}) => {
     return (
-        <div className={"px-4 pt-3 pb-8"}>
+        <div className={"responsive-px limit-size pt-3 pb-8"}>
             <SectionLabel>Pickup and Delivery Service </SectionLabel>
             <Headline className={"mt-4"}>Skip the trip. We'll come to you.</Headline>
             <div className={"mb-4"}>

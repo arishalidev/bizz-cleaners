@@ -5,13 +5,12 @@ import PickupAndDeliveryHomeStep from "./PickupAndDeliveryHomeStep.tsx";
 import step1 from "../../assets/deskWithComputer.png"
 import step2 from "../../assets/deliveryVan.png"
 import step3 from "../../assets/cleanClothes.png"
-import Button from "../../components/Button.tsx";
 import Body from "../../components/Body.tsx";
 import SectionLabel from "../../components/SectionLabel.tsx";
 
 function PickupAndDeliveryHome() {
     return (
-        <div className={"px-4 pt-8 pb-18 bg-white"}>
+        <div className={"responsive-px limit-size responsive-py bg-white"}>
             <div className={"flex flex-col gap-3"}>
                 <SectionLabel>Pickup & Delivery</SectionLabel>
                 <Headline className={"mt-4"}>Pickup and Delivery Headline</Headline>
@@ -51,9 +50,6 @@ function PickupAndDeliveryHome() {
                                        imageAlt={"Clean fresh clothes just the way you like them"}
             />
             </div>
-
-            <Button className={"w-full"}>Book Now</Button>
-
         </div>
 
 

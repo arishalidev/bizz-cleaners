@@ -45,7 +45,7 @@ const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <div className={"bg-white px-4 pt-8"}>
+        <div className={"bg-white responsive-px limit-size pt-8"}>
             {faqs.map((faq, i) =>
                 <div key={i}>
                     <hr className={"text-primary-500"}/>

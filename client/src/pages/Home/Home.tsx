@@ -7,6 +7,7 @@ import Testimonials from "./Testimonials.tsx";
 import BusinessInfo from "./BusinessInfo.tsx";
 import { useEffect, useState } from 'react';
 import AboutHome from "./AboutHome.tsx";
+import Button from "../../components/Button.tsx";
 
 function Home() {
 
@@ -32,6 +33,11 @@ function Home() {
             <TrustStrip rating={rating} userRatingCount={userRatingCount}/>
             <Highlights/>
             <PickupAndDeliveryHome/>
+
+
+            <Button className={"w-full"}>Book Now</Button>
+
+
             <SpecialtyServices/>
             <AboutHome/>
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>

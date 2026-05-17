@@ -33,7 +33,7 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
             <Steps/>
             <DeliveryHighlights/>
 
-            <div className={"px-4 pt-2 pb-12 bg-white"}>
+            <div className={"responsive-px limit-size pt-2 pb-12 bg-white"}>
                 <Button className={"w-full"}>Book now</Button>
             </div>
 

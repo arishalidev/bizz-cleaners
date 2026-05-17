@@ -24,7 +24,6 @@ function App() {
     return (
       <BrowserRouter>
           <ScrollToTop/>
-          <div className={"bg-neutral-50"}>
               <Navigation/>
               <div className={"pt-17"}>
                   <Routes>
@@ -34,7 +33,6 @@ function App() {
                   </Routes>
               </div>
               {/*<Footer/>*/}
-          </div>
       </BrowserRouter>
   );
 }

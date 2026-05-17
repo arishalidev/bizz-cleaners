@@ -14,7 +14,7 @@ interface DeliveryHighlightsProps {
 
 const DeliveryHighlights: React.FC<DeliveryHighlightsProps> = ({}) => {
     return (
-        <div className={"px-4 py-8 bg-white"}>
+        <div className={"responsive-px limit-size py-8 bg-white"}>
             <SectionLabel>Why Bizz Cleaners</SectionLabel>
             <Headline className={"mt-4"}>Why your neighbors choose Bizz</Headline>
             <div className={"mt-10 mx-2 flex flex-col gap-12"}>

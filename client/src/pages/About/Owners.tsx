@@ -9,7 +9,7 @@ interface OwnersProps {
 
 const Owners: React.FC<OwnersProps> = ({}) => {
     return (
-        <div className={"flex flex-col gap-5 px-4 bg-white py-10"}>
+        <div className={"flex flex-col gap-5 responsive-px limit-size bg-white py-10"}>
             <SectionLabel>About Owners</SectionLabel>
             <div className={"flex flex-col gap-4"}>
                 <Headline>Caring for clothes since 1996</Headline>

@@ -12,7 +12,7 @@ interface StepsProps {
 
 const Steps: React.FC<StepsProps> = ({}) => {
     return (
-        <div className={" pt-10 pb-18 px-4 bg-neutral-900"}>
+        <div className={" pt-10 pb-18 responsive-px limit-size bg-neutral-900"}>
             <SectionLabel className={"text-white"}>How It Works</SectionLabel>
 
             <div className={"flex flex-col gap-18"}>

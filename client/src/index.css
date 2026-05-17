@@ -63,4 +63,20 @@
     --color-yellow-700: #A27C1A;
     --color-yellow-800: #7C5E10;
     --color-yellow-900: #513C06;
+
+    --breakpoint-md: 650px;
+    --breakpoint-lg: 1024px;
 }
+
+@utility limit-size {
+    @apply max-w-7xl mx-auto;
+}
+
+@utility responsive-px {
+    @apply px-4 sm:px-6 lg:px-8;
+}
+
+@utility responsive-py {
+    @apply py-10
+}
+

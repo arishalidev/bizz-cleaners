@@ -11,7 +11,7 @@ interface BizzCleanersProps {
 
 const BizzCleaners: React.FC<BizzCleanersProps> = ({}) => {
     return (
-        <div className={"flex flex-col gap-5 px-4 bg-neutral-900 py-10"}>
+        <div className={"flex flex-col gap-5 responsive-px limit-size bg-neutral-900 py-10"}>
             <SectionLabel className={"text-neutral-300"}>About Bizz Cleaners</SectionLabel>
 
             <img className={"rounded-md"} src={teamPortrait} alt={"Team Portrait of Bizz Cleaners staff."} />

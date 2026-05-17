@@ -11,7 +11,7 @@ interface BusinessInfoProps {
 const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } : BusinessInfoProps) => {
 
     return (
-        <div className={"flex flex-col gap-6 bg-white px-4 py-10"}>
+        <div className={"flex flex-col gap-6 bg-white responsive-px limit-size py-10"}>
             <Headline>Visit Us Today</Headline>
             <img src={businessInfo} alt={"Font of Bizz Cleaners store"} className={"rounded-md drop-shadow-md"}/>
                 <div className={"flex flex-col gap-2"}>

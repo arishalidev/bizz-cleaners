@@ -13,7 +13,7 @@ function Button({children, variant = "primary", className = "", ...rest}: Button
 
     return(
         <button
-            className={`p-4 rounded-md text-lg shadow-md active:shadow-2xs ${styles[variant]} ${className}`}
+            className={`p-4 md:px-8 md:py-6 rounded-md text-lg md:text-xl shadow-md active:shadow-2xs ${styles[variant]} ${className}`}
             {...rest}
         >{children}</button>
     )
