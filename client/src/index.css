@@ -77,6 +77,6 @@
 }
 
 @utility responsive-py {
-    @apply pt-8 pb-12 md:pt-10 md:pb-18 lg:pt-14 lg:pb-24
+    @apply pt-8 pb-12 md:pt-10 md:pb-18
 }
 

@@ -7,7 +7,7 @@ interface BodyProps {
 
 const Body: React.FC<BodyProps> = ({children, className=""} : BodyProps) => {
     return (
-        <p className={`text-lg/9 md:text-xl/8 ${className}`}>
+        <p className={`text-base/9 md:text-lg/8 ${className}`}>
             {children}
         </p>
     );
