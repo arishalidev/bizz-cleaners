@@ -14,8 +14,8 @@ const highlights = [
 ]
 function Highlights() {
     return (
-        <div className={"responsive-py px-2 limit-size lg:max-w-5xl"}>
-            <div className={"grid grid-cols-2 justify-center place-items-center gap-y-10 md:gap-y-14 lg:gap-y-20 gap-x-2"}>
+        <div className={"responsive-py px-2 limit-size"}>
+            <div className={"grid grid-cols-2 justify-center place-items-center gap-y-10 md:gap-y-14 gap-x-2"}>
                 {highlights.map(highlight =>
                     <Highlight Icon={highlight.icon} text={highlight.text} key={highlight.key}/>
                 )}
