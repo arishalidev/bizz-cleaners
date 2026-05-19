@@ -9,7 +9,7 @@ interface HighlightProps {
 
 function Highlight({Icon, text}: HighlightProps) {
     return (
-        <div className={`flex flex-col w-fit items-center`}>
+        <div className={`flex flex-col w-fit items-center lg:flex-1`}>
             <span className={"inline-flex w-16 h-16 md:w-20 md:h-20 bg-primary-100 rounded-full items-center justify-center text-3xl"}>
                 <Icon className={"md:text-4xl"}/>
             </span>

@@ -45,7 +45,7 @@ function PickupAndDeliveryHome() {
                                                    imageAlt={""}/>
 
                         <PickupAndDeliveryHomeStep image={step3}
-                                                   description={"Get your clothes back, usually within 48 hours."}
+                                                   description={"Get your clothes back, within 48 hours."}
                                                    tagline={"Simply sit back and relax."}
                                                    title={"3. Get it back fresh"}
                                                    imageAlt={"Clean fresh clothes just the way you like them"}/>
