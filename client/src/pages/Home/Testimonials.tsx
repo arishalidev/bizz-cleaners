@@ -48,7 +48,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
                     <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</Body>
             </div>
 
-            <div className={"flex flex-col gap-12 lg:flex-row mt-12"}>
+            <div className={"flex flex-col gap-12 lg:grid lg:grid-cols-2 min-[1140px]:flex min-[1140px]:flex-row mt-12"}>
                 {testimonials.map(testimonial =>
                 <Testimonial headshot={testimonial.headshot}
                              name={testimonial.name}

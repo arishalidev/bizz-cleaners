@@ -11,18 +11,21 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({headshot, name, review}: TestimonialProps) => {
     return (
-        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 px-4 py-10 relative shadow-md"}>
-            <div className={"flex gap-6"}>
-                <img src={headshot} alt={"Image of Happy Customer"} className={"h-14 rounded-full"}/>
-                <div className={"flex flex-col gap-1"}>
-                    <span className={"font-semibold"}>{name}</span>
-                    <span className={"inline-flex items-center gap-1 text-[#fedf01] text-2xl"}>
-                        {Array.from({length:5}, (_, i) => ( <IoStar key={i}/> ))}
+        <div className={"flex flex-col gap-3 w-full rounded-md bg-primary-50 px-4 pb-10 pt-5 relative shadow-md"}>
+            <div className={"flex gap-6 items-center"}>
+                <img src={headshot} alt={"Image of Happy Customer"} className={"aspect-square w-15 rounded-full"}/>
+                <div className={"flex flex-col"}>
+                    <Body className={"font-semibold"}>{name}</Body>
+                    <span className={"text-sm -mt-1"}>Verified Customer</span>
+
+                    <span className={"inline-flex items-center gap-1 text-[#fedf01] text-2xl mt-2"}>
+                    {Array.from({length: 5}, (_, i) => (<IoStar key={i}/>))}
                     </span>
+
                 </div>
             </div>
 
-            <hr className={"text-primary-500 my-3"}/>
+            <hr className={"text-primary-500"}/>
 
             <Body>
                 {review}

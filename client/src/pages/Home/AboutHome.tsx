@@ -30,7 +30,7 @@ const AboutHome: React.FC<AboutHomeProps> = ({}) => {
                     </div>
                 </div>
                 <img src={ownersFriendly} alt={"Owners of Bizz Cleaners, a delightful couple."}
-                     className={"mt-6 rounded-md drop-shadow-md w-5/6 max-w-sm ml-5 md:w-1/2 lg:max-w-lg"}/>
+                     className={"mt-6 rounded-md drop-shadow-md w-5/6 object-contain max-w-sm ml-5 md:w-1/2 lg:max-w-lg"}/>
             </div>
         </div>
     );
