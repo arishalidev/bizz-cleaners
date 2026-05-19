@@ -7,6 +7,7 @@ import Headline from "../../components/Headline.tsx";
 import { IoStar } from "react-icons/io5";
 import React from "react";
 import SectionLabel from "../../components/SectionLabel.tsx";
+import Body from "../../components/Body.tsx";
 
 const testimonials = [
     {
@@ -38,19 +39,16 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
     return (
         <div className={"responsive-px limit-size responsive-py"}>
             <SectionLabel>Testimonials</SectionLabel>
-            <div className={"w-75"}>
+            <div className={"w-75 md:w-full md:mt-2"}>
                 <Headline>See Why We are Number One in Flower Mound</Headline>
             </div>
 
-            <span className={"inline-flex items-center gap-3 text-base"}>
-                <span className={"inline-flex gap-1 items-center"}>
-                    <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</span>
-            </span>
+            <div className={"inline-flex items-center gap-3 text-base md:mt-2"}>
+                <Body className={"inline-flex gap-1 items-center"}>
+                    <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</Body>
+            </div>
 
-            <div className={"my-6"}></div>
-
-
-            <div className={"flex flex-col gap-12"}>
+            <div className={"flex flex-col gap-12 lg:flex-row mt-12"}>
                 {testimonials.map(testimonial =>
                 <Testimonial headshot={testimonial.headshot}
                              name={testimonial.name}
