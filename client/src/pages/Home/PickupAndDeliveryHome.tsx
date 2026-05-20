@@ -10,8 +10,8 @@ import SectionLabel from "../../components/SectionLabel.tsx";
 
 function PickupAndDeliveryHome() {
     return (
-        <div className={"responsive-px responsive-py bg-white"}>
-            <div className={"limit-size"}>
+        <div className={"bg-white"}>
+            <div className={"limit-size responsive-px responsive-py"}>
                 <div className={"flex flex-col gap-3"}>
                     <SectionLabel>Pickup & Delivery</SectionLabel>
                     <Headline className={"mt-4"}>Pickup and Delivery Headline</Headline>

@@ -35,7 +35,7 @@ function Home() {
             <PickupAndDeliveryHome/>
 
             <div className={"bg-white responsive-px pb-15 -mt-4 md:flex md:justify-center"}>
-                <Button className={"w-full md:w-3/5"}>Book Now</Button>
+                <Button className={"w-full md:w-3/5 max-w-4xl"}>Book Now</Button>
             </div>
 
 

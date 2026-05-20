@@ -24,9 +24,8 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                 <Headline>Visit Us Today</Headline>
                 <div className={"max-w-6xl mx-auto md:mt-4"}>
                     <img src={businessInfo} alt={"Font of Bizz Cleaners store"}
-                         className={"rounded-md drop-shadow-md"}/>
-                    <div
-                        className={"flex flex-col gap-2 md:flex-row md:gap-8 lg:gap-12 mt-6 mb-8 md:mb-10 md:justify-evenly"}>
+                         className={"rounded-md drop-shadow-md lg:w-9/10 mx-auto"}/>
+                    <div className={"flex flex-col gap-2 lg:flex-row min-[1175px]:flex md:gap-8 lg:gap-10 mt-6 mb-8 md:mb-10 md:justify-evenly md:grid md:grid-cols-2 lg:w-9/10 lg:mx-auto lg:justify-around"}>
                         <div>
                             {isOpen === undefined ? (
                                 <div></div>
@@ -36,7 +35,7 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                                 <h3 className={"font-semibold text-red-500"}>Closed</h3>
                             )}
 
-                            <div className={"flex gap-4 mt-2"}>
+                            <div className={"flex gap-4 mt-2 w-fit"}>
                                 <div className={"flex flex-col"}>
                                     {hoursOfOperation.map((day, i) =>
                                         <div key={i} className={"flex flex-col"}>
@@ -64,7 +63,7 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                             </div>
                         </div>
 
-                        <div className={"flex flex-col gap-2 mt-4"}>
+                        <div className={"flex flex-col gap-2 mt-4 w-fit"}>
 
                             <a href={"tel:+19723551807"} className={"inline-flex gap-4"}>
                                 <span className={"text-2xl mt-1"}><IoCallOutline/></span>
@@ -87,16 +86,18 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
 
 
                         </div>
+
+                        <div className={" mt-8  md:mt-0 md:col-start-2 md:row-start-1 md:row-span-2 lg:flex-1"}>
+                            <iframe
+                                src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.564529369901!2d-97.07125436071318!3d33.01525459620687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2d1f87b1e3d5%3A0xce319181104f911a!2sBizz%20Cleaners!5e0!3m2!1sen!2sus!4v1778693139746!5m2!1sen!2sus"}
+                                allowFullScreen={true}
+                                loading={"lazy"}
+                                referrerPolicy={"no-referrer-when-downgrade"}
+                                className={"h-96 md:h-112 lg:h-124 w-full"}/>
+                        </div>
                     </div>
 
                     <div className={"md:max-w-19/28 mx-auto"}>
-                        <iframe
-                            src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.564529369901!2d-97.07125436071318!3d33.01525459620687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2d1f87b1e3d5%3A0xce319181104f911a!2sBizz%20Cleaners!5e0!3m2!1sen!2sus!4v1778693139746!5m2!1sen!2sus"}
-                            allowFullScreen={true}
-                            loading={"lazy"}
-                            referrerPolicy={"no-referrer-when-downgrade"}
-                            className={"h-96 md:h-112 lg:h-124 w-full"}/>
-
                         <div className={"flex gap-8 mt-6"}>
                             <Button className={"flex-1"}>Schedule Pickup</Button>
                             <Button className={"flex-1 outline-2"} variant={"secondary"}>Get Directions</Button>
