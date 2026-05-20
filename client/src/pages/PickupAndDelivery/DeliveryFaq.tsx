@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import DeliveryQA from "./DeliveryQA.tsx";
+import SectionLabel from "../../components/SectionLabel.tsx";
 
 interface DeliveryFaqProps {
 
@@ -45,18 +46,26 @@ const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <div className={"bg-white responsive-px limit-size pt-8"}>
-            {faqs.map((faq, i) =>
-                <div key={i}>
-                    <hr className={"text-primary-500"}/>
-                    <DeliveryQA
-                        question={faq.question}
-                        answer={faq.answer}
-                        expanded={i === openIndex}
-                        onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-                    />
+
+        <div className={"bg-white"}>
+            <div className={"responsive-px responsive-py limit-size pt-8"}>
+
+                <div className={"mb-3"}>
+                    <SectionLabel>FAQ</SectionLabel>
                 </div>
-            )}
+
+                {faqs.map((faq, i) =>
+                    <div key={i}>
+                        <hr className={"text-primary-500"}/>
+                        <DeliveryQA
+                            question={faq.question}
+                            answer={faq.answer}
+                            expanded={i === openIndex}
+                            onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+                        />
+                    </div>
+                )}
+            </div>
         </div>
     );
 };

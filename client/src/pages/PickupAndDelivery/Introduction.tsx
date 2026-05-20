@@ -31,7 +31,10 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
                 And here's the part we're proud of: the people who clean your clothes are the same people who hand them back to you. No middlemen, no third-party drivers. Just our team, treating every shirt, suit, and sequined dress like it belongs to a neighbor — because it does.
             </Body>
 
-            <img src={businessInfo} alt={"Font of Bizz Cleaners store"} className={"rounded-md drop-shadow-md my-8 object-cover h-96"}/>
+            <div className={"w-full"}>
+                <img src={businessInfo} alt={"Font of Bizz Cleaners store"}
+                    className={"rounded-md drop-shadow-md my-8 object-cover min-h-96"}/>
+            </div>
         </div>
 
     );
