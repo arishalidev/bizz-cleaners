@@ -10,7 +10,7 @@ const TrustStrip: React.FC<TrustStripProps> = ({rating, userRatingCount} : Trust
     return(
     <div className={"text-xl responsive-px limit-size"}>
         <div className={"mt-4 md:flex md:justify-around md:py-2 lg:max-w-5xl mx-auto"}>
-            <h3 className={"font-semibold"}>25 Years of Quality Cleaning</h3>
+            <h3 className={"font-semibold"}>30 Years of Quality Cleaning</h3>
             <span className={"inline-flex items-center gap-1"}>
                 <FaStar className={"text-yellow-400"}/>
                 <span className={"font-semibold"}>{rating}</span>({userRatingCount} Google Reviews)

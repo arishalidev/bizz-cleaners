@@ -8,6 +8,7 @@ import SectionLabel from "../../components/SectionLabel.tsx";
 import { IoCallOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { PiStorefront } from "react-icons/pi";
+import {linkToDirections, linkToPortal} from "../../utils/links.ts";
 
 
 interface BusinessInfoProps {
@@ -99,8 +100,8 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
 
                     <div className={"md:max-w-19/28 mx-auto"}>
                         <div className={"flex gap-8 mt-6"}>
-                            <Button className={"flex-1"}>Schedule Pickup</Button>
-                            <Button className={"flex-1 outline-2"} variant={"secondary"}>Get Directions</Button>
+                            <Button className={"flex-1"} onClick={linkToPortal}>Schedule Pickup</Button>
+                            <Button className={"flex-1 outline-2"} variant={"secondary"} onClick={linkToDirections}>Get Directions</Button>
                         </div>
                     </div>
                 </div>
