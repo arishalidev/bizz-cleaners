@@ -26,9 +26,17 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
             <nav className={"relative z-10 px-3 py-2 flex items-center"}>
 
                 <Link to={"/"}><img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>
-                <button className={"ml-auto"} onClick={() => {setIsOpen(!isOpen)}}>
+                <button className={"ml-auto lg:hidden"} onClick={() => {setIsOpen(!isOpen)}}>
                     <MdMenu className={"text-5xl"}/>
                 </button>
+
+                <div className={"ml-auto hidden lg:block"}>
+                    <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
+                    <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
+                    <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
+
+
+                </div>
             </nav>
 
 
