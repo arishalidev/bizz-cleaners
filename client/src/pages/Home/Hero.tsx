@@ -2,6 +2,7 @@ import '../../App.css';
 import heroImage from '../../assets/hero-image.jpg';
 import Button from "../../components/Button.tsx";
 import Body from "../../components/Body.tsx";
+import {linkToDirections, linkToPortal} from "../../utils/links.ts";
 
 function Hero() {
     return (
@@ -15,8 +16,8 @@ function Hero() {
                     <h2 className={"text-xl font-normal md:text-2xl"}>Same Day Services <br/> Free Pickup and Delivery</h2>
 
                     <div className={"mt-12 flex space-x-4 md:space-x-6"}>
-                        <Button variant={"primary"}>Schedule Pickup</Button>
-                        <Button variant={"secondary"}>Get Directions</Button>
+                        <Button variant={"primary"} onClick={linkToPortal}>Schedule Pickup</Button>
+                        <Button variant={"secondary"} onClick={linkToDirections}>Get Directions</Button>
                     </div>
 
                     <div className={"mt-4 md:mt-6"}>

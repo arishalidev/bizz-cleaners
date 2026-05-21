@@ -14,11 +14,10 @@ function PickupAndDeliveryHome() {
             <div className={"limit-size responsive-px responsive-py"}>
                 <div className={"flex flex-col gap-3"}>
                     <SectionLabel>Pickup & Delivery</SectionLabel>
-                    <Headline className={"mt-4"}>Pickup and Delivery Headline</Headline>
+                    <Headline className={"mt-4"}>We'll handle the laundry. You handle life</Headline>
 
                     <Body className={"mt-2"}>
-                        Let us take care of your clothes while you get
-                        on with your life!
+                        Between work, family, and everything in between, getting to the cleaners shouldn't be one more errand. Let us take care of your clothes while you get on with your day.
                     </Body>
 
                     <div>
@@ -26,6 +25,8 @@ function PickupAndDeliveryHome() {
                         <Bullet> Get hours of your week back </Bullet> <br/>
                         <Bullet> Schedule online in minutes </Bullet>
                     </div>
+
+                    <Body>Free on every order $25 and up.</Body>
                 </div>
 
                 <div className={"mt-4 md:mt-8 lg:mt-12 md:mx-auto"}>

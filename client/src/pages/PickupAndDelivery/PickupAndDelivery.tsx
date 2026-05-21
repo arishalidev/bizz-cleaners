@@ -8,6 +8,7 @@ import ServiceArea from "./ServiceArea.tsx";
 
 import React, {useEffect, useState} from "react";
 import DeliveryFaq from "./DeliveryFaq.tsx";
+import {linkToPortal} from "../../utils/links.ts";
 
 interface PickupAndDeliveryProps {
 
@@ -27,14 +28,14 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
 
     return (
         <div>
-            <SecondaryHero header={"Six years caring for North DFW's closets"} cta={<Button>Schedule a pickup</Button>}/>
+            <SecondaryHero header={"Six years caring for North DFW's closets"} cta={<Button onClick={linkToPortal}>Schedule a pickup</Button>}/>
             <TopQuote/>
             <Introduction/>
             <Steps/>
             <DeliveryHighlights/>
 
             <div className={"responsive-px limit-size pt-2 pb-12 bg-white"}>
-                <Button className={"w-full"}>Book now</Button>
+                <Button className={"w-full"} onClick={linkToPortal}>Book now</Button>
             </div>
 
             <ServiceArea apiKey={googleMapsApiKey}/>

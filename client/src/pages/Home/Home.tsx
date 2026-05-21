@@ -8,6 +8,7 @@ import BusinessInfo from "./BusinessInfo.tsx";
 import { useEffect, useState } from 'react';
 import AboutHome from "./AboutHome.tsx";
 import Button from "../../components/Button.tsx";
+import { linkToPortal } from "../../utils/links.ts";
 
 function Home() {
 
@@ -35,7 +36,7 @@ function Home() {
             <PickupAndDeliveryHome/>
 
             <div className={"bg-white responsive-px pb-15 -mt-4 md:flex md:justify-center"}>
-                <Button className={"w-full md:w-3/5 max-w-4xl"}>Book Now</Button>
+                <Button className={"w-full md:w-3/5 max-w-4xl"} onClick={linkToPortal}>Book Now</Button>
             </div>
 
 
