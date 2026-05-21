@@ -11,9 +11,9 @@ const Owners: React.FC<OwnersProps> = ({}) => {
     return (
         <div className={"bg-white"}>
             <div className={"flex flex-col gap-5 responsive-px limit-size py-10"}>
-                <SectionLabel>About Owners</SectionLabel>
                 <div className={"flex flex-col gap-4"}>
                     <div className={"max-w-5xl mx-auto flex-col flex gap-4 lg:mt-2"}>
+                        <SectionLabel>About Owners</SectionLabel>
                         <Headline>Caring for clothes since 1996</Headline>
 
                         <Body>It started with one small shop in Bay City, Texas, back in 1996. Three decades later, we've

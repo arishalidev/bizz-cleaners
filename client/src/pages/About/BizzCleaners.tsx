@@ -13,7 +13,9 @@ const BizzCleaners: React.FC<BizzCleanersProps> = ({}) => {
     return (
         <div className={"bg-neutral-900"}>
             <div className={"flex flex-col gap-5 responsive-px limit-size py-10"}>
-                <SectionLabel className={"text-neutral-300"}>About Bizz Cleaners</SectionLabel>
+                <div className={"max-w-5xl w-full mx-auto"}>
+                    <SectionLabel className={"text-neutral-300"}>About Bizz Cleaners</SectionLabel>
+                </div>
 
                 <div>
                     <img className={"rounded-md mx-auto max-w-5xl w-full"} src={teamPortrait}
@@ -29,7 +31,6 @@ const BizzCleaners: React.FC<BizzCleanersProps> = ({}) => {
                         caring for your wardrobe as easy as possible — at a price that makes sense for a family business
                         serving its neighbors.</Body>
                 </div>
-
             </div>
         </div>
     );
