@@ -15,8 +15,8 @@ const SecondaryHero: React.FC<SecondaryHeroProps> = ({header, subHeader = "", ct
 
             <div className={"responsive-px limit-size"}>
                 <div className={"absolute top-18 text-white space-y-2"}>
-                    <h1 className={"text-3xl font-semibold w-80"}>{header}</h1>
-                    <h2 className={"text-xl font-normal w-70"}>{subHeader}</h2>
+                    <h1 className={"text-3xl font-semibold w-80 md:w-full"}>{header}</h1>
+                    <h2 className={"text-xl font-normal w-100"}>{subHeader}</h2>
                     {<div className={"mt-8"}>{cta}</div>}
                 </div>
             </div>
