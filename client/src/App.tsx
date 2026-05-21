@@ -3,9 +3,9 @@ import About from "./pages/About/About.tsx"
 import Navigation from "./components/Navigation.tsx"
 
 import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
-//import Footer from "./components/Footer.tsx";
+import Footer from "./components/Footer.tsx";
 import PickupAndDelivery from "./pages/PickupAndDelivery/PickupAndDelivery.tsx";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 
 function ScrollToTop() {
@@ -21,6 +21,16 @@ function ScrollToTop() {
 }
 
 function App() {
+
+    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
+
+    useEffect(() => {
+        fetch('/api/get/business-information')
+            .then(res => res.json())
+            .then(data => {
+                setHoursOfOperation(data.hoursOfOperation);
+            })
+    }, []);
     return (
       <BrowserRouter>
           <ScrollToTop/>
@@ -32,7 +42,7 @@ function App() {
                       <Route path={"/delivery"} element={<PickupAndDelivery/>} />
                   </Routes>
               </div>
-              {/*<Footer/>*/}
+            <Footer hoursOfOperation={hoursOfOperation}/>
       </BrowserRouter>
   );
 }
