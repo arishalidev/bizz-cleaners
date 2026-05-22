@@ -11,7 +11,7 @@ const TrustCards: React.FC<TrustCardsProps> = ({}) => {
 
         <div className={"responsive-px limit-size responsive-py"}>
             <Headline>Why Customers Keep Coming Back</Headline>
-            <div className={"flex flex-col gap-8 py-8 md:flex-row lg:mt-12"}>
+            <div className={"flex flex-col gap-8 pt-8 md:flex-row lg:mt-12"}>
                 <div className={"flex-1 h-96"}>
                     <TrustCard heading={"10,000+ Orders"} subheading={"Delivered Directly"}></TrustCard>
                 </div>

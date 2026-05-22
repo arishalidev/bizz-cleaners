@@ -15,6 +15,9 @@ const About: React.FC<AboutProps> = ({}) => {
             <Owners/>
             <BizzCleaners/>
             <TrustCards></TrustCards>
+            <div className={"limit-size responsive-px"}>
+                <hr className={"text-neutral-600"}/>
+            </div>
         </div>
     );
 };
