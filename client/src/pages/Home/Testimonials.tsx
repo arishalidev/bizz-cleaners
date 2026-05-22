@@ -12,20 +12,20 @@ import Body from "../../components/Body.tsx";
 const testimonials = [
     {
         headshot: testimonialHeadshot2,
-        name: "Tom Palmer",
-        review: "The absolute best! Genuinely caring staff and in all the time as a customer, where most cleaners routinely damaged my clothes, I have never had a single broken button. I most grateful to have a service provider who genuinely takes pride in their product!",
+        name: "Shaan S",
+        review: "I've been a clothing collector for over 10 years, with a collection entailing garments from late 80s Ralph Lauren with unique fabrics to contemporary clothes as well. Over the years I have exclusively been using this service because when I purchase clothes from overseas, no matter the age, these guys make it feel brand new. Recently, my house caught on fire, and I had that deep smoke smell in my entire collection, and to my surprise, they were able to tailor their cleaning process specifically to my needs, and again, left me pleased! I highly recommend this service, as a collector and enthusiast with very specific and rare garments, I would not go anywhere else!",
         key: 1,
     },
     {
         headshot: testimonialHeadshot1,
-        name: "Hannah Robinson",
-        review: "We are very happy with Bizz Cleaners on Long Prairie Road in Flower Mound. The turnaround time is quick, and our clothes are cleaned thoroughly with no chemical smell left behind. The staff is polite and helpful. We use Bizz Cleaners weekly and our clothes look great.\n",
+        name: "Debbie Herman",
+        review: "Bizz Cleaners always does great work on our clothes. Staff is always polite and professional. Love their same day service! It's such a convenience especially for things needed at the last minute. Just had a prom dress dry cleaned and couldn't believe the extra touches they did. It came back with all straps laced up, on a bust, and a bag long enough for the dress and sealed at the bottom. Very impressive and greatly appreciated!",
         key: 2,
     },
     {
         headshot: testimonialHeadshot3,
         name: "Allan Cherry",
-        review: "Bizz Cleaners always does great work on our clothes. Staff is always polite and professional. Love their same day service! It's such a convenience especially for things needed at the last minute. Just had a prom dress dry cleaned and couldn't believe the extra touches they did. It came back with all straps laced up, on a bust, and a bag long enough for the dress and sealed at the bottom. Very impressive and greatly appreciated!\n",
+        review: "Efficient, friendly service! After having no luck finding a dry cleaner that can do same day (literally tried 3 places) they worked their magic and had my dry cleaning done by 5pm that day! Also, the staff is extremely helpful!! Offered to bring items to my car since I had a baby in a stroller :) thank you for being kind!",
         key: 3,
     },
 ]
