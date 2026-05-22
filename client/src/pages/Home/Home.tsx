@@ -24,7 +24,7 @@ function Home() {
                 setRating(data.rating);
                 setUserRatingCountCount(data.userRatingCount);
                 setHoursOfOperation(data.hoursOfOperation);
-                setIsOpen(true);
+                setIsOpen(data.isOpen);
             })
     }, []);
 

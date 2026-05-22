@@ -12,7 +12,7 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 
     function selectedOnMobileCss( params : { isActive: boolean }) : string {
         const isActive = params.isActive;
-        const baseCss = "p-4";
+        const baseCss = "p-4 lg:rounded-md";
 
         if(isActive) {
             return baseCss + " bg-primary-500 text-white"
@@ -40,7 +40,7 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
             </nav>
 
 
-            <div className={`absolute top-0 h-screen w-full bg-neutral-50 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+            <div className={`lg:hidden absolute top-0 h-screen w-full bg-neutral-50 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
                 <div className={"absolute bottom-0"}>
                     <div className={"text-3xl pb-8"}>
                         <nav className={"flex flex-col"}>

@@ -9,6 +9,7 @@ import Button from "../../components/Button.tsx";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaCheck } from "react-icons/fa";
 import {FaXmark} from "react-icons/fa6";
+import {linkToPortal} from "../../utils/links.ts";
 
 interface ServiceAreaProps {
     apiKey: string | undefined;
@@ -82,6 +83,10 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
         );
     }
 
+    function joinWaitlist() {
+        window.open("mailto:business@bizzclean.com");
+    }
+
 
     const position = {lat: 33.01602299, lng: -97.07124099};
 
@@ -122,7 +127,10 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
             </APIProvider>}
 
             <div className={"mt-3"}>
-                <form className={"flex gap-3 items-center"}>
+                <form className={"flex gap-3 items-center"} onSubmit={(e) => {
+                    e.preventDefault();
+                    zipCodeEntry(); }
+                }>
                     <input type={"text"} 
                             inputMode={"numeric"}
                            value={zipCode}
@@ -149,7 +157,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                 ) : validZip ? (
                     <div className={"flex flex-col items-center gap-10 mt-6"}>
                         <Headline className={"inline-flex items-center gap-2"}><span className={"text-primary-500"}><FaCheck/></span>We Service your area!</Headline>
-                        <Button className={"w-56"}>Book Now</Button>
+                        <Button className={"w-56"} onClick={linkToPortal}>Book Now</Button>
                     </div>
                 ) : (
                     <div className={"flex flex-col items-center gap-8 mt-6"}>
@@ -158,7 +166,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                             className={"text-red-500"}><FaXmark/></span>We dont service this area</Headline>
                             <Body>Let us know you're waiting:</Body>
                         </div>
-                        <Button className={"w-56 outline-2"} variant={"secondary"}>Join Waitlist</Button>
+                        <Button className={"w-56 outline-2"} variant={"secondary"} onClick={joinWaitlist}>Join Waitlist</Button>
                     </div>
                 )}
 

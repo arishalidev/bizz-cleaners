@@ -26,7 +26,7 @@ function PickupAndDeliveryHome() {
                         <Bullet> Schedule online in minutes </Bullet>
                     </div>
 
-                    <Body>Free on every order $25 and up.</Body>
+                    <Body className={"-mt-2 italic text-sm"}>Free on orders $25 and up.</Body>
                 </div>
 
                 <div className={"mt-4 md:mt-8 lg:mt-12 md:mx-auto"}>
