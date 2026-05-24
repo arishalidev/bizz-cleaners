@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 import Footer from "./components/Footer.tsx";
 import PickupAndDelivery from "./pages/PickupAndDelivery/PickupAndDelivery.tsx";
 import {useEffect, useState} from "react";
+import ContactUs from "./pages/ContactUs.tsx";
 
 
 function ScrollToTop() {
@@ -40,6 +41,7 @@ function App() {
                       <Route path={"/"} element={<Home/>} />
                       <Route path={"/About"} element={<About/>} />
                       <Route path={"/delivery"} element={<PickupAndDelivery/>} />
+                      <Route path={"/contact"} element={<ContactUs hoursOfOperation={hoursOfOperation}/>} />
                   </Routes>
               </div>
             <Footer hoursOfOperation={hoursOfOperation}/>

@@ -30,10 +30,11 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                     <MdMenu className={"text-5xl"}/>
                 </button>
 
-                <div className={"ml-auto hidden lg:block"}>
+                <div className={"ml-auto hidden lg:flex lg:gap-2"}>
                     <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
                     <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
                     <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
+                    <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
 
 
                 </div>
@@ -49,6 +50,8 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                             <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
                             <hr className={"text-primary-500"}/>
                             <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
+                            <hr className={"text-primary-500"}/>
+                            <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
                             <hr className={"text-primary-500"}/>
                         </nav>
                     </div>
