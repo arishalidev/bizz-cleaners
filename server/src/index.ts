@@ -3,7 +3,7 @@ import express from 'express';
 import type { Request, Response } from 'express';
 import cors from 'cors';
 
-import {findBusiness, getBusinessDetails, isOpenNow} from './getBusinessInformation'
+import {findBusiness, getBusinessDetails, isOpenNow} from './getBusinessInformation.js'
 
 const MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 const CLEANCLOUD_API_KEY = process.env.CLEANCLOUD_API_KEY;
