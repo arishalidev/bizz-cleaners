@@ -96,5 +96,5 @@ app.post("/api/validate-zip", (req: Request, res: Response<validationResponse>) 
     res.json({ valid });
 });
 
-
-app.listen(3000, '0.0.0.0', () => console.log('Server online!'));
+const PORT = process.env.PORT || 3000;
+app.listen(Number(PORT), '0.0.0.0', () => console.log('Server online on port ' + PORT));
