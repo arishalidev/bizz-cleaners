@@ -15,5 +15,8 @@ export default defineConfig({
     host: '0.0.0.0',
     allowedHosts: ["bizz-cleaners-production.up.railway.app"],
     port: parseInt(process.env.PORT || '5173'),
+    proxy: {
+      '/api': process.env.SERVER_URL || 'http://localhost:3000'
+    }
   }
 });
