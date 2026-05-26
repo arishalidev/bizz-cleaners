@@ -23,9 +23,13 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
         }
     }
 
+    //css for when scrolled but still on hero
+    const onHeroCss = (scrolledAny && !scrolledPast) ? " bg-[rgb(74,74,74)]" : ""
+    const pastHeroCss = scrolledPast ? " bg-neutral-50 text-neutral-900" : ""
+
     return (
         <div className={"fixed z-50 w-full "}>
-            <nav className={"relative z-10 px-3 py-2 flex items-center limit-size"}>
+            <nav className={"relative z-10 px-3 py-2 flex items-center limit-size" + onHeroCss + pastHeroCss}>
 
                 <Link to={"/"}><img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>
                 <button className={"ml-auto lg:hidden"} onClick={() => {setIsOpen(!isOpen)}}>

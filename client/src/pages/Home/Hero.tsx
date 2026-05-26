@@ -9,41 +9,25 @@ import {NavbarContext} from "../../contexts/NavbarContext.tsx";
 function Hero() {
 
     const {setScrolledAny, setScrolledPast} = useContext(NavbarContext)
-    const scrolledAnySentinelRef = useRef(null)
-    const scrolledPastSentinelRef = useRef(null)
+    const heroRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        const sentinel = scrolledAnySentinelRef.current;
-        if(!sentinel) return;
+        const hero = heroRef.current;
+        if (!hero) return;
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setScrolledAny(!entry.isIntersecting);
-            }, { threshold : 0 }
-        )
+        const update = () => {
+            const bottom = hero.getBoundingClientRect().bottom;
+            setScrolledAny(window.scrollY > 0);
+            setScrolledPast(bottom <= 70);
+        };
 
-        observer.observe(sentinel);
-        return () => observer.disconnect();
-    });
-
-    useEffect(() => {
-        const sentinel = scrolledPastSentinelRef.current;
-        if(!sentinel) return;
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setScrolledPast(!entry.isIntersecting);
-            }, { threshold : 0 }
-        )
-
-        observer.observe(sentinel);
-        return () => observer.disconnect();
-    });
+        update();
+        window.addEventListener('scroll', update, { passive: true });
+        return () => window.removeEventListener('scroll', update);
+    }, []);
 
     return (
-        <div className={"relative"}>
-            <div ref={scrolledAnySentinelRef} className={"absolute top-0"}/>
-            <div ref={scrolledPastSentinelRef} className={"absolute bottom-0"}/>
+        <div className={"relative"} ref={heroRef}>
 
             <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105 md:max-h-160"}/>
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.7)]"}></div>
