@@ -9,7 +9,7 @@ import Button from "../../components/Button.tsx";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaCheck } from "react-icons/fa";
 import {FaXmark} from "react-icons/fa6";
-import {linkToPortal} from "../../utils/links.ts";
+import {linkToPortal, apiBase} from "../../utils/links.ts";
 
 interface ServiceAreaProps {
     apiKey: string | undefined;
@@ -52,7 +52,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
     function zipCodeEntry() {
         if(!validateZipCode()) return;
 
-        fetch("/api/validate-zip", {
+        fetch(`${apiBase}/api/validate-zip`, {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify({zip: zipCode})
@@ -71,7 +71,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
             (position) => {
                 const coords = { lat: position.coords.latitude, lng: position.coords.longitude };
 
-                fetch("/api/validate-location", {
+                fetch(`${apiBase}/api/validate-location`, {
                     method: 'POST',
                     headers: { 'content-type': 'application/json'},
                     body: JSON.stringify(coords)

@@ -8,7 +8,7 @@ import BusinessInfo from "./BusinessInfo.tsx";
 import { useEffect, useState } from 'react';
 import AboutHome from "./AboutHome.tsx";
 import Button from "../../components/Button.tsx";
-import { linkToPortal } from "../../utils/links.ts";
+import { linkToPortal, apiBase } from "../../utils/links.ts";
 
 function Home() {
 
@@ -18,7 +18,7 @@ function Home() {
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
 
     useEffect(() => {
-        fetch('/api/get/business-information')
+        fetch(`${apiBase}/api/get/business-information`)
             .then(res => res.json())
             .then(data => {
                 setRating(data.rating);

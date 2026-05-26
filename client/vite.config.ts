@@ -15,8 +15,5 @@ export default defineConfig({
     host: '0.0.0.0',
     allowedHosts: ["bizz-cleaners-client-production.up.railway.app", "bizz-cleaners-production.up.railway.app"],
     port: parseInt(process.env.PORT || '5173'),
-    proxy: {
-      '/api': 'bizz-cleaners-server-production.up.railway.app'
-    }
   }
 });

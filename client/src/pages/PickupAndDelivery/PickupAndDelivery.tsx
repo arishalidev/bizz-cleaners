@@ -8,7 +8,7 @@ import ServiceArea from "./ServiceArea.tsx";
 
 import React, {useEffect, useState} from "react";
 import DeliveryFaq from "./DeliveryFaq.tsx";
-import {linkToPortal} from "../../utils/links.ts";
+import {linkToPortal, apiBase} from "../../utils/links.ts";
 
 interface PickupAndDeliveryProps {
 
@@ -19,7 +19,7 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
     const [googleMapsApiKey, setGoogleMapsApiKey] = useState<string | undefined>();
 
     useEffect(() => {
-        fetch("/api/get/google-maps-api-key")
+        fetch(`${apiBase}/api/get/google-maps-api-key`)
             .then(res => res.json())
             .then(data => {
                 setGoogleMapsApiKey(data.key)

@@ -7,6 +7,7 @@ import Footer from "./components/Footer.tsx";
 import PickupAndDelivery from "./pages/PickupAndDelivery/PickupAndDelivery.tsx";
 import {useEffect, useState} from "react";
 import ContactUs from "./pages/ContactUs.tsx";
+import {apiBase} from "./utils/links.ts";
 
 
 function ScrollToTop() {
@@ -26,7 +27,7 @@ function App() {
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
 
     useEffect(() => {
-        fetch('/api/get/business-information')
+        fetch(`${apiBase}/api/get/business-information`)
             .then(res => res.json())
             .then(data => {
                 setHoursOfOperation(data.hoursOfOperation);
