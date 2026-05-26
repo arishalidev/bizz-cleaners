@@ -9,7 +9,7 @@ import {useEffect, useState} from "react";
 import ContactUs from "./pages/ContactUs.tsx";
 import {apiBase} from "./utils/links.ts";
 
-import { NavbarContext } from "./contexts/navbarContext.tsx"
+import { NavbarContext } from "./contexts/NavbarContext.tsx"
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();

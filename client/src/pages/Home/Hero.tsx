@@ -3,12 +3,48 @@ import heroImage from '../../assets/hero-image.jpg';
 import Button from "../../components/Button.tsx";
 import Body from "../../components/Body.tsx";
 import { linkToDirections, linkToPortal } from "../../utils/links.ts";
+import {useContext, useEffect, useRef} from "react";
+import {NavbarContext} from "../../contexts/NavbarContext.tsx";
 
 function Hero() {
 
+    const {setScrolledAny, setScrolledPast} = useContext(NavbarContext)
+    const scrolledAnySentinelRef = useRef(null)
+    const scrolledPastSentinelRef = useRef(null)
+
+    useEffect(() => {
+        const sentinel = scrolledAnySentinelRef.current;
+        if(!sentinel) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setScrolledAny(!entry.isIntersecting);
+            }, { threshold : 0 }
+        )
+
+        observer.observe(sentinel);
+        return () => observer.disconnect();
+    });
+
+    useEffect(() => {
+        const sentinel = scrolledPastSentinelRef.current;
+        if(!sentinel) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setScrolledPast(!entry.isIntersecting);
+            }, { threshold : 0 }
+        )
+
+        observer.observe(sentinel);
+        return () => observer.disconnect();
+    });
 
     return (
         <div className={"relative"}>
+            <div ref={scrolledAnySentinelRef} className={"absolute top-0"}/>
+            <div ref={scrolledPastSentinelRef} className={"absolute bottom-0"}/>
+
             <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105 md:max-h-160"}/>
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.7)]"}></div>
 

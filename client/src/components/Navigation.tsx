@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
-import {NavbarContext} from "../contexts/navbarContext.tsx";
+import {NavbarContext} from "../contexts/NavbarContext.tsx";
 
 interface NavigationProps {
 
@@ -11,11 +11,6 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const { scrolledAny, scrolledPast } = useContext(NavbarContext);
-
-    useEffect(() => {
-
-    })
-
 
     function selectedOnMobileCss( params : { isActive: boolean }) : string {
         const isActive = params.isActive;
