@@ -9,6 +9,7 @@ import {useEffect, useState} from "react";
 import ContactUs from "./pages/ContactUs.tsx";
 import {apiBase} from "./utils/links.ts";
 
+import { NavbarContext } from "./contexts/navbarContext.tsx"
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
@@ -24,6 +25,12 @@ function ScrollToTop() {
 
 function App() {
 
+    // User has scrolled at all
+    const [scrolledAny, setScrolledAny] = useState(false);
+
+    // User has scrolled all the way past the hero
+    const [scrolledPast, setScrolledPast] = useState(false);
+
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
 
     useEffect(() => {
@@ -36,8 +43,10 @@ function App() {
     return (
       <BrowserRouter>
           <ScrollToTop/>
+            <NavbarContext.Provider value={{scrolledAny, setScrolledAny, scrolledPast, setScrolledPast}}>
+
               <Navigation/>
-              <div className={"pt-17"}>
+              <div>
                   <Routes>
                       <Route path={"/"} element={<Home/>} />
                       <Route path={"/About"} element={<About/>} />
@@ -45,7 +54,10 @@ function App() {
                       <Route path={"/contact"} element={<ContactUs hoursOfOperation={hoursOfOperation}/>} />
                   </Routes>
               </div>
+            </NavbarContext.Provider>
+
             <Footer hoursOfOperation={hoursOfOperation}/>
+
       </BrowserRouter>
   );
 }

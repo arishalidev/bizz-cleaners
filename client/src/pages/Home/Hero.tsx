@@ -2,9 +2,11 @@ import '../../App.css';
 import heroImage from '../../assets/hero-image.jpg';
 import Button from "../../components/Button.tsx";
 import Body from "../../components/Body.tsx";
-import {linkToDirections, linkToPortal} from "../../utils/links.ts";
+import { linkToDirections, linkToPortal } from "../../utils/links.ts";
 
 function Hero() {
+
+
     return (
         <div className={"relative"}>
             <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105 md:max-h-160"}/>

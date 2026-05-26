@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
+import {NavbarContext} from "../contexts/navbarContext.tsx";
 
 interface NavigationProps {
 
@@ -9,12 +10,18 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({}) => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const { scrolledAny, scrolledPast } = useContext(NavbarContext);
+
+    useEffect(() => {
+
+    })
+
 
     function selectedOnMobileCss( params : { isActive: boolean }) : string {
         const isActive = params.isActive;
         const baseCss = "p-4 lg:rounded-md";
 
-        if(isActive) {
+        if (isActive) {
             return baseCss + " bg-primary-500 text-white"
         } else {
             return baseCss + " hover:bg-primary-300"
@@ -22,8 +29,8 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
     }
 
     return (
-        <div className={"fixed z-50 w-full bg-neutral-50 "}>
-            <nav className={"relative z-10 px-3 py-2 flex items-center"}>
+        <div className={"fixed z-50 w-full "}>
+            <nav className={"relative z-10 px-3 py-2 flex items-center limit-size"}>
 
                 <Link to={"/"}><img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>
                 <button className={"ml-auto lg:hidden"} onClick={() => {setIsOpen(!isOpen)}}>
