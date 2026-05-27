@@ -23,6 +23,11 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
         }
     }
 
+    // TODO's
+    // Resize images throughout the whole website (esp on lg screens?)
+    // make the navbar have a shadow after scrolling slightly off the top (similar to rinse.com)
+    // Think about moving section label and headline below image in business information section
+
     //css for when scrolled but still on hero
     const onHeroCss = (scrolledAny && !scrolledPast) ? "" : ""
     const pastHeroCss = scrolledPast ? " bg-neutral-50 text-neutral-900 shadow-md" : " text-white"
@@ -32,8 +37,9 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
             <nav className={"relative z-10 px-3 py-2 flex items-center limit-size"}>
 
                 <Link to={"/"}><img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>
-                <button className={"ml-auto lg:hidden"} onClick={() => {setIsOpen(!isOpen)}}>
-                    <MdMenu className={"text-5xl"}/>
+
+                <button className={"ml-auto bg-primary-500 rounded-md text-neutral-900 size-12 flex items-center justify-center lg:hidden"} onClick={() => {setIsOpen(!isOpen)}}>
+                    <MdMenu className={"text-4xl"}/>
                 </button>
 
                 <div className={"ml-auto hidden lg:flex lg:gap-2"}>
@@ -47,7 +53,7 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
             </nav>
 
 
-            <div className={`lg:hidden absolute top-0 h-screen w-full bg-neutral-50 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+            <div className={`lg:hidden absolute top-0 h-screen w-full bg-neutral-50 text-neutral-900 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
                 <div className={"absolute bottom-0"}>
                     <div className={"text-3xl pb-8"}>
                         <nav className={"flex flex-col"}>
