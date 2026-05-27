@@ -23,14 +23,13 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
         }
     }
 
-    //CSS for when scrolled but still on hero
-    const onHeroCss = (scrolledAny && !scrolledPast) ? "pointer-events-none fixed inset-x-0 top-0 z-60 h-17.5 bg-linear-to-b from-black/20 to-transparent" : ""
+    //CSS for when scrolled past hero
     const pastHeroCss = scrolledPast ? " bg-neutral-50 text-neutral-900 shadow-md" : " text-white"
 
     return (
         <div className={"fixed z-50 w-full" + pastHeroCss}>
 
-            <div className={onHeroCss}></div>
+            <div className={`pointer-events-none fixed inset-x-0 top-0 z-5 h-20.5 bg-linear-to-b from-neutral-900/50 to-transparent transition-opacity duration-300 ${(scrolledAny && !scrolledPast) ? "opacity-100" : "opacity-0"}`}></div>
 
             <nav className={"relative z-10 px-3 py-2 flex items-center limit-size"}>
 
@@ -45,7 +44,6 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                     <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
                     <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
                     <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
-
 
                 </div>
             </nav>
