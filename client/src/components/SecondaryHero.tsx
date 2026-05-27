@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import heroImage from "../assets/hero-image.jpg";
+import { NavbarContext } from "../contexts/NavbarContext.tsx"
+import {useContext, useRef } from "react";
 
 interface SecondaryHeroProps {
     header: string,
@@ -8,8 +10,26 @@ interface SecondaryHeroProps {
 }
 
 const SecondaryHero: React.FC<SecondaryHeroProps> = ({header, subHeader = "", cta} : SecondaryHeroProps) => {
+
+    const { setScrolledAny, setScrolledPast } = useContext(NavbarContext)
+    const heroRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const hero = heroRef.current;
+        if(!hero) return;
+
+        const update = () => {
+            const bottom = hero.getBoundingClientRect().bottom;
+            setScrolledAny(window.scrollY > 0);
+            setScrolledPast(bottom <= 70);
+        }
+
+        update();
+        window.addEventListener("scroll", update, {passive: true});
+        return () => window.removeEventListener("scroll", update);
+    }, []);
     return (
-        <div className={"relative overflow-hidden max-h-72"}>
+        <div className={"relative overflow-hidden max-h-72"} ref={ heroRef}>
             <img src={heroImage} alt={"Clean pressed shirts"} className={"block w-full object-cover min-h-105"}/>
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.7)]"}></div>
 
