@@ -23,17 +23,15 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
         }
     }
 
-    // TODO's
-    // Resize images throughout the whole website (esp on lg screens?)
-    // make the navbar have a shadow after scrolling slightly off the top (similar to rinse.com)
-    // Think about moving section label and headline below image in business information section
-
-    //css for when scrolled but still on hero
-    const onHeroCss = (scrolledAny && !scrolledPast) ? "" : ""
+    //CSS for when scrolled but still on hero
+    const onHeroCss = (scrolledAny && !scrolledPast) ? "pointer-events-none fixed inset-x-0 top-0 z-60 h-17.5 bg-linear-to-b from-black/20 to-transparent" : ""
     const pastHeroCss = scrolledPast ? " bg-neutral-50 text-neutral-900 shadow-md" : " text-white"
 
     return (
-        <div className={"fixed z-50 w-full" + onHeroCss + pastHeroCss}>
+        <div className={"fixed z-50 w-full" + pastHeroCss}>
+
+            <div className={onHeroCss}></div>
+
             <nav className={"relative z-10 px-3 py-2 flex items-center limit-size"}>
 
                 <Link to={"/"}><img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>

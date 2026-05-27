@@ -26,7 +26,7 @@ const SecondaryHero: React.FC<SecondaryHeroProps> = ({header, subHeader = "", ct
 
         update();
         window.addEventListener("scroll", update, {passive: true});
-        return () => window.removeEventListener("scroll", update);
+        return () => window.removeEventListener("scroll", update)
     }, []);
     return (
         <div className={"relative overflow-hidden max-h-72"} ref={ heroRef}>

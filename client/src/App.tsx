@@ -45,7 +45,7 @@ function App() {
           <ScrollToTop/>
             <NavbarContext.Provider value={{scrolledAny, setScrolledAny, scrolledPast, setScrolledPast}}>
 
-              <Navigation/>
+                <Navigation/>
               <div>
                   <Routes>
                       <Route path={"/"} element={<Home/>} />
