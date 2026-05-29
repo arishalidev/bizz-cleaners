@@ -33,7 +33,7 @@ function Hero() {
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.7)]"}></div>
 
             <div className={"responsive-px limit-size"}>
-                <div className={"absolute top-24 text-white space-y-2"}>
+                <div className={"absolute top-24 min-[850px]:top-28 text-white space-y-2"}>
                     <h1 className={"text-3xl font-semibold md:text-5xl md:mb-5"}>Flower Mound’s<br/> Trusted Dry Cleaners</h1>
                     <h2 className={"text-xl font-normal md:text-2xl"}>Same Day Services <br/> Free Pickup and Delivery</h2>
 
