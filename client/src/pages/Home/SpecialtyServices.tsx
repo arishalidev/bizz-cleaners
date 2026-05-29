@@ -39,7 +39,7 @@ function SpecialtyServices() {
                 <SectionLabel className={"text-white"}> Specialty Services</SectionLabel>
                 <Headline className={"mt-4"}>The right care for whatever's in your closet</Headline>
 
-                <div className={"flex flex-col gap-12 md:gap-18 mt-2 lg:grid lg:grid-cols-2 lg:mx-auto"}>
+                <div className={"flex flex-col gap-12 md:gap-18 mt-2 lg:grid lg:grid-cols-2"}>
                     {specialtyServices.map(service =>
                         <SpecialtyService title={service.title}
                                           description={service.description}

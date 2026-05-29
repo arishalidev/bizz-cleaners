@@ -11,12 +11,14 @@ interface SpecialtyServiceProps {
 }
 function SpecialtyService({title, description, link, image, imageAlt}: SpecialtyServiceProps) {
     return (
-        <div className={"md:max-w-200"}>
+        <div className={"w-full mx-auto lg:max-w-135"}>
             <div className={"flex justify-center mt-4"}>
-                <img className={"rounded-lg block w-full aspect-square object-cover p-8 lg:p-0"} src={image} alt={imageAlt}/>
+                <img className={"rounded-lg block w-full object-cover my-8 aspect-square max-h-112 lg:max-h-96"} src={image} alt={imageAlt}/>
             </div>
             <h3 className={"font-semibold text-xl md:text-2xl mb-2 md:mb-4 lg:mt-8 lg:mb-2"}>{title}</h3>
-            <Body className={"my-1"}>{description}</Body>
+            <div className={"max-w-124 md:max-w-154"}>
+                <Body className={"my-1"}>{description}</Body>
+            </div>
             <div className={"mt-2"}>
                 <Link to={link} className={"inline-flex items-center h-full gap-1 text-primary-400 font-semibold relative"}>
                     <Body>Learn More</Body><GoArrowRight className={"md:text-xl"}/>
