@@ -14,9 +14,9 @@ function PickupAndDeliveryHome() {
             <div className={"limit-size responsive-px responsive-py"}>
                 <div className={"flex flex-col gap-3"}>
                     <SectionLabel>Pickup & Delivery</SectionLabel>
-                    <Headline className={"mt-4"}>We'll handle the laundry. You handle life</Headline>
+                    <Headline className={"mt-1"}>We'll handle the laundry. You handle life</Headline>
 
-                    <Body className={"mt-2"}>
+                    <Body className={"mt-2 max-w-150"}>
                         Between work, family, and everything in between, getting to the cleaners shouldn't be one more errand. Let us take care of your clothes while you get on with your day.
                     </Body>
 
@@ -25,11 +25,9 @@ function PickupAndDeliveryHome() {
                         <Bullet> Get hours of your week back </Bullet> <br/>
                         <Bullet> Schedule online in minutes </Bullet>
                     </div>
-
-                    <Body className={"-mt-2 italic text-sm"}>Free on orders $25 and up.</Body>
                 </div>
 
-                <div className={"mt-4 md:mt-8 lg:mt-12 md:mx-auto"}>
+                <div className={"mt-6 md:mt-8 lg:mt-12 md:mx-auto"}>
                     <SectionLabel dot={false} className={"mb-4 md:mb-6"}>How It Works</SectionLabel>
 
                     <div className={"flex flex-col gap-10 md:gap-16 lg:flex-row"}>
