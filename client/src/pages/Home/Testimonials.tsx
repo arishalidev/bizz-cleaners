@@ -13,7 +13,7 @@ const testimonials = [
     {
         headshot: testimonialHeadshot2,
         name: "Shaan S",
-        review: "I've been a clothing collector for over 10 years, with a collection entailing garments from late 80s Ralph Lauren with unique fabrics to contemporary clothes as well. Over the years I have exclusively been using this service because when I purchase clothes from overseas, no matter the age, these guys make it feel brand new. Recently, my house caught on fire, and I had that deep smoke smell in my entire collection, and to my surprise, they were able to tailor their cleaning process specifically to my needs, and again, left me pleased! I highly recommend this service, as a collector and enthusiast with very specific and rare garments, I would not go anywhere else!",
+        review: "... Over the years I have exclusively been using this service because when I purchase clothes from overseas, no matter the age, these guys make it feel brand new. Recently, my house caught on fire, and I had that deep smoke smell in my entire collection, and to my surprise, they were able to tailor their cleaning process specifically to my needs, and again, left me pleased! I highly recommend this service, as a collector and enthusiast with very specific and rare garments, I would not go anywhere else!",
         key: 1,
     },
     {

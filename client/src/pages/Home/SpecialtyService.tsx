@@ -15,7 +15,7 @@ function SpecialtyService({title, description, link, image, imageAlt}: Specialty
             <div className={"flex justify-center mt-4"}>
                 <img className={"rounded-lg block w-full object-cover my-8 aspect-square max-h-112 lg:max-h-96"} src={image} alt={imageAlt}/>
             </div>
-            <h3 className={"font-semibold text-xl md:text-2xl mb-2 md:mb-4 lg:mt-8 lg:mb-2"}>{title}</h3>
+            <h3 className={"font-semibold text-xl md:text-2xl mb-2 md:mb-4 lg:mb-2"}>{title}</h3>
             <div className={"max-w-124 md:max-w-154"}>
                 <Body className={"my-1"}>{description}</Body>
             </div>
