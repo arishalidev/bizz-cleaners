@@ -1,14 +1,15 @@
 import * as React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "other";
 }
 
 function Button({children, variant = "primary", className = "", ...rest}: ButtonProps) {
 
     const styles = {
         primary: "bg-primary-500 text-white hover:bg-primary-600",
-        secondary: "bg-white text-neutral-900 hover:bg-neutral-50"
+        secondary: "bg-white text-neutral-900 hover:bg-neutral-50",
+        other: ""
     };
 
     return(

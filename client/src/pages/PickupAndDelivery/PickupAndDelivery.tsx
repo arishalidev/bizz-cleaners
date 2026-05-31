@@ -34,8 +34,10 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
             <Steps/>
             <DeliveryHighlights/>
 
-            <div className={"responsive-px limit-size pt-2 pb-12 bg-white"}>
-                <Button className={"w-full"} onClick={linkToPortal}>Book now</Button>
+            <div className={"bg-white"}>
+                <div className={"responsive-px limit-size pt-2 pb-12"}>
+                    <Button className={"w-full"} onClick={linkToPortal}>Book now</Button>
+                </div>
             </div>
 
             <ServiceArea apiKey={googleMapsApiKey}/>
