@@ -34,8 +34,8 @@ function Hero() {
 
             <div className={"responsive-px limit-size"}>
                 <div className={"absolute top-24 min-[850px]:top-28 text-white space-y-2"}>
-                    <h1 className={"text-3xl font-semibold md:text-5xl md:mb-5"}>Flower Mound’s<br/> Trusted Dry Cleaners</h1>
-                    <h2 className={"text-xl font-normal md:text-2xl"}>Same Day Services <br/> Free Pickup and Delivery</h2>
+                    <h1 className={"text-3xl font-semibold md:text-5xl md:mb-5"}>Professional garment care,<br className={"max-[440px]:hidden"}/>  delivered to your door</h1>
+                    <h2 className={"text-xl font-normal md:text-2xl"}>Proudly serving Flower Mound, Highland Village,<br className={"max-[500px]:hidden"}/> Lewisville, and surrounding communities</h2>
 
                     <div className={"mt-12 flex space-x-4 md:space-x-6"}>
                         <Button variant={"primary"} onClick={linkToPortal}>Schedule Pickup</Button>

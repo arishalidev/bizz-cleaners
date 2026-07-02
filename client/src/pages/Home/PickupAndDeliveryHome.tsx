@@ -13,11 +13,14 @@ function PickupAndDeliveryHome() {
         <div className={"bg-white"}>
             <div className={"limit-size responsive-px responsive-py"}>
                 <div className={"flex flex-col gap-3"}>
-                    <SectionLabel>Pickup & Delivery</SectionLabel>
-                    <Headline className={"mt-1"}>We'll handle the laundry. You handle life</Headline>
+                    <Headline className={"mt-1"}>Pickup and delivery that works <br/> around your day</Headline>
 
                     <Body className={"mt-2 max-w-150"}>
-                        Between work, family, and everything in between, getting to the cleaners shouldn't be one more errand. Let us take care of your clothes while you get on with your day.
+                        Finding time to drop off clothes isn't always easy. Some weeks you're juggling work, kids, errands, and a dozen other things. A trip to the dry cleaner can quickly turn into one more thing on the list.
+                    </Body>
+
+                    <Body className={"mt-2"}>
+                        Our pickup and delivery service is designed to take that task off your plate.
                     </Body>
 
                     <div>
