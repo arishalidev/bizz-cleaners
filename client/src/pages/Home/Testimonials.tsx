@@ -39,7 +39,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
     return (
         <div className={"responsive-px limit-size responsive-py"}>
             <SectionLabel>Testimonials</SectionLabel>
-            <div className={"w-75 md:w-full md:mt-2"}>
+            <div className={"sm:w-75 md:w-full md:mt-2"}>
                 <Headline>See Why We are Number One in Flower Mound</Headline>
             </div>
 

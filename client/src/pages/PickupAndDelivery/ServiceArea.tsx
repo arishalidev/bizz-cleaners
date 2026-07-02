@@ -141,7 +141,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                                    value={zipCode}
                                    onChange={(e) => setZipCode(e.target.value)}
                                    placeholder={"Enter your zip code"}
-                                   className={" bg-white rounded-md outline p-4 md:py-5 w-62.5 text-lg"}/>
+                                   className={" bg-white rounded-md outline p-4 md:py-5 min-w-16 text-lg"}/>
                             <Button type={"button"} variant={"other"}
                                     className={"outline-1 w-50 bg-neutral-900 text-neutral-50 hover:bg-black"}
                                     onClick={zipCodeEntry}>Enter</Button>

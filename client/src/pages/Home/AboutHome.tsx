@@ -16,7 +16,7 @@ const AboutHome: React.FC<AboutHomeProps> = ({}) => {
                             <SectionLabel>Our Story</SectionLabel>
                             <Headline className={"mt-1"}>A family business, three decades in the making</Headline>
                         <div className={"lg:flex lg:gap-8 lg:items-start mt-4"}>
-                            <div className={"flex flex-col gap-4 min-w-110"}>
+                            <div className={"flex flex-col gap-4 sm:min-w-110"}>
                                 <Body>It started with one small shop in Bay City, Texas, back in 1996. Three decades
                                     later, we've run cleaners across the Houston area and as far north as Vancouver —
                                     and
