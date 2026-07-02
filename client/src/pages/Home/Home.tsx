@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import AboutHome from "./AboutHome.tsx";
 import Button from "../../components/Button.tsx";
 import { linkToPortal, apiBase } from "../../utils/links.ts";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
 
@@ -28,6 +29,8 @@ function Home() {
             })
     }, []);
 
+    const navigate = useNavigate();
+
     return (
         <div>
             <Hero/>
@@ -35,8 +38,9 @@ function Home() {
             <Highlights/>
             <PickupAndDeliveryHome/>
 
-            <div className={"bg-white responsive-px pb-15 -mt-4 md:flex md:justify-center"}>
-                <Button className={"w-full md:w-3/5 max-w-4xl"} onClick={linkToPortal}>Book Now</Button>
+            <div className={"bg-white responsive-px pb-15 -mt-4 flex gap-3"}>
+                <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule pickup </Button>
+                <Button className={"flex-1 md:flex-none md:w-56"} onClick={() => navigate("/delivery")} variant={"other"}>Learn more</Button>
             </div>
 
 
