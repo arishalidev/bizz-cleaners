@@ -14,7 +14,7 @@ function Button({children, variant = "primary", className = "", ...rest}: Button
 
     return(
         <button
-            className={`py-2 px-4 md:py-4 lg:py-5 lg:px-8 rounded-md text-lg shadow-md active:shadow-2xs ${styles[variant]} ${className}`}
+            className={`py-2 px-4 md:py-3 lg:px-6 rounded-md shadow-md active:shadow-2xs ${styles[variant]} ${className}`}
             {...rest}
         >{children}</button>
     )
