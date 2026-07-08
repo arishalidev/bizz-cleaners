@@ -1,26 +1,30 @@
 import type {IconType} from "react-icons";
 import Body from "../../components/Body.tsx";
-import React from "react";
 
-interface HighlightProps {
+interface Highlight {
     Icon: IconType,
     text: string,
-    highlightId: number
-    setModal: React.Dispatch<React.SetStateAction<number | undefined>>;
-
+    description: string,
 }
 
 
-function Highlight({Icon, text, highlightId, setModal}: HighlightProps) {
+function Highlight({Icon, text, description}: Highlight) {
     return (
-        <button className={`group flex flex-col w-fit items-center min-[850px]:flex-1`} onClick={() => setModal(highlightId)}>
-            <span className={"inline-flex size-16 md:size-20 bg-primary-100 rounded-full items-center justify-center text-3xl"}>
-                <span className={"inline-flex size-15 md:size-18 group-hover:bg-primary-200 rounded-full items-center justify-center text-3xl md:text-4xl"}>
-                    <Icon/>
+        <div>
+
+            <div className={"grid grid-cols-[auto_1fr] gap-x-4"}>
+                <div className={`flex w-fit gap-2 items-baseline-last`}>
+                <span
+                    className={"inline-flex w-14 h-14 bg-primary-100 rounded-full items-center justify-center text-3xl"}>
+                    <Icon className={"text-3xl"}/>
                 </span>
-            </span>
-            <Body className={`mt-2 font-semibold text-primary-500`}>{text}</Body>
-        </button>
+                </div>
+
+                    <Body className={`font-semibold content-center`}>{text}</Body>
+                    <Body className={"col-start-2"}>{description}</Body>
+            </div>
+
+        </div>
     )
 }
 
