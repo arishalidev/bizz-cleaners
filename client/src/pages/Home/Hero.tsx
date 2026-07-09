@@ -32,7 +32,7 @@ function Hero() {
             <div className={"absolute inset-0 bg-[hsla(0,0%,0%,.25)]"}></div>
 
             <div className={"responsive-px limit-size"}>
-                <div className={"absolute top-24 lg:top-30 text-white space-y-2"}>
+                <div className={"absolute top-30 lg:top-36 text-white space-y-2"}>
                     <h1 className={"text-3xl text-shadow-lg font-bold md:text-4xl lg:text-5xl lg:mb-5"}>Professional garment care,<br className={"max-[440px]:hidden"}/>  delivered to your door</h1>
                     <h2 className={"text-xl lg:text-2xl text-shadow-lg font-normal"}>Proudly serving Flower Mound, Highland Village,<br className={"max-[500px]:hidden"}/>Lewisville,and surrounding communities</h2>
 

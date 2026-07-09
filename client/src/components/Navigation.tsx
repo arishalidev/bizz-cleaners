@@ -10,7 +10,7 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({}) => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const { scrolledAny, scrolledPast } = useContext(NavbarContext);
+    const { scrolledPast } = useContext(NavbarContext);
 
     function selectedOnMobileCss( params : { isActive: boolean }) : string {
         const isActive = params.isActive;
@@ -24,16 +24,23 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
     }
 
     //CSS for when scrolled past hero
-    const pastHeroCss = scrolledPast ? " bg-neutral-50 text-neutral-900 shadow-md" : " text-white"
+    const pastHeroCss = scrolledPast ? " bg-neutral-800 text-neutral-50 shadow-md" : " text-white"
 
     return (
         <div className={"fixed z-50 w-full" + pastHeroCss}>
 
-            <div className={`pointer-events-none fixed inset-x-0 top-0 z-5 h-20.5 bg-linear-to-b from-neutral-900/50 to-transparent transition-opacity duration-300 ${(scrolledAny && !scrolledPast) ? "opacity-100" : "opacity-0"}`}></div>
-
+            <div className={`pointer-events-none fixed inset-x-0 top-0 z-5 h-20.5 bg-linear-to-b from-neutral-900/50 to-transparent transition-opacity duration-300 opacity-100`}></div>
             <nav className={"relative z-10 px-6 py-2 flex items-center limit-size"}>
 
-                <Link to={"/"}><img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-15"} onClick={() => {setIsOpen(false)}}/></Link>
+                <Link to={"/"}>
+                    <div className={"flex gap-2"} onClick={() => {setIsOpen(false)}}>
+                        <img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-14 lg:w-15"}/>
+                        <div className={"font-semibold font-[Arial_Black] text-2xl lg:text-3xl italic mt-4.5 lg:mt-5 tracking-wide"}> CLEANERS</div>
+                    </div>
+
+                    <div className={"lg:text-lg text-neutral-50 font-[Arial] font-semibold"}>Dry Cleaning with Home Delivery </div>
+
+                </Link>
 
                 <button className={"ml-auto bg-primary-500 rounded-md text-neutral-900 size-11 flex items-center justify-center lg:hidden"} onClick={() => {setIsOpen(!isOpen)}}>
                     <MdMenu className={"text-2xl"}/>
