@@ -73,7 +73,7 @@
 }
 
 @utility responsive-px {
-    @apply px-4 md:px-10 lg:px-24;
+    @apply px-4 md:px-12 lg:px-24;
 }
 
 @utility responsive-py {

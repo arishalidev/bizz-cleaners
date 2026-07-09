@@ -17,12 +17,25 @@ const dropOffBoxHighlight = {image: dropOffBox, icon: PiDoor, text: "24/7 Secure
 function Highlights() {
 
     return (
-        <div className={"responsive-py px-2 max-w-5xl mx-auto"}>
-            <div className={"flex flex-col justify-center place-items-center gap-6"}>
-                <Highlight Icon={sameDayHighlight.icon} text={sameDayHighlight.text} description={sameDayHighlight.description}/>
-                <Highlight Icon={dropOffBoxHighlight.icon} image={dropOffBoxHighlight.image} text={dropOffBoxHighlight.text} description={dropOffBoxHighlight.description}/>
-                <Highlight Icon={ecoFriendlyHighlight.icon} text={ecoFriendlyHighlight.text} description={ecoFriendlyHighlight.description}/>
-                <Highlight Icon={deliveryHighlight.icon} image={deliveryHighlight.image} text={deliveryHighlight.text} description={deliveryHighlight.description}/>
+        <div className={"responsive-py px-4 md:px-8 lg:px-12 max-w-5xl mx-auto"}>
+            <div className={"flex flex-col justify-center place-items-center gap-6 lg:flex-row"}>
+                <div className={"flex flex-col gap-6 flex-1 self-start"}>
+                    <Highlight Icon={sameDayHighlight.icon} text={sameDayHighlight.text}
+                              description={sameDayHighlight.description}/>
+
+                    <Highlight Icon={dropOffBoxHighlight.icon} image={dropOffBoxHighlight.image}
+                               imageAlt={"Drop off box located at the front of our store"}
+                               text={dropOffBoxHighlight.text} description={dropOffBoxHighlight.description}/>
+                </div>
+
+                <div className={"flex flex-col gap-6 flex-1 self-start"}>
+                    <Highlight Icon={ecoFriendlyHighlight.icon} text={ecoFriendlyHighlight.text}
+                              description={ecoFriendlyHighlight.description}/>
+
+                    <Highlight Icon={deliveryHighlight.icon} image={deliveryHighlight.image}
+                               text={deliveryHighlight.text} description={deliveryHighlight.description}
+                               imageAlt={"Our signature delivery van parked outside a house"}/>
+                </div>
             </div>
         </div>
     )
