@@ -1,10 +1,10 @@
 import Headline from "../../components/Headline.tsx";
-import Bullet from "../../components/Bullet.tsx";
 import PickupAndDeliveryHomeStep from "./PickupAndDeliveryHomeStep.tsx";
 
 import step1 from "../../assets/deskWithComputer.png"
 import step2 from "../../assets/deliveryVan.png"
 import step3 from "../../assets/cleanClothes.png"
+import deliveredClothes from "../../assets/deliveredClothes.png"
 import Body from "../../components/Body.tsx";
 import SectionLabel from "../../components/SectionLabel.tsx";
 
@@ -13,46 +13,53 @@ function PickupAndDeliveryHome() {
         <div className={"bg-white"}>
             <div className={"limit-size responsive-px responsive-py"}>
                 <div className={"flex flex-col gap-3"}>
-                    <Headline className={"mt-1"}>Pickup and delivery that works <br/> around your day</Headline>
+                    <Headline className={"mt-1"}>Pickup and delivery that <br/> works around your day</Headline>
 
                     <Body className={"mt-2 max-w-150"}>
                         Finding time to drop off clothes isn't always easy. Some weeks you're juggling work, kids, errands, and a dozen other things. A trip to the dry cleaner can quickly turn into one more thing on the list.
                     </Body>
 
-                    <Body className={"mt-2"}>
-                        Our pickup and delivery service is designed to take that task off your plate.
-                    </Body>
-
-                    <div>
-                        <Bullet> No pickup or delivery fees* </Bullet> <br/>
-                        <Bullet> Get hours of your week back </Bullet> <br/>
-                        <Bullet> Schedule online in minutes </Bullet>
-                    </div>
+                    <Body>Our pickup and delivery service is designed to take that task off your plate.</Body>
                 </div>
 
                 <div className={"mt-6 md:mt-8 lg:mt-12 md:mx-auto"}>
-                    <SectionLabel dot={false} className={"mb-4 md:mb-6"}>How It Works</SectionLabel>
+                    <SectionLabel dot={false} className={"mb-4 md:mb-6"}>Our easy process</SectionLabel>
 
                     <div className={"flex flex-col gap-10 md:gap-16 lg:flex-row"}>
                         <PickupAndDeliveryHomeStep image={step1}
-                                                   description={"Pick a time and location that works for you."}
-                                                   tagline={"Takes less than a minute."}
-                                                   title={"1. Schedule a pickup"}
+                                                   description={"Choose a pickup date through our online portal or mobile app."}
+                                                   tagline={""}
+                                                   title={"1. Schedule your pickup "}
                                                    imageAlt={""}/>
 
                         <PickupAndDeliveryHomeStep image={step2}
-                                                   description={"Set your bag outside on pickup day."}
-                                                   tagline={"No need to be home!"}
-                                                   title={"2. Leave it at the door"}
+                                                   description={"Place your garments in your Bizz Cleaners weatherproof bag."}
+                                                   tagline={"No need to wait at home."}
+                                                   title={"2. Leave your bag outside "}
                                                    imageAlt={""}/>
 
                         <PickupAndDeliveryHomeStep image={step3}
-                                                   description={"Get your clothes back, within 48 hours."}
-                                                   tagline={"Simply sit back and relax."}
-                                                   title={"3. Get it back fresh"}
+                                                   description={"We'll clean, inspect, and return your items ready to wear."}
+                                                   tagline={""}
+                                                   title={"3. Receive freshly cleaned clothes"}
                                                    imageAlt={"Clean fresh clothes just the way you like them"}/>
 
                     </div>
+
+                    <h3 className={`mt-10 font-medium text-xl md:text-2xl`}>Your clothes stay in our care</h3>
+
+                    <div className={"flex flex-col lg:flex-row gap-4 mt-4"}>
+                        <div>
+                            <Body className={"max-w-150"}>
+                            We don't use a third-party delivery company. The people picking up and delivering your
+                            clothes work directly with our team, so your garments receive the same care and attention every step of
+                            the way.</Body>
+                        </div>
+
+
+                        <img src={deliveredClothes} className={"lg:w-5/10"} alt={""}></img>
+                    </div>
+                    <h3 className={`mt-10 font-medium text-xl md:text-2xl`}>Ready to start saving hours every month?</h3>
                 </div>
             </div>
         </div>
