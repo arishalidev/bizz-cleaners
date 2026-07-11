@@ -58,7 +58,7 @@ function PickupAndDeliveryHome() {
 
                         <img src={deliveredClothes} className={"lg:w-5/10"} alt={""}></img>
                     </div>
-                    <div className={"mt-10 flex flex-col gap-2 lg:flex-row lg:gap-4"}>
+                    <div className={"mt-10 flex flex-col gap-2"}>
                         <h3 className={`font-medium text-xl md:text-2xl lg:max-w-150 lg:mr-auto`}>Ready to start saving hours every month?</h3>
                         <div className={"lg:w-5/10"}><Body>Skip the trip to the dry cleaner and let us come to you.</Body></div>
                     </div>

@@ -1,43 +1,50 @@
 import SpecialtyService from "./SpecialtyService.tsx";
 import Headline from "../../components/Headline.tsx";
 
-import specialty1 from "../../assets/specialty1.jpg"
-import specialty2 from "../../assets/specialty2.jpg"
-import specialty3 from "../../assets/specialty3.jpg"
-import SectionLabel from "../../components/SectionLabel.tsx";
+import specialty1 from "../../assets/sp1.png"
+import specialty2 from "../../assets/sp2.png"
+import specialty3 from "../../assets/sp3.png"
+import specialty4 from "../../assets/sp4.png"
 
 const specialtyServices = [
     {
-        title: "Wedding Dresses",
-        description: "Expert cleaning, long term security. Your gown stays as beautiful as the day you wore it — for daughters, granddaughters, or just memories.",
+        title: "Wedding dress cleaning & preservation",
+        description: "From intricate beading and lace to delicate silk fabrics, we carefully clean and preserve wedding gowns so they remain beautiful for years to come.",
         link: "",
         image: specialty1 ,
         imageAlt: "Wedding Dress",
         key: 1,
     },
     {
-        title: "Indian Clothes",
-        description: "Sarees, lehengas, sherwanis, and intricate beadwork — handled with the care these garments deserve.",
+        title: "Indian garments",
+        description: "Sarees, lehengas, sherwanis, and embroidered garments require specialized care. We clean and press each piece individually to protect colors, embellishments, and fine details.",
         link: "",
         image: specialty2,
         imageAlt: "Indian Saree",
         key: 2,
     },
     {
-        title: "Wash and Fold",
-        description: "Timely, affordable, and perfectly folded every time. Save time for the things you love and leave your laundry with us.",
+        title: "Wash & fold laundry",
+        description: "Save time with professional wash and fold service. Your clothes are sorted, cleaned, folded, and packaged neatly for pickup or delivery.",
         link: "",
         image: specialty3,
+        imageAlt: "Folded Clothes",
+        key: 3,
+    },
+    {
+        title: "Dry Cleaning",
+        description: "Professional garment care for suits, dresses, business attire, and everyday clothing.",
+        link: "",
+        image: specialty4,
         imageAlt: "Folded Clothes",
         key: 3,
     },]
 
 function SpecialtyServices() {
     return (
-        <div className={"text-white bg-neutral-900"}>
+        <div className={""}>
             <div className={"limit-size responsive-px responsive-py"}>
-                <SectionLabel className={"text-white"}> Specialty Services</SectionLabel>
-                <Headline className={"mt-4"}>The right care for whatever's in your closet</Headline>
+                <Headline className={"mt-4"}>Specialty cleaning services</Headline>
 
                 <div className={"flex flex-col gap-12 md:gap-18 mt-2 lg:grid lg:grid-cols-2"}>
                     {specialtyServices.map(service =>
