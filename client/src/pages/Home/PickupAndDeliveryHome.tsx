@@ -6,7 +6,6 @@ import step2 from "../../assets/deliveryVan.png"
 import step3 from "../../assets/cleanClothes.png"
 import deliveredClothes from "../../assets/deliveredClothes.png"
 import Body from "../../components/Body.tsx";
-import SectionLabel from "../../components/SectionLabel.tsx";
 
 function PickupAndDeliveryHome() {
     return (
@@ -23,25 +22,25 @@ function PickupAndDeliveryHome() {
                 </div>
 
                 <div className={"mt-6 md:mt-8 lg:mt-12 md:mx-auto"}>
-                    <SectionLabel dot={false} className={"mb-4 md:mb-6"}>Our easy process</SectionLabel>
+                    <h3 className={`mt-10 mb-10 font-medium text-xl md:text-2xl`}>Our easy process</h3>
 
                     <div className={"flex flex-col gap-10 md:gap-16 lg:flex-row"}>
                         <PickupAndDeliveryHomeStep image={step1}
                                                    description={"Choose a pickup date through our online portal or mobile app."}
                                                    tagline={""}
-                                                   title={"1. Schedule your pickup "}
+                                                   title={"Schedule your pickup"}
                                                    imageAlt={""}/>
 
                         <PickupAndDeliveryHomeStep image={step2}
                                                    description={"Place your garments in your Bizz Cleaners weatherproof bag."}
                                                    tagline={"No need to wait at home."}
-                                                   title={"2. Leave your bag outside "}
+                                                   title={"Leave your bag outside"}
                                                    imageAlt={""}/>
 
                         <PickupAndDeliveryHomeStep image={step3}
                                                    description={"We'll clean, inspect, and return your items ready to wear."}
                                                    tagline={""}
-                                                   title={"3. Receive freshly cleaned clothes"}
+                                                   title={"Receive freshly cleaned clothes"}
                                                    imageAlt={"Clean fresh clothes just the way you like them"}/>
 
                     </div>
@@ -59,7 +58,10 @@ function PickupAndDeliveryHome() {
 
                         <img src={deliveredClothes} className={"lg:w-5/10"} alt={""}></img>
                     </div>
-                    <h3 className={`mt-10 font-medium text-xl md:text-2xl`}>Ready to start saving hours every month?</h3>
+                    <div className={"mt-10 flex flex-col gap-2 lg:flex-row lg:gap-4"}>
+                        <h3 className={`font-medium text-xl md:text-2xl lg:max-w-150 lg:mr-auto`}>Ready to start saving hours every month?</h3>
+                        <div className={"lg:w-5/10"}><Body>Skip the trip to the dry cleaner and let us come to you.</Body></div>
+                    </div>
                 </div>
             </div>
         </div>
