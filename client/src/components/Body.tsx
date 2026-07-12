@@ -2,14 +2,22 @@ import React from 'react';
 
 interface BodyProps {
     children: React.ReactNode
+    subtext?: boolean
     className?: string
 }
 
-const Body: React.FC<BodyProps> = ({children, className=""} : BodyProps) => {
+const Body: React.FC<BodyProps> = ({children, className="", subtext=false} : BodyProps) => {
     return (
-        <p className={`text-base/7.5 md:text-lg/8 ${className}`}>
-            {children}
-        </p>
+        <>
+            {subtext ?
+                <p className={`text-base/7.5 text-neutral-600 ${className}`}>
+                    {children}
+                </p>
+                :
+                <p className={`text-base/7.5 md:text-lg/8 ${className}`}>
+                    {children}
+                </p>}
+        </>
     );
 };
 

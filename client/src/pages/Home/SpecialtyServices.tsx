@@ -5,6 +5,9 @@ import specialty1 from "../../assets/sp1.png"
 import specialty2 from "../../assets/sp2.png"
 import specialty3 from "../../assets/sp3.png"
 import specialty4 from "../../assets/sp4.png"
+import Body from "../../components/Body.tsx";
+import Button from "../../components/Button.tsx";
+import {useNavigate} from "react-router-dom";
 
 const specialtyServices = [
     {
@@ -41,12 +44,26 @@ const specialtyServices = [
     },]
 
 function SpecialtyServices() {
+
+    const navigate = useNavigate();
+
     return (
         <div className={""}>
             <div className={"limit-size responsive-px responsive-py"}>
-                <Headline className={"mt-4"}>Specialty cleaning services</Headline>
+                <div className={"flex flex-col gap-3 lg:flex-row"}>
+                    <div>
+                        <Headline>Specialty cleaning services</Headline>
+                        <Button variant={"other"} className={"mt-5 hidden lg:block"} onClick={() => navigate("/services")}>See all our services</Button>
+                    </div>
 
-                <div className={"flex flex-col gap-12 md:gap-18 mt-2 lg:grid lg:grid-cols-2"}>
+                    <Body subtext={true} className={"w-120 lg:ml-auto lg:mt-1"}>Not every garment should be treated the same way. Our team has extensive
+                        experience caring for specialty fabrics and delicate items that require extra special attention.</Body>
+                    <div>
+                        <Button variant={"other"} className={" block lg:hidden"} onClick={() => navigate("/services")}>See all our services</Button>
+                    </div>
+                </div>
+
+                <div className={"flex flex-col gap-12 md:gap-18 lg:grid lg:grid-cols-2"}>
                     {specialtyServices.map(service =>
                         <SpecialtyService title={service.title}
                                           description={service.description}
