@@ -1,12 +1,12 @@
 import Hero from "./Hero.tsx";
-import TrustStrip from "./TrustStrip.tsx";
+//import TrustStrip from "./TrustStrip.tsx";
+//import AboutHome from "./AboutHome.tsx";
 import Highlights from "./Highlights.tsx";
 import SpecialtyServices from "./SpecialtyServices.tsx";
 import PickupAndDeliveryHome from "./PickupAndDeliveryHome.tsx";
 import Testimonials from "./Testimonials.tsx";
 import BusinessInfo from "./BusinessInfo.tsx";
 import { useEffect, useState } from 'react';
-import AboutHome from "./AboutHome.tsx";
 import Button from "../../components/Button.tsx";
 import { linkToPortal, apiBase } from "../../utils/links.ts";
 import { useNavigate } from 'react-router-dom';
@@ -34,7 +34,7 @@ function Home() {
     return (
         <div>
             <Hero/>
-            <TrustStrip rating={rating} userRatingCount={userRatingCount}/>
+            {/*<TrustStrip rating={rating} userRatingCount={userRatingCount}/>*/}
             <Highlights/>
             <PickupAndDeliveryHome/>
 
@@ -45,7 +45,7 @@ function Home() {
 
 
             <SpecialtyServices/>
-            <AboutHome/>
+            {/*<AboutHome/>*/}
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
         </div>
