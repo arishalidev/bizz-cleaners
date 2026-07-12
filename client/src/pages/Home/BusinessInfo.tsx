@@ -2,11 +2,11 @@ import React from "react"
 import businessInfo from "../../assets/businessInfo.jpg"
 import Headline from "../../components/Headline.tsx";
 import Button from "../../components/Button.tsx";
-import SectionLabel from "../../components/SectionLabel.tsx";
 
 import {linkToDirections, linkToPortal} from "../../utils/links.ts";
 import HoursOfOperation from "../../components/hoursOfOperation.tsx";
 import ContactInfo from "../../components/ContactInfo.tsx";
+import Body from "../../components/Body.tsx";
 
 
 interface BusinessInfoProps {
@@ -19,8 +19,11 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
     return (
         <div className={"bg-white"}>
             <div className={"flex flex-col gap-6 responsive-px limit-size responsive-py"}>
-                <SectionLabel>Business Information</SectionLabel>
-                <Headline>Visit Us Today</Headline>
+                <div>
+                    <Headline>We're here when you need us</Headline>
+                    <Body subtext={true} className={"mt-2 max-w-110"}>From everyday clothes to garments that need extra care, you can count on us to
+                        get the job done right.</Body>
+                </div>
                 <div className={"md:mt-4"}>
                     <div className={"overflow-hidden"}>
                         <img src={businessInfo} alt={"Font of Bizz Cleaners store"}

@@ -6,7 +6,6 @@ import Headline from "../../components/Headline.tsx";
 
 import { IoStar } from "react-icons/io5";
 import React from "react";
-import SectionLabel from "../../components/SectionLabel.tsx";
 import Body from "../../components/Body.tsx";
 
 const testimonials = [
@@ -38,9 +37,8 @@ interface TestimonialsProps {
 const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : TestimonialsProps) => {
     return (
         <div className={"responsive-px limit-size responsive-py"}>
-            <SectionLabel>Testimonials</SectionLabel>
-            <div className={"sm:w-75 md:w-full md:mt-2"}>
-                <Headline>See Why We are Number One in Flower Mound</Headline>
+            <div className={"md:mt-2"}>
+                <Headline>See why Flower Mound customers keep coming back</Headline>
             </div>
 
             <div className={"inline-flex items-center gap-3 text-base md:mt-2"}>
