@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import {NavbarContext} from "../contexts/NavbarContext.tsx";
@@ -9,8 +9,10 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({}) => {
 
+    const navbarBgColor = "bg-neutral-800"
+
     const [isOpen, setIsOpen] = useState(false);
-    const { scrolledPast } = useContext(NavbarContext);
+    const { scrolledPast, scrolledPastLg } = useContext(NavbarContext);
 
     function selectedOnMobileCss( params : { isActive: boolean }) : string {
         const isActive = params.isActive;
@@ -23,13 +25,20 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
         }
     }
 
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "";
+        return () => { document.body.style.overflow = ""; };
+    }, [isOpen]);
+
     //CSS for when scrolled past hero
-    const pastHeroCss = scrolledPast ? " bg-neutral-800 text-neutral-50 shadow-md" : " text-white"
+    const pastHeroCss = scrolledPast ? ` ${navbarBgColor} text-neutral-50 shadow-md` : " text-white"
+    const pastHeroCssLg = scrolledPastLg ? ` ${navbarBgColor} lg:text-neutral-50 lg:shadow-md` : " text-white"
+
 
     return (
-        <div className={"fixed z-50 w-full" + pastHeroCss}>
+        <div className={"fixed z-50 w-full" + pastHeroCss + pastHeroCssLg}>
 
-            <div className={`pointer-events-none fixed inset-x-0 top-0 z-5 h-20.5 bg-linear-to-b from-neutral-900/50 to-transparent transition-opacity duration-300 opacity-100`}></div>
+            <div className={`pointer-events-none fixed inset-x-0 top-0 z-5 h-20.5 bg-linear-to-b from-neutral-900/80 to-transparent transition-opacity duration-300 opacity-100`}></div>
             <nav className={"relative z-10 px-6 py-2 flex items-center limit-size"}>
 
                 <Link to={"/"}>
@@ -57,7 +66,8 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 
 
             {/* Mobile menu overlay */}
-            <div className={`lg:hidden absolute top-0 h-screen w-full bg-neutral-50 text-neutral-900 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+            <div className={`lg:hidden overflow-hidden absolute top-0 h-screen w-full bg-neutral-50 text-neutral-900 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+                <div className={`h-[90px] lg:h-[100px] bg ${navbarBgColor}`}></div>
                 <div className={"absolute bottom-0"}>
                     <div className={"text-3xl pb-8"}>
                         <nav className={"flex flex-col"}>

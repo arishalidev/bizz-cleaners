@@ -7,7 +7,7 @@ import {NavbarContext} from "../../contexts/NavbarContext.tsx";
 
 function Hero() {
 
-    const {setScrolledAny, setScrolledPast} = useContext(NavbarContext)
+    const {setScrolledAny, setScrolledPast, setScrolledPastLg} = useContext(NavbarContext)
     const heroRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -17,7 +17,8 @@ function Hero() {
         const update = () => {
             const bottom = hero.getBoundingClientRect().bottom;
             setScrolledAny(window.scrollY > 0);
-            setScrolledPast(bottom <= 70);
+            setScrolledPast(bottom <= 90);
+            setScrolledPastLg(bottom <= 100);
         };
 
         update();

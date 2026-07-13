@@ -31,6 +31,9 @@ function App() {
     // User has scrolled all the way past the hero
     const [scrolledPast, setScrolledPast] = useState(false);
 
+    // User has scrolled all the way past the hero on lg screens
+    const [scrolledPastLg, setScrolledPastLg] = useState(false);
+
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
 
     useEffect(() => {
@@ -43,7 +46,7 @@ function App() {
     return (
       <BrowserRouter>
           <ScrollToTop/>
-            <NavbarContext.Provider value={{scrolledAny, setScrolledAny, scrolledPast, setScrolledPast}}>
+            <NavbarContext.Provider value={{scrolledAny, setScrolledAny, scrolledPast, setScrolledPast, setScrolledPastLg, scrolledPastLg}}>
 
                 <Navigation/>
               <div>

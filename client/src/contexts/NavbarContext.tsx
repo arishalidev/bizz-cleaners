@@ -5,6 +5,8 @@ interface NavbarContextType {
     setScrolledAny: React.Dispatch<React.SetStateAction<boolean>>;
     scrolledPast: boolean;
     setScrolledPast: React.Dispatch<React.SetStateAction<boolean>>;
+    scrolledPastLg: boolean;
+    setScrolledPastLg: React.Dispatch<React.SetStateAction<boolean>>;
 
 }
 
@@ -14,4 +16,7 @@ export const NavbarContext = createContext<NavbarContextType>(
         setScrolledAny: () => {},
         scrolledPast: false,
         setScrolledPast: () => {},
+        scrolledPastLg: false,
+        setScrolledPastLg: () => {},
+
     });
