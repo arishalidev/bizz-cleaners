@@ -5,8 +5,8 @@ import Testimonial from "./Testimonial.tsx";
 import Headline from "../../components/Headline.tsx";
 
 import { IoStar } from "react-icons/io5";
+
 import React from "react";
-import Body from "../../components/Body.tsx";
 
 const testimonials = [
     {
@@ -41,9 +41,10 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
                 <Headline>See why Flower Mound customers keep coming back</Headline>
             </div>
 
-            <div className={"inline-flex items-center gap-3 text-base md:mt-2"}>
-                <Body className={"inline-flex gap-1 items-center"}>
-                    <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Reviews</Body>
+            <div className={"inline-flex items-center gap-3 text-lg lg:text-xl md:mt-2"}>
+                <p className={"inline-flex gap-1 items-center"}>
+                    <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Google Reviews
+                </p>
             </div>
 
             <div className={"flex flex-col gap-12 lg:grid lg:grid-cols-2 min-[1140px]:flex min-[1140px]:flex-row mt-12"}>

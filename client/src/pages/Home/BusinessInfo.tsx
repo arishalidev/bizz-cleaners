@@ -24,6 +24,14 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                     <Body subtext={true} className={"mt-2 max-w-110"}>From everyday clothes to garments that need extra care, you can count on us to
                         get the job done right.</Body>
                 </div>
+                <div className={"mr-auto"}>
+                    <div className={"flex gap-8"}>
+                        <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule Pickup</Button>
+                        <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Get Directions</Button>
+                    </div>
+                </div>
+
+
                 <div className={"md:mt-4"}>
                     <div className={"overflow-hidden"}>
                         {/*<img src={businessInfo} alt={"Font of Bizz Cleaners store"}
@@ -51,13 +59,6 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                                 loading={"lazy"}
                                 referrerPolicy={"no-referrer-when-downgrade"}
                                 className={"h-96 md:h-112 w-full"}/>
-                        </div>
-                    </div>
-
-                    <div className={"md:max-w-19/28 mx-auto"}>
-                        <div className={"flex gap-8 mt-6"}>
-                            <Button className={"flex-1"} onClick={linkToPortal}>Schedule Pickup</Button>
-                            <Button className={"flex-1 outline-2"} variant={"secondary"} onClick={linkToDirections}>Get Directions</Button>
                         </div>
                     </div>
                 </div>

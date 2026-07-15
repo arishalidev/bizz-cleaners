@@ -38,9 +38,12 @@ function Home() {
             <Highlights/>
             <PickupAndDeliveryHome/>
 
-            <div className={"bg-white responsive-px limit-size pb-15 -mt-9 md:-mt-12 flex gap-3"}>
-                <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule pickup </Button>
-                <Button className={"flex-1 md:flex-none md:w-56"} onClick={() => navigate("/delivery")} variant={"other"}>Learn more</Button>
+            <div className={"bg-white"}>
+                <div className={"responsive-px limit-size pb-15 -mt-9 md:-mt-12 flex gap-3"}>
+                    <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule pickup </Button>
+                    <Button className={"flex-1 md:flex-none md:w-56"} onClick={() => navigate("/delivery")}
+                            variant={"other"}>Learn more</Button>
+                </div>
             </div>
 
 

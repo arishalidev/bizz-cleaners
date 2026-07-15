@@ -10,7 +10,7 @@ const Body: React.FC<BodyProps> = ({children, className="", subtext=false} : Bod
     return (
         <>
             {subtext ?
-                <p className={`text-base/7.5 text-neutral-600 ${className}`}>
+                <p className={`text-base/7 text-neutral-600 ${className}`}>
                     {children}
                 </p>
                 :

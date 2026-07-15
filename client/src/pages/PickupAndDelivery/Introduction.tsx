@@ -3,7 +3,7 @@ import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
 import {HashLink} from "react-router-hash-link";
 import {GoArrowRight} from "react-icons/go";
-import businessInfo from "../../assets/businessInfo.jpg";
+import businessInfo from "../../assets/storefront.jpg";
 import SectionLabel from "../../components/SectionLabel.tsx";
 
 interface IntroductionProps {
