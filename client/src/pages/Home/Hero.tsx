@@ -1,5 +1,5 @@
 import '../../App.css';
-import heroImage from '../../assets/hero-image.png';
+import heroImage from '../../assets/hero-image.jpg';
 import Button from "../../components/Button.tsx";
 import { linkToDirections, linkToPortal } from "../../utils/links.ts";
 import {useContext, useEffect, useRef} from "react";

@@ -3,8 +3,8 @@ import { PiLeaf } from "react-icons/pi";
 import { PiDoor } from "react-icons/pi";
 import { PiVan } from "react-icons/pi";
 
-import dropOffBox from "../../assets/dropOffBox.png"
-import vanAtFrontDoor from "../../assets/vanAtFrontDoor.png"
+import dropOffBox from "../../assets/dropOffBox.jpg"
+import vanAtFrontDoor from "../../assets/vanAtFrontDoor.jpg"
 
 import Highlight from "./Highlight.tsx";
 

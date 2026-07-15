@@ -4,7 +4,7 @@ import PickupAndDeliveryHomeStep from "./PickupAndDeliveryHomeStep.tsx";
 import step1 from "../../assets/deskWithComputer.png"
 import step2 from "../../assets/deliveryVan.png"
 import step3 from "../../assets/cleanClothes.png"
-import deliveredClothes from "../../assets/deliveredClothes.png"
+import deliveredClothes from "../../assets/deliveredClothes.jpg"
 import Body from "../../components/Body.tsx";
 
 function PickupAndDeliveryHome() {

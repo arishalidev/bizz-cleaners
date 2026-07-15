@@ -1,10 +1,10 @@
 import SpecialtyService from "./SpecialtyService.tsx";
 import Headline from "../../components/Headline.tsx";
 
-import specialty1 from "../../assets/sp1.png"
-import specialty2 from "../../assets/sp2.png"
-import specialty3 from "../../assets/sp3.png"
-import specialty4 from "../../assets/sp4.png"
+import specialty1 from "../../assets/weddingDress.jpg"
+import specialty2 from "../../assets/indianGarments.jpg"
+import specialty3 from "../../assets/foldedClothes.jpg"
+import specialty4 from "../../assets/suitsDryCleaned.jpg"
 import Body from "../../components/Body.tsx";
 import Button from "../../components/Button.tsx";
 import {useNavigate} from "react-router-dom";

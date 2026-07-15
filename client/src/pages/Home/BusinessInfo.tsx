@@ -1,5 +1,5 @@
 import React from "react"
-import businessInfo from "../../assets/businessInfo.jpg"
+//import businessInfo from "../../assets/storefront.jpg"
 import Headline from "../../components/Headline.tsx";
 import Button from "../../components/Button.tsx";
 
@@ -26,8 +26,8 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                 </div>
                 <div className={"md:mt-4"}>
                     <div className={"overflow-hidden"}>
-                        <img src={businessInfo} alt={"Font of Bizz Cleaners store"}
-                            className={"rounded-md drop-shadow-md object-cover aspect-7/4 object-[0%_15%] w-full"}/>
+                        {/*<img src={businessInfo} alt={"Font of Bizz Cleaners store"}
+                            className={"rounded-md drop-shadow-md object-cover aspect-7/4 object-[0%_15%] w-full"}/>*/}
                     </div>
                     <div className={"flex flex-col gap-2 lg:flex-row min-[1175px]:flex md:gap-8 lg:gap-10 mt-6 mb-8 md:mb-10 md:justify-evenly md:grid md:grid-cols-2 lg:mx-auto lg:justify-around"}>
                         <div>
