@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import Button from "../../components/Button.tsx";
 import { linkToPortal, apiBase } from "../../utils/links.ts";
 import { useNavigate } from 'react-router-dom';
+import SatisfactionGuarantee from "./SatisfactionGuarantee.tsx";
 
 function Home() {
 
@@ -49,6 +50,7 @@ function Home() {
 
             <SpecialtyServices/>
             {/*<AboutHome/>*/}
+            <SatisfactionGuarantee/>
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
         </div>

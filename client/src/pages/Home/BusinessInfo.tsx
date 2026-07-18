@@ -26,8 +26,8 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                 </div>
                 <div className={"mr-auto"}>
                     <div className={"flex gap-8"}>
-                        <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule Pickup</Button>
-                        <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Get Directions</Button>
+                        <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule collection </Button>
+                        <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Find us</Button>
                     </div>
                 </div>
 

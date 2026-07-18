@@ -17,7 +17,7 @@ const dropOffBoxHighlight = {image: dropOffBox, icon: PiDoor, text: "24/7 Secure
 function Highlights() {
 
     return (
-        <div className={"responsive-py px-4 md:px-8 lg:px-12 mx-auto"}>
+        <div className={"responsive-py responsive-px limit-size mx-auto"}>
             <div className={"flex flex-col justify-center place-items-center gap-6 lg:flex-row"}>
                 <div className={"flex flex-col gap-6 flex-1 self-start"}>
                     <Highlight Icon={sameDayHighlight.icon} text={sameDayHighlight.text}
