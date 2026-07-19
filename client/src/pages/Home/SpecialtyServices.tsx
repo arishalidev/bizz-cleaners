@@ -56,7 +56,7 @@ function SpecialtyServices() {
                         <Button variant={"other"} className={"mt-5 hidden lg:block"} onClick={() => navigate("/services")}>See all our services</Button>
                     </div>
 
-                    <Body subtext={true} className={"w-120 lg:ml-auto lg:mt-1"}>Not every garment should be treated the same way. Our team has extensive
+                    <Body subtext={true} className={"max-w-120 lg:ml-auto lg:mt-1"}>Not every garment should be treated the same way. Our team has extensive
                         experience caring for specialty fabrics and delicate items that require extra special attention.</Body>
                     <div>
                         <Button variant={"other"} className={" block lg:hidden"} onClick={() => navigate("/services")}>See all our services</Button>

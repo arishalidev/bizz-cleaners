@@ -24,13 +24,6 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                     <Body subtext={true} className={"mt-2 max-w-110"}>From everyday clothes to garments that need extra care, you can count on us to
                         get the job done right.</Body>
                 </div>
-                <div className={"mr-auto"}>
-                    <div className={"flex gap-8"}>
-                        <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule collection </Button>
-                        <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Find us</Button>
-                    </div>
-                </div>
-
 
                 <div className={"md:mt-4"}>
                     <div className={"overflow-hidden"}>
@@ -61,6 +54,13 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                                 className={"h-96 md:h-112 w-full"}/>
                         </div>
                     </div>
+                    <div className={"mr-auto"}>
+                        <div className={"flex gap-8"}>
+                            <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule collection </Button>
+                            <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Find us</Button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
