@@ -11,7 +11,7 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({}) => {
     return (
         <div>
-            <SecondaryHero header={"The people behind your clean clothes"} subHeader={"Family-owned, neighbor-focused, and a little obsessed with doing things right."}></SecondaryHero>
+            <SecondaryHero header={<>Serving Flower Mound with <br className={"max-[440px]:hidden"}/> 30 years of experience</>} subHeader={"A family business built on doing things the right way."}></SecondaryHero>
             <Owners/>
             <BizzCleaners/>
             <TrustCards></TrustCards>
