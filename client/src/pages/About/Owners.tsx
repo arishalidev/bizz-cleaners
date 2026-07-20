@@ -1,7 +1,7 @@
 import React from 'react';
-import SectionLabel from "../../components/SectionLabel.tsx";
 import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
+import teamPortrait from "../../assets/teamPort.jpg";
 
 interface OwnersProps {
 
@@ -10,21 +10,19 @@ interface OwnersProps {
 const Owners: React.FC<OwnersProps> = ({}) => {
     return (
         <div className={"bg-white"}>
-            <div className={"flex flex-col gap-5 responsive-px limit-size py-10"}>
+            <div className={"flex flex-col gap-5 responsive-px limit-size-5xl py-10"}>
+
+                <img className={"rounded-md mx-auto max-w-5xl w-full"} src={teamPortrait}
+                     alt={"Team Portrait of Bizz Cleaners staff."}/>
+
                 <div className={"mx-auto lg:mt-2 w-full"}>
-                    <SectionLabel>About Owners</SectionLabel>
                     <div className={"mt-4 max-w-5xl mx-auto w-full flex-col flex gap-4"}>
-                        <Headline>Caring for clothes since 1996</Headline>
+                        <Headline>A family business built on doing things the right way</Headline>
 
-                        <Body className={"max-w-150"}>It started with one small shop in Bay City, Texas, back in 1996.
-                            Three decades later,
-                            we've run cleaners across the Houston area and as far north as Vancouver — and we've brought
-                            everything we've learned to Flower Mound.</Body>
+                        <Body className={"max-w-150"}>Bizz Cleaners didn't start in Flower Mound. Our story began in 1996 with a small dry cleaning store in Bay City, Texas..</Body>
 
-                        <Body className={"max-w-150"}>Decades in, there isn't much we haven't seen. But when something
-                            new comes our way, we slow
-                            down, ask questions, and make sure we get it right the first time.</Body>
-                        <Body>— Farzana and Rehman</Body>
+                        <Body className={"max-w-150"}>Over the years, we expanded throughout the Houston area, operated a store in Vancouver, Canada, and learned a lot about what customers expect from a cleaner they can trust. Six years ago, we brought that experience to Flower Mound, where we've been proud to serve local families, professionals, and businesses ever since.</Body>
+                        <Body className={"max-w-150"}>The locations may have changed over the years, but the way we do business hasn't. We believe in treating people fairly, doing quality work, and standing behind every garment that comes through our doors.</Body>
 
                     </div>
                 </div>

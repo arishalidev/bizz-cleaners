@@ -72,6 +72,11 @@
     @apply max-w-7xl mx-auto;
 }
 
+@utility limit-size-5xl {
+    @apply max-w-5xl mx-auto;
+}
+
+
 @utility responsive-px {
     @apply px-4 md:px-12 lg:px-24;
 }

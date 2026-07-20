@@ -3,8 +3,6 @@ import SectionLabel from "../../components/SectionLabel.tsx";
 import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
 
-import teamPortrait from "../../assets/teamPortrait.jpg"
-
 interface BizzCleanersProps {
 
 }
@@ -15,11 +13,6 @@ const BizzCleaners: React.FC<BizzCleanersProps> = ({}) => {
             <div className={"flex flex-col gap-5 responsive-px limit-size py-10"}>
                 <div className={"w-full mx-auto"}>
                     <SectionLabel className={"text-neutral-300"}>About Bizz Cleaners</SectionLabel>
-                </div>
-
-                <div>
-                    <img className={"rounded-md mx-auto max-w-5xl w-full"} src={teamPortrait}
-                         alt={"Team Portrait of Bizz Cleaners staff."}/>
                 </div>
 
                 <div className={"mt-4 flex flex-col gap-4 mx-auto max-w-5xl text-white w-full"}>
