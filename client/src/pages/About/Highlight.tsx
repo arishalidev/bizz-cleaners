@@ -22,7 +22,7 @@ function Highlight({Icon, text, description, image, imageAlt}: Highlight) {
 
                 <div>
                     <Body className={`font-semibold`}>{text}</Body>
-                    <Body className={"lg:h-24 md:max-w-125"}>{description}</Body>
+                    <Body className={"max-w-90 md:max-w-120"}>{description}</Body>
                     {image && <img src={image} alt={imageAlt} className={"w-full mt-1 max-w-124"}/>}
                 </div>
             </div>
