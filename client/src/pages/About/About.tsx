@@ -1,20 +1,38 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SecondaryHero from "../../components/SecondaryHero.tsx"
 import Introduction from "./Introduction.tsx"
 import Highlights from "./Highlights.tsx";
 import OurPromise from "./OurPromise.tsx";
+import LittleThingsMatter from "./littleThingsMatter.tsx";
+import BusinessInfo from "../About/BusinessInfo.tsx";
+import {apiBase} from "../../utils/links.ts";
 
 interface AboutProps {
 
 }
 
 const About: React.FC<AboutProps> = ({}) => {
+
+    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
+    const [isOpen, setIsOpen] = useState<boolean | undefined>();
+
+    useEffect(() => {
+        fetch(`${apiBase}/api/get/business-information`)
+            .then(res => res.json())
+            .then(data => {
+                setHoursOfOperation(data.hoursOfOperation);
+                setIsOpen(data.isOpen);
+            })
+    }, []);
+
     return (
         <div>
             <SecondaryHero header={<>Serving Flower Mound with <br className={"max-[440px]:hidden"}/> 30 years of experience</>} subHeader={"A family business built on doing things the right way."}></SecondaryHero>
             <Introduction/>
             <Highlights/>
             <OurPromise/>
+            <LittleThingsMatter/>
+            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
         </div>
     );
 };
