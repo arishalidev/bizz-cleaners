@@ -35,14 +35,14 @@ const OurPromise: React.FC<OurPromiseProps> = ({}) => {
                     </div>
                 </div>
 
-                <div className={"flex flex-col"}>
+                <div className={"flex flex-col w-9/10 mx-auto"}>
                     <div className={"flex-col flex gap-3 mt-8 max-w-175 "}>
                         <Bullet>Re-cleaning when needed</Bullet>
                         <Bullet>Fair solutions when problems arise</Bullet>
                         <Bullet>A local team that stands behind its work</Bullet>
                     </div>
 
-                    <img src={shirtInspected}/>
+                    <img className={"mt-4"} src={shirtInspected} alt={"Dress shirt being inspected"}/>
                 </div>
 
             </div>
