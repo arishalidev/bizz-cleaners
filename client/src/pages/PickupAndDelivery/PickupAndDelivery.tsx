@@ -1,14 +1,12 @@
 import SecondaryHero from "../../components/SecondaryHero.tsx";
-import Button from "../../components/Button.tsx";
-//import TopQuote from "./TopQuote.tsx";
 import Introduction from "./Introduction.tsx";
-import DeliveryHighlights from "./DeliveryHighlights.tsx";
+import Highlights from "./Highlights.tsx";
 import Steps from "./Steps.tsx";
 import ServiceArea from "./ServiceArea.tsx";
 
 import React, {useEffect, useState} from "react";
 import DeliveryFaq from "./DeliveryFaq.tsx";
-import {linkToPortal, apiBase} from "../../utils/links.ts";
+import {apiBase} from "../../utils/links.ts";
 
 interface PickupAndDeliveryProps {
 
@@ -32,13 +30,7 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
             {/*<TopQuote/>*/}
             <Introduction/>
             <Steps/>
-            <DeliveryHighlights/>
-
-            <div className={"bg-white"}>
-                <div className={"responsive-px limit-size pt-2 pb-12"}>
-                    <Button className={"w-full"} onClick={linkToPortal}>Book now</Button>
-                </div>
-            </div>
+            <Highlights/>
 
             <ServiceArea apiKey={googleMapsApiKey}/>
 
