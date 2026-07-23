@@ -1,10 +1,12 @@
 import React from 'react';
-import SectionLabel from "../../components/SectionLabel.tsx";
 
-import step1 from "../../assets/deskWithComputer.png"
-import step2 from "../../assets/deliveryVan.png"
-import step3 from "../../assets/cleanClothes.png"
+import desk from "../../assets/deskWithComputer.png"
+import home from "../../assets/home.png"
+import cleaners from "../../assets/store.png"
+import cleanClothes from "../../assets/cleanClothes.png"
 import Step from "./Step.tsx";
+import Headline from "../../components/Headline.tsx";
+import Body from "../../components/Body.tsx";
 
 interface StepsProps {
 
@@ -12,30 +14,37 @@ interface StepsProps {
 
 const Steps: React.FC<StepsProps> = ({}) => {
     return (
-        <div className={"bg-neutral-900"}>
-            <div className={" pt-10 pb-18 responsive-px limit-size responsive-py"}>
-                <SectionLabel className={"text-white"}>How It Works</SectionLabel>
+        <div>
+            <div className={" pt-10 pb-18 responsive-px limit-size-5xl responsive-py"}>
 
-                <div className={"flex flex-col gap-18"}>
+                <Headline>How pickup and delivery works</Headline>
+                <Body subtext={true}>*Pickup and delivery orders are subject to a $25 minimum order amount</Body>
+
+                <div className={"flex flex-col gap-12"}>
                     <Step
                         headline={"1. Schedule your pickup"}
-                        body={"Pick a time and spot that works for your life — front porch, side gate, apartment lobby. Add a note for stains, starch, or anything special. The whole thing takes less than a minute through our [online portal]."}
-                        image={step1}
+                        body={"Book a pickup through our online portal or mobile app. Choose the day that works best for your schedule."}
+                        image={desk}
                         imageAlt={""}
                     />
 
                     <Step
                         headline={"2. Leave it by the door"}
-                        body={"Pick a time and spot that works for your life — front porch, side gate, apartment lobby. Add a note for stains, starch, or anything special. The whole thing takes less than a minute through our [online portal].\n"}
-                        image={step2}
+                        body={"Place your Bizz Cleaners weatherproof bag by your front door on pickup day. There's no need to wait at home."}
+                        image={home}
                         imageAlt={""}
                     />
                     <Step
+                        headline={"3. We clean your garments"}
+                        body={"Your items are cleaned, pressed, and inspected right here in our Flower Mound facility."}
+                        image={cleaners}
+                        imageAlt={""}
+                    />
 
-
-                        headline={"3. Get it back fresh"}
-                        body={"Your clothes come back cleaned, pressed, and hung with care — usually within 48 hours. Sit back, pour the coffee, and enjoy a closet that did itself.\n"}
-                        image={step3}
+                    <Step
+                        headline={"4. We deliver them back"}
+                        body={"Most orders are returned within 48 hours, fresh, clean, and ready to wear."}
+                        image={cleanClothes}
                         imageAlt={""}
                     />
                 </div>
