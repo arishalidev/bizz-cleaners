@@ -1,6 +1,6 @@
 import SecondaryHero from "../../components/SecondaryHero.tsx";
 import Button from "../../components/Button.tsx";
-import TopQuote from "./TopQuote.tsx";
+//import TopQuote from "./TopQuote.tsx";
 import Introduction from "./Introduction.tsx";
 import DeliveryHighlights from "./DeliveryHighlights.tsx";
 import Steps from "./Steps.tsx";
@@ -28,8 +28,8 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
 
     return (
         <div>
-            <SecondaryHero header={"Six years caring for North DFW's closets"} cta={<Button onClick={linkToPortal}>Schedule a pickup</Button>}/>
-            <TopQuote/>
+            <SecondaryHero header={"Laundry and dry cleaning services without the extra trip"}/>
+            {/*<TopQuote/>*/}
             <Introduction/>
             <Steps/>
             <DeliveryHighlights/>
