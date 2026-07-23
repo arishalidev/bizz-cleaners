@@ -6,7 +6,6 @@ import cleaners from "../../assets/store.png"
 import cleanClothes from "../../assets/cleanClothes.png"
 import Step from "./Step.tsx";
 import Headline from "../../components/Headline.tsx";
-import Body from "../../components/Body.tsx";
 
 interface StepsProps {
 
@@ -18,9 +17,9 @@ const Steps: React.FC<StepsProps> = ({}) => {
             <div className={" pt-10 pb-18 responsive-px limit-size-5xl responsive-py"}>
 
                 <Headline>How pickup and delivery works</Headline>
-                <Body subtext={true}>*Pickup and delivery orders are subject to a $25 minimum order amount</Body>
+                {/*<Body subtext={true}>*Pickup and delivery orders are subject to a $25 minimum order amount</Body>*/}
 
-                <div className={"flex flex-col gap-12"}>
+                <div className={"flex flex-col gap-12 mt-8 mx-auto"}>
                     <Step
                         headline={"1. Schedule your pickup"}
                         body={"Book a pickup through our online portal or mobile app. Choose the day that works best for your schedule."}

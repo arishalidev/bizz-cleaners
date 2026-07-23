@@ -1,5 +1,4 @@
 import React from 'react';
-import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
 
 interface StepProps {
@@ -12,15 +11,15 @@ interface StepProps {
 const Step: React.FC<StepProps> = ({headline, body, image, imageAlt}) => {
     return (
         <div className={"mt-4"}>
-            <div className={"gap-x-16 grid grid-cols-2 grid-rows-[auto_1fr]"}>
-                <Headline>{headline}</Headline>
-                <Body className={"max-w-140 lg:min-w-100"}>
-                    {body}
-                </Body>
-                <div className={"justify-center mt-2 col-start-2 row-start-1 row-span-2"}>
-                    <div className={"w-full max-w-120 lg:max-w-90"}>
-                        <img className={"w-full object-contain"} src={image} alt={imageAlt}/>
-                    </div>
+            <div className={"gap-x-4 md:gap-x-8 lg:gap-x-16 flex"}>
+                <div>
+                    <h3 className={"text-xl md:text-2xl"}>{headline}</h3>
+                    <Body subtext={true} className={"max-w-140 lg:min-w-100 mt-3"}>
+                        {body}
+                    </Body>
+                </div>
+                <div className={"justify-center mt-2 col-start-2 row-start-1 row-span-2 w-15/10 max-w-75"}>
+                        <img className={"object-contain"} src={image} alt={imageAlt}/>
                 </div>
             </div>
         </div>
