@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import DeliveryQA from "./DeliveryQA.tsx";
-import SectionLabel from "../../components/SectionLabel.tsx";
+import Headline from "../../components/Headline.tsx";
 
 interface DeliveryFaqProps {
 
@@ -8,37 +8,25 @@ interface DeliveryFaqProps {
 
 const faqs = [
     {
-        question: "What days do you pick up and deliver?",
-        answer: "We pick up Tuesdays and Wednesdays, and deliver Thursdays and Fridays — so your clothes are back in your closet before the weekend."
+        question: "How does pickup and delivery work?",
+        answer: "Schedule a pickup online or through our app, leave your bag outside, and we'll handle the rest."
     },
     {
-        question: "Do I get a bag?",
-        answer: "You sure do. We'll bring you a custom weatherproof bag with your very first delivery — on us."
+        question: "Do I need to be home?",
+        answer: "No. Simply leave your garments in your Bizz Cleaners bag on pickup day."
     },
     {
-        question: "Do you serve apartments and senior living communities?",
-        answer: "Absolutely. We work with apartment complexes and senior homes all across North DFW. Some buildings prefer we drop off through a receptionist or front desk — just [give us a call] and we'll work out the details together."
+        question: "How quickly will I get my clothes back?",
+        answer: "Most pickup and delivery orders are returned within approximately 48 hours."
     },
     {
-        question: "What kinds of clothes can I send?",
-        answer: "Just about anything you wear — from everyday button-downs to ties, dresses, suits, and even wedding gowns. For larger or more delicate pieces (think gowns or heirlooms), we'll give you a quick call to talk through pricing before we start."
+        question: "Is there a minimum order amount?",
+        answer: "Yes. Pickup and delivery services have a $25 minimum order amount."
     },
     {
-        question: "Is pickup and delivery really free?",
-        answer: "Yep — free on any order $25 or more. Smaller orders are welcome too; they're just charged a flat $25 to cover the round trip."
+        question: "Can I schedule recurring pickups?",
+        answer: "Absolutely. We can send a weekly text reminder, so you never have to remember pickup day."
     },
-    {
-        question: "How does payment work?",
-        answer: "We keep a credit card on file and only charge it once your clean clothes are back at your door. No surprises, no upfront fees."
-    },
-    {
-        question: "Can I reschedule?",
-        answer: "Of course — life happens. You can reschedule anytime through our portal, or [give us a call] and we'll take care of it."
-    },
-    {
-        question: "Do you run on holidays?",
-        answer: "We work most weeks of the year, with two exceptions: Thanksgiving week and Christmas week. If your regular pickup or delivery falls on a holiday, we may reach out to find a better day."
-    }
 ];
 
 const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
@@ -48,10 +36,10 @@ const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
     return (
 
         <div className={"bg-white"}>
-            <div className={"responsive-px responsive-py limit-size pt-8"}>
+            <div className={"responsive-px responsive-py limit-size-5xl pt-8"}>
 
                 <div className={"mb-3"}>
-                    <SectionLabel>FAQ</SectionLabel>
+                    <Headline>Frequently asked questions</Headline>
                 </div>
 
                 {faqs.map((faq, i) =>
