@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import SectionLabel from "../../components/SectionLabel.tsx";
 import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
 import deliveryVan from "../../assets/deliveryVan.png"
@@ -91,15 +90,18 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
     const position = {lat: 33.01602299, lng: -97.07124099};
 
     return (
-        <div id={"service-area"} className={"responsive-px responsive-py limit-size py-8"}>
-            <SectionLabel>Service Area</SectionLabel>
+        <div id={"service-area"} className={"responsive-px responsive-py limit-size-5xl py-8"}>
             <Headline className={"mt-4"}>Are we in your neighborhood?</Headline>
-            <Body className={"mt-2 max-w-150"}>We've called North DFW home for six years, and our routes keep growing. Pop in your zip code or share your location to see if we're already coming your way — and if we're not yet, we'd love to know you're waiting.</Body>
 
+            <div className={"flex-col flex gap-2 max-w-180 mt-4"}>
+                <Body>We currently serve Flower Mound and many surrounding North DFW communities.</Body>
+                <Body>Enter your zip code below to see if pickup and delivery is available in your area. If we're not
+                    there yet, let us know—we're always looking to expand our routes.</Body>
+            </div>
 
-            <div className={"lg:flex lg:gap-12"}>
+            <div>
                 {apiKey && <APIProvider apiKey={apiKey}>
-                <div className={"w-full h-120 mt-6 lg:max-w-150"}>
+                <div className={"w-full h-120 mt-6"}>
                     <Map defaultCenter={position} defaultZoom={10.4} mapId="59b74ff889c3544d96f3646f"
                          gestureHandling="none"></Map>
 
@@ -141,9 +143,9 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                                    value={zipCode}
                                    onChange={(e) => setZipCode(e.target.value)}
                                    placeholder={"Enter your zip code"}
-                                   className={" bg-white rounded-md outline p-4 md:py-5 min-w-16 text-lg"}/>
+                                   className={" bg-white rounded-md outline text-lg py-2 px-4 md:py-3 lg:px-6 shadow-md active:shadow-2xs w-full flex-1 max-w-60"}/>
                             <Button type={"button"} variant={"other"}
-                                    className={"outline-1 w-50 bg-neutral-900 text-neutral-50 hover:bg-black"}
+                                    className={"outline-1  bg-neutral-900 text-neutral-50 hover:bg-black"}
                                     onClick={zipCodeEntry}>Enter</Button>
                         </form>
                         {zipErrorMessage && <div className={"text-red-500 mt-1"}>{zipErrorMessage}</div>}
@@ -151,7 +153,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                         <button
                             className={"group mt-2 inline-flex items-center gap-1 text-neutral-900 hover:text-black relative text-[18px]/8"}
                             onClick={validateUserLocation}>
-                            Use My Location<MdOutlineLocationOn className={"text-xl"}/>
+                            Use my location<MdOutlineLocationOn className={"text-xl"}/>
                             <div
                                 className={"absolute h-1 bg-purple-100 group-hover:bg-purple-200 group-active:bg-purple-300 w-full bottom-1"}></div>
                         </button>
@@ -160,8 +162,8 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
 
                     <div className={"min-h-64 bg-white mt-12 rounded-md shadow py-4 mx-auto"}>
                         {validZip === undefined ? (
-                            <div className={"flex flex-col items-center gap-8 lg:max-h-96"}>
-                                <img src={deliveryVan} alt={""} className={"opacity-65 max-w-120 px-12"}/>
+                            <div className={"flex flex-col items-center lg:max-h-96"}>
+                                <img src={deliveryVan} alt={"delivery van placeholder image"} className={"opacity-65 max-w-120 px-4 w-full"}/>
                             </div>
                         ) : validZip ? (
                             <div className={"flex flex-col items-center gap-10 mt-6"}>
