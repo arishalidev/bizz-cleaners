@@ -1,9 +1,10 @@
 import React from 'react';
 import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
-import storefront from "../../assets/storefront.jpg";
+import vanAtFrontDoor from "../../assets/vanAtFrontDoor.jpg";
 import Button from "../../components/Button.tsx";
 import {linkToPortal} from "../../utils/links.ts";
+import {HashLink} from "react-router-hash-link";
 
 interface IntroductionProps {
 
@@ -14,8 +15,8 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
     <div className={"bg-white"}>
         <div className={"flex flex-col gap-5 responsive-px limit-size-5xl py-10"}>
 
-            <img className={"rounded-md mx-auto max-w-5xl w-full"} src={storefront}
-                 alt={"Team Portrait of Bizz Cleaners staff."}/>
+            <img className={"rounded-md mx-auto max-w-5xl w-full"} src={vanAtFrontDoor}
+                 alt={"Delivery van at the front door of a beautiful house"}/>
 
             <div className={"mx-auto lg:mt-2 w-full"}>
                 <Headline className={"my-4"}>Serving Flower Mound and the North DFW area</Headline>
@@ -28,6 +29,10 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
                 </div>
                 <div className={"mt-8 flex gap-3"}>
                     <Button className={" w-48 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule collection </Button>
+                    <HashLink smooth to='/delivery/#service-area' className={""}>
+                        <Button className={" w-48 md:flex-none md:w-56"} variant={"other"}> See our service area </Button>
+                    </HashLink>
+
                 </div>
             </div>
         </div>

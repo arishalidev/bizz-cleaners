@@ -90,7 +90,8 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
     const position = {lat: 33.01602299, lng: -97.07124099};
 
     return (
-        <div id={"service-area"} className={"responsive-px responsive-py limit-size-5xl py-8"}>
+        <div className={"responsive-px responsive-py limit-size-5xl py-8"}>
+            <div id={"service-area"} className={"-mt-28 absolute"}></div>
             <Headline className={"mt-4"}>Are we in your neighborhood?</Headline>
 
             <div className={"flex-col flex gap-2 max-w-180 mt-4"}>
