@@ -29,7 +29,7 @@ const Steps: React.FC<StepsProps> = ({}) => {
 
                     <Step
                         headline={"2. Leave it by the door"}
-                        body={"Place your Bizz Cleaners weatherproof bag by your front door on pickup day. There's no need to wait at home."}
+                        body={"Place your clothes in a weatherproof bag by your front door on pickup day. There's no need to wait at home."}
                         image={home}
                         imageAlt={""}
                     />
@@ -42,7 +42,7 @@ const Steps: React.FC<StepsProps> = ({}) => {
 
                     <Step
                         headline={"4. We deliver them back"}
-                        body={"Most orders are returned within 48 hours, fresh, clean, and ready to wear."}
+                        body={"Most orders are returned within 48 hours, fresh, clean, and ready to wear. Included in your first delivery is a brand new Bizz Cleaners weatherproof bag"}
                         image={cleanClothes}
                         imageAlt={""}
                     />

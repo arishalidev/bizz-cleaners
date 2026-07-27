@@ -31,7 +31,7 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
 
     return (
         <div>
-            <SecondaryHero header={"Laundry and dry cleaning services without the extra trip"}/>
+            <SecondaryHero header={"Pickup and Delivery"} subHeader={"Laundry and dry cleaning services without the extra trip"} smallSize={true}/>
             {/*<TopQuote/>*/}
             <Introduction/>
             <Steps/>

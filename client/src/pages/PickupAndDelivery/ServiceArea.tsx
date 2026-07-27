@@ -169,16 +169,15 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                         ) : validZip ? (
                             <div className={"flex flex-col items-center gap-10 mt-6"}>
                                 <Headline className={"inline-flex items-center gap-2"}><span
-                                    className={"text-primary-500"}><FaCheck/></span>We
-                                    Service your area!</Headline>
-                                <Button className={"w-56"} onClick={linkToPortal}>Book Now</Button>
+                                    className={"text-primary-500"}><FaCheck/></span>We service your area!</Headline>
+                                <Button className={"w-56"} onClick={linkToPortal}>Book now</Button>
                             </div>
                         ) : (
                             <div className={"flex flex-col items-center gap-8 mt-6"}>
                                 <div>
                                     <Headline className={"inline-flex items-center gap-2"}><span
-                                        className={"text-red-500"}><FaXmark/></span>We dont service this area</Headline>
-                                    <Body>Let us know you're waiting:</Body>
+                                        className={"text-red-500"}><FaXmark/></span>We don't service this area</Headline>
+                                    <Body>But you can let us know you're waiting!</Body>
                                 </div>
                                 <Button className={"w-56 outline-2"} variant={"secondary"} onClick={joinWaitlist}>Join
                                     Waitlist</Button>

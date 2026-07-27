@@ -12,6 +12,7 @@ interface ContactUsProps {
     hoursOfOperation: string[],
 }
 
+
 const ContactUs: React.FC<ContactUsProps> = ({ hoursOfOperation } : ContactUsProps) => {
 
     return (

@@ -35,7 +35,7 @@ const specialtyServices = [
         key: 3,
     },
     {
-        title: "Dry Cleaning",
+        title: "Dry cleaning",
         description: "Professional garment care for suits, dresses, business attire, and everyday clothing.",
         link: "",
         image: specialty4,

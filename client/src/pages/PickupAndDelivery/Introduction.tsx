@@ -28,7 +28,7 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
                     <Body>Your clothes are cleaned right here in our Flower Mound store and delivered back to your door, usually within 48 hours. Because we handle our own pickups and deliveries, your garments stay in the care of the Bizz Cleaners team the entire time.</Body>
                 </div>
                 <div className={"mt-8 flex gap-3"}>
-                    <Button className={" w-48 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule collection </Button>
+                    <Button className={" w-48 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule pickup </Button>
                     <HashLink smooth to='/delivery/#service-area' className={""}>
                         <Button className={" w-48 md:flex-none md:w-56"} variant={"other"}> See our service area </Button>
                     </HashLink>
