@@ -27,7 +27,7 @@ const Highlights: React.FC<HighlightsProps> = ({}) => {
                                description={"Follow your order throughout the cleaning and delivery process."}/>
                     <Highlight Icon={PiTShirt} text={"Weatherproof garment bags"}
                                description={"Pickup and delivery customers receive a branded weatherproof bag designed to keep garments protected outdoors."}
-                                image={deliveredClothes}/>
+                               image={deliveredClothes}/>
                     <Highlight Icon={MdLoop} text={"Recurring pickup reminders"}
                                description={"Want regular service? We'll send a text each week. Simply reply and we'll stop by on your scheduled day."}/>
                 </div>
