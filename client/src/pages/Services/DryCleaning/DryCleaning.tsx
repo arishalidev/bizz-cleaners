@@ -3,6 +3,7 @@ import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import Introduction from "./Introduction.tsx";
 import Highlights from "./Highlights.tsx";
 import CleanerApproach from "./CleanerApproach.tsx";
+import TurnaroundTimes from "./TurnaroundTimes.tsx";
 
 interface DryCleaningProps {
 
@@ -15,6 +16,7 @@ const DryCleaning: React.FC<DryCleaningProps> = ({}) => {
             <Introduction/>
             <Highlights/>
             <CleanerApproach/>
+            <TurnaroundTimes/>
         </div>
     );
 };
