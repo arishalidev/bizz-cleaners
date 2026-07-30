@@ -1,5 +1,5 @@
-import { IoIosArrowDown } from "react-icons/io";
 import Body from "../../../components/Body.tsx";
+import { IoIosArrowDown } from "react-icons/io";
 
 interface DeliveryQAProps {
     question: string,
@@ -16,7 +16,7 @@ const QASection: React.FC<DeliveryQAProps> = ({question, answer, expanded, onTog
             <span className={"flex items-center"}>
                 <p className={`text-lg/7.5 md:text-xl/8 text-left w-fit`}>{question}</p>
                 <span className={"flex-1"}></span>
-                <IoIosArrowDown className={"text-lg"}/>
+                <IoIosArrowDown className={`text-lg ${expanded && "rotate-180"} transition-transform duration-500`}/>
                 <span className={"w-4"}></span>
             </span>
             </button>
