@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import {NavbarContext} from "../contexts/NavbarContext.tsx";
+import { IoIosArrowDown } from "react-icons/io";
 
 interface NavigationProps {
 
@@ -57,6 +58,17 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 
                 <div className={"ml-auto hidden lg:flex lg:gap-2"}>
                     <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
+                    <div className={"p-4 lg:rounded-md group relative"}>
+                        <NavLink to={"/services"} onClick={() => {setIsOpen(false)}}><span className={"flex items-center gap-1"}>Services <IoIosArrowDown/></span></NavLink>
+                        <div className={"absolute invisible group-hover:visible top-12 bg-neutral-800"}>
+                            <div className={"ml-auto hidden lg:flex flex-col lg:gap-2"}>
+
+                            <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
+                            <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
+                            <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
+                            </div>
+                        </div>
+                    </div>
                     <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
                     <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
                     <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
