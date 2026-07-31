@@ -1,5 +1,5 @@
 import React from 'react';
-import dryCleaning from "../../../assets/suitsDryCleaned.jpg";
+import foldedClothes from "../../../assets/foldedClothes.jpg";
 import Headline from "../../../components/Headline.tsx";
 import Body from "../../../components/Body.tsx";
 import Button from "../../../components/Button.tsx";
@@ -21,16 +21,18 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
                     </div>
                 </div>
 
-                <img className={"rounded-md mx-auto max-w-5xl w-full"} src={dryCleaning}
-                     alt={"Suits freshly cleaned and pressed"}/>
+                <img className={"rounded-md mx-auto max-w-5xl w-full"} src={foldedClothes}
+                     alt={"Folded shirts in an orderly stack."}/>
 
                 <div className={"mx-auto lg:mt-2 w-full"}>
-                    <Headline className={"my-4"}>Serving Flower Mound and the North DFW area</Headline>
+                    <Headline className={"my-4"}>Fresh, folded, and ready to put away</Headline>
 
                     <div className={"flex-col flex gap-4 max-w-150"}>
-                        <Body>Some clothes need a little more than a trip through the washing machine.</Body>
-                        <Body>Dry cleaning helps protect delicate fabrics, maintain the shape of your garments, and remove stains that traditional washing often can't. No matter if it's a business suit, dress pants, a favorite blouse, or a special occasion outfit, our team takes the time to clean each item properly.</Body>
-                        <Body>Every garment is cleaned and inspected in-house by our experienced team. Nothing is sent to another facility, and every item is checked before it's returned to you.</Body>
+                        <Body>Laundry has a way of piling up. Between work, family, and everything else going on during the
+                            week, it can be hard to find the time to keep up with it all.</Body>
+                        <Body>Our wash and fold service is a simple way to take laundry off your to-do list.</Body>
+                        <Body>Just drop off your clothes in one of our wash and fold bags, and we'll take care of the rest.
+                            Your items are sorted, washed, dried, neatly folded, and packaged for pickup or delivery.</Body>
                     </div>
                 </div>
             </div>
