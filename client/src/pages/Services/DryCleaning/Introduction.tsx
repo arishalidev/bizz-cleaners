@@ -3,7 +3,7 @@ import dryCleaning from "../../../assets/suitsDryCleaned.jpg";
 import Headline from "../../../components/Headline.tsx";
 import Body from "../../../components/Body.tsx";
 import Button from "../../../components/Button.tsx";
-import {linkToPortal} from "../../../utils/links.ts";
+import {linkToDirections, linkToPortal} from "../../../utils/links.ts";
 
 interface IntroductionProps {
 
@@ -12,7 +12,14 @@ interface IntroductionProps {
 const Introduction: React.FC<IntroductionProps> = ({}) => {
     return (
         <div className={"bg-white"}>
-            <div className={"flex flex-col gap-5 responsive-px limit-size-5xl py-10"}>
+            <div className={"flex flex-col gap-5 responsive-px limit-size-5xl pb-10 pt-6"}>
+
+                <div className={"mr-auto pb-6 w-full"}>
+                    <div className={"flex gap-8"}>
+                        <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule collection </Button>
+                        <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Find us</Button>
+                    </div>
+                </div>
 
                 <img className={"rounded-md mx-auto max-w-5xl w-full"} src={dryCleaning}
                      alt={"Team Portrait of Bizz Cleaners staff."}/>
@@ -26,11 +33,6 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
                         <Body>Every garment is cleaned and inspected in-house by our experienced team. Nothing is sent to another facility, and every item is checked before it's returned to you.</Body>
                     </div>
                 </div>
-
-                <div className={"mt-8 flex gap-3"}>
-                    <Button className={" w-48 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule pickup </Button>
-                </div>
-
             </div>
         </div>
     );
