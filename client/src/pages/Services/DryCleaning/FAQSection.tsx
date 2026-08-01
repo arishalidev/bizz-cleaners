@@ -27,7 +27,7 @@ const FAQSection: React.FC<DeliveryFaqProps> = ({}) => {
 
     return (
 
-        <div>
+        <div className={"-mt-8 md:-mt-16"}>
             <div className={"responsive-px responsive-py limit-size-5xl pt-8"}>
 
                 <div className={"mb-3"}>
