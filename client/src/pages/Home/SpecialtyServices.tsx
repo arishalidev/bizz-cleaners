@@ -29,7 +29,7 @@ const specialtyServices = [
     {
         title: "Wash & fold laundry",
         description: "Save time with professional wash and fold service. Your clothes are sorted, cleaned, folded, and packaged neatly for pickup or delivery.",
-        link: "",
+        link: "/wash-and-fold",
         image: specialty3,
         imageAlt: "Folded Clothes",
         key: 3,

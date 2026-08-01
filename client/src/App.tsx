@@ -12,6 +12,7 @@ import {apiBase} from "./utils/links.ts";
 import { NavbarContext } from "./contexts/NavbarContext.tsx"
 import DryCleaning from "./pages/Services/DryCleaning/DryCleaning.tsx";
 import WashAndFold from "./pages/Services/WashAndFold/WashAndFold.tsx";
+import Leather from "./pages/Services/Leather/Leather.tsx";
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
@@ -59,6 +60,7 @@ function App() {
                       <Route path={"/contact"} element={<ContactUs hoursOfOperation={hoursOfOperation}/>} />
                       <Route path={"/dry-cleaning"} element={<DryCleaning/>} />
                       <Route path={"/wash-and-fold"} element={<WashAndFold/>} />
+                      <Route path={"/leather"} element={<Leather/>} />
 
                   </Routes>
               </div>
