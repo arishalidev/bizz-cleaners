@@ -13,6 +13,7 @@ import { NavbarContext } from "./contexts/NavbarContext.tsx"
 import DryCleaning from "./pages/Services/DryCleaning/DryCleaning.tsx";
 import WashAndFold from "./pages/Services/WashAndFold/WashAndFold.tsx";
 import Leather from "./pages/Services/Leather/Leather.tsx";
+import Wedding from "./pages/Services/Wedding/Wedding.tsx";
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
@@ -61,6 +62,7 @@ function App() {
                       <Route path={"/dry-cleaning"} element={<DryCleaning/>} />
                       <Route path={"/wash-and-fold"} element={<WashAndFold/>} />
                       <Route path={"/leather"} element={<Leather/>} />
+                      <Route path={"/wedding"} element={<Wedding/>} />
 
                   </Routes>
               </div>
