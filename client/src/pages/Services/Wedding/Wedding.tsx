@@ -6,6 +6,9 @@ import TurnaroundTimes from "./TurnaroundTimes.tsx";
 import FAQSection from "./FAQSection.tsx"
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
+import WhyItMatters from "./WhyItMatters.tsx";
+import SpecializedCare from "./SpecializedCare.tsx";
+import Preservation from "./Preservation.tsx";
 
 interface DryCleaningProps {
 
@@ -29,6 +32,9 @@ const Wedding: React.FC<DryCleaningProps> = ({}) => {
         <div>
             <SecondaryHero header={"Wedding dress cleaning and preservation"} smallSize={true}/>
             <Introduction/>
+            <WhyItMatters/>
+            <SpecializedCare/>
+            <Preservation/>
             <Highlights/>
             <TurnaroundTimes/>
             <FAQSection/>
