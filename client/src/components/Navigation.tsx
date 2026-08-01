@@ -60,12 +60,12 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                     <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
                     <div className={"p-4 lg:rounded-md group relative"}>
                         <NavLink to={"/services"} onClick={() => {setIsOpen(false)}}><span className={"flex items-center gap-1"}>Services <IoIosArrowDown/></span></NavLink>
-                        <div className={"absolute invisible group-hover:visible top-12 bg-neutral-800"}>
+                        <div className={"absolute w-48 invisible group-hover:visible top-14 rounded-md bg-neutral-800"}>
                             <div className={"ml-auto hidden lg:flex flex-col lg:gap-2"}>
-
-                            <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
-                            <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
-                            <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
+                                <NavLink to={"/dry-cleaning"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Dry Cleaning</NavLink>
+                                <NavLink to={"/wash-and-fold"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Wash and Fold</NavLink>
+                                <NavLink to={"/wedding"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Wedding Dress</NavLink>
+                                <NavLink to={"/leather"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Leather</NavLink>
                             </div>
                         </div>
                     </div>
