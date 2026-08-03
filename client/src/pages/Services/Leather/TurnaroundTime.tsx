@@ -15,9 +15,9 @@ function Highlight({Icon, text, description}: Highlight) {
         <div className={"flex-1"}>
             <div className={"flex flex-col"}>
                 <div className={"mt-2"}>
-                    <div className={"flex items-center gap-x-4"}>
+                    <div className={"flex gap-x-4"}>
                         <span
-                        className={"inline-flex w-14 h-14 bg-primary-100 rounded-xl items-center justify-center text-3xl"}>
+                        className={"inline-flex mt-1 w-14 h-14 bg-primary-100 rounded-xl items-center justify-center text-3xl"}>
                             <Icon className={"text-3xl"}/>
                         </span>
                         <div>

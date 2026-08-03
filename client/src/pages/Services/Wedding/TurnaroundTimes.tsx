@@ -13,14 +13,14 @@ interface TurnaroundTimesProps {
 const TurnaroundTimes: React.FC<TurnaroundTimesProps> = ({}) => {
     return (
         <div className={"responsive-py responsive-px limit-size-5xl"}>
-            <div className={"-mt-8 md:-mt-16"}>
+            <div>
                 <Headline>Pricing and turnaround time</Headline>
                 <div className={"mt-4 flex flex-col gap-4"}>
                     <TurnaroundTime Icon={IoPricetagOutline} text={"Pricing"}
-                                    description={"Leather cleaning is priced by the garment, so we'll need to see the item before providing a quote"}></TurnaroundTime>
+                                    description={"Every wedding dress is unique, so pricing is provided after we inspect the gown Factors such as fabric type, embellishments, staining, and overall condition all affect the final cost."}></TurnaroundTime>
 
                     <TurnaroundTime Icon={PiClock} text={"Turnaround time"}
-                                    description={"Most leather cleaning orders are completed within one week."}></TurnaroundTime>
+                                    description={"Most wedding dress cleaning and preservation orders are completed within 2–3 weeks."}></TurnaroundTime>
                 </div>
             </div>
         </div>

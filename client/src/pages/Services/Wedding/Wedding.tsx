@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import Introduction from "./Introduction.tsx";
-import Highlights from "./Highlights.tsx";
 import TurnaroundTimes from "./TurnaroundTimes.tsx";
 import FAQSection from "./FAQSection.tsx"
 import {apiBase} from "../../../utils/links.ts";
@@ -35,7 +34,6 @@ const Wedding: React.FC<DryCleaningProps> = ({}) => {
             <WhyItMatters/>
             <SpecializedCare/>
             <Preservation/>
-            <Highlights/>
             <TurnaroundTimes/>
             <FAQSection/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>

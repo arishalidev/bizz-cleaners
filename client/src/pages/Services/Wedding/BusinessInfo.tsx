@@ -2,7 +2,7 @@ import React from "react"
 import Headline from "../../../components/Headline.tsx";
 import Button from "../../../components/Button.tsx";
 
-import {linkToDirections, linkToPortal} from "../../../utils/links.ts";
+import {linkToCall, linkToDirections} from "../../../utils/links.ts";
 import HoursOfOperation from "../../../components/hoursOfOperation.tsx";
 import ContactInfo from "../../../components/ContactInfo.tsx";
 import Body from "../../../components/Body.tsx";
@@ -53,13 +53,13 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                     </div>
 
                     <div className={"mt-8 lg:mt-12 max-w-140 flex flex-col gap-2 mb-6"}>
-                        <Headline>Ready to bring in your leather garments?</Headline>
-                        <Body subtext={true}>Stop by the store and we'll take a look at your item, answer any questions, and provide a quote before cleaning begins.</Body>
+                        <Headline>Ready to protect your gown?</Headline>
+                        <Body subtext={true}>From post-wedding cleaning to long-term preservation, we're here to help keep your dress looking its best for years to come.</Body>
                     </div>
 
                     <div className={"mr-auto"}>
                         <div className={"flex gap-8"}>
-                            <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule collection </Button>
+                            <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToCall}>Request a quote </Button>
                             <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Find us</Button>
                         </div>
                     </div>

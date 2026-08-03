@@ -8,16 +8,16 @@ interface DeliveryFaqProps {
 
 const faqs = [
     {
-        question: "What types of leather garments do you clean?",
-        answer: "We clean leather jackets, coats, pants, skirts, and other leather outerwear."
+        question: "Should I clean my wedding dress after the wedding?",
+        answer: "Yes. Many stains are invisible at first and become more noticeable over time. Professional cleaning helps remove those stains before they permanently discolor the fabric."
     },
     {
-        question: "Why use a professional leather clothes cleaner?  ",
-        answer: "Leather requires different cleaning methods than traditional laundry or dry cleaning. Professional cleaning helps protect the look and feel of the material."
+        question: "Can you clean dresses with lace, beading, and embroidery?",
+        answer: "Absolutely. We regularly clean gowns with delicate fabrics and detailed embellishments, using cleaning methods selected specifically for each dress."
     },
     {
-        question: "How often should leather be cleaned?",
-        answer: "That depends on how often it's worn. Many customers bring their leather garments in once they start noticing dirt, buildup, or signs of wear."
+        question: "How much does it cost to dry clean a wedding dress?",
+        answer: "Pricing varies from gown to gown. Bring your dress in for an inspection and we'll provide a quote before any work begins."
     }
 ];
 
