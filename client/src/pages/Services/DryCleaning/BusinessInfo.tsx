@@ -6,7 +6,6 @@ import {linkToDirections, linkToPortal} from "../../../utils/links.ts";
 import HoursOfOperation from "../../../components/hoursOfOperation.tsx";
 import ContactInfo from "../../../components/ContactInfo.tsx";
 import Body from "../../../components/Body.tsx";
-import clothesLoaded from "../../../assets/clothesLoaded.jpg";
 
 
 interface BusinessInfoProps {
@@ -52,10 +51,6 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                                 className={"h-96 md:h-112 w-full"}/>
                         </div>
                     </div>
-
-                    <img className={"rounded-md mx-auto max-w-5xl w-full"} src={clothesLoaded}
-                         alt={"Team Portrait of Bizz Cleaners staff."}/>
-
 
                     <div className={"mt-8 lg:mt-12 max-w-140 flex flex-col gap-2 mb-6"}>
                         <Headline>Ready to bring in your garments?</Headline>

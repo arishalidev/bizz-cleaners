@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import QASection from "./QASection.tsx";
 import Headline from "../../../components/Headline.tsx";
-import clothesLoaded from "../../../assets/clothesLoaded.jpg";
 
 interface DeliveryFaqProps {
 
@@ -9,16 +8,16 @@ interface DeliveryFaqProps {
 
 const faqs = [
     {
-        question: "How does dry cleaning work?",
-        answer: "Dry cleaning uses specialized cleaning solutions instead of water to clean garments. This process helps protect fabrics that may be damaged by traditional washing."
+        question: "Should I clean my wedding dress after the wedding?",
+        answer: "Yes. Many stains are invisible at first and become more noticeable over time. Professional cleaning helps remove those stains before they permanently discolor the fabric."
     },
     {
-        question: "Does dry cleaning remove stains?",
-        answer: "Many stains can be successfully treated through professional dry cleaning. Results depend on the type of stain, fabric, and how long the stain has been present."
+        question: "Can you clean dresses with lace, beading, and embroidery?",
+        answer: "Absolutely. We regularly clean gowns with delicate fabrics and detailed embellishments, using cleaning methods selected specifically for each dress."
     },
     {
-        question: "How long does dry cleaning take?",
-        answer: "Most orders are ready the next business day. We also offer same-day dry cleaning on qualifying items dropped off before 9:00 AM."
+        question: "How much does it cost to dry clean a wedding dress?",
+        answer: "Pricing varies from gown to gown. Bring your dress in for an inspection and we'll provide a quote before any work begins."
     }
 ];
 
@@ -46,10 +45,6 @@ const FAQSection: React.FC<DeliveryFaqProps> = ({}) => {
                         />
                     </div>
                 )}
-
-                <img className={"rounded-md mx-auto max-w-5xl w-full mt-8 md:mt-16"} src={clothesLoaded}
-                     alt={"Team Portrait of Bizz Cleaners staff."}/>
-
             </div>
         </div>
     );

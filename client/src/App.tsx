@@ -15,6 +15,7 @@ import WashAndFold from "./pages/Services/WashAndFold/WashAndFold.tsx";
 import Leather from "./pages/Services/Leather/Leather.tsx";
 import Wedding from "./pages/Services/Wedding/Wedding.tsx";
 import Household from "./pages/Services/Household/Household.tsx";
+import Shoes from "./pages/Services/Shoes/Shoes.tsx";
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
@@ -65,6 +66,7 @@ function App() {
                       <Route path={"/leather"} element={<Leather/>} />
                       <Route path={"/wedding"} element={<Wedding/>} />
                       <Route path={"/household"} element={<Household/>} />
+                      <Route path={"/shoes"} element={<Shoes/>} />
 
                   </Routes>
               </div>
