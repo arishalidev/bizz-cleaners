@@ -10,16 +10,14 @@ const WhyItMatters: React.FC<WhyItMattersProps> = ({}) => {
     return (
         <div className={"bg-white -mt-8 md:-mt-16"}>
             <div className={"responsive-px responsive-py limit-size-5xl"}>
-                <Headline className={"my-4"}>Why wedding dress cleaning matters</Headline>
+                <Headline className={"my-4"}>Bring your favourite pair back to life</Headline>
                 <div className={"flex-col flex gap-4 max-w-150"}>
 
-                    <Body>After a wedding, many gowns look perfectly clean at first glance. What many brides don't realize
-                        is that stains from champagne, cake, makeup, perfume, and perspiration can remain hidden in the
-                        fabric.</Body>
-
-                    <Body>Over time, those stains can oxidize and become yellow or brown, making them much harder to
-                        remove. Having your gown professionally cleaned soon after the wedding helps protect the fabric
-                        and prevents those hidden stains from becoming permanent.</Body>
+                    <Body>A good pair of shoes can last for years with the right care.</Body>
+                    <Body>When dirt, scuffs, and everyday wear start showing, professional cleaning can help freshen them
+                        up and keep them looking their best.</Body>
+                    <Body>Every pair is inspected before cleaning so we can choose the right process for the materials and
+                        condition of the shoe.</Body>
 
 
                 </div>

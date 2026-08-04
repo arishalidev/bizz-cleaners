@@ -1,5 +1,5 @@
 import React from 'react';
-import weddingDress from "../../../assets/weddingDress.jpg";
+import shoes from "../../../assets/shoes.jpg";
 import Headline from "../../../components/Headline.tsx";
 import Body from "../../../components/Body.tsx";
 import Button from "../../../components/Button.tsx";
@@ -22,23 +22,25 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
                     </div>
                 </div>
 
-                <img className={"rounded-md mx-auto max-w-5xl w-full"} src={weddingDress}
-                     alt={"Leather jackets, nicely pressed."}/>
+                <img className={"rounded-md mx-auto max-w-5xl w-full"} src={shoes}
+                     alt={"Clean shoes stacked on top of each other"}/>
 
                 <div className={"mx-auto lg:mt-2 w-full"}>
-                    <Headline className={"my-4"}>Helping you preserve the memories stitched into every dress</Headline>
+                    <Headline className={"my-4"}>A little care goes a long way</Headline>
 
                     <div className={"flex-col flex gap-4 max-w-150"}>
-                        <Body>Your wedding dress is one of the most meaningful garments you'll ever own. Long after the
-                            flowers are gone and the photographs are tucked away, your gown remains a reminder of one of
-                            life's biggest celebrations.</Body>
+                        <Body>A good pair of shoes can take you a long way. From dress shoes and boots to everyday
+                            footwear, regular cleaning can help keep them looking their best and ready for whatever
+                            comes next.</Body>
 
-                        <Body>Professional cleaning and preservation help keep your dress looking beautiful for years to
-                            come. At Bizz Cleaners, every gown is cleaned and preserved in-house by an experienced team
-                            that understands the care these garments require.</Body>
+                        <Body>At Bizz Cleaners, we offer professional shoe cleaning services for a variety of materials and
+                            styles. Before any cleaning begins, we take a close look at the shoe's material,
+                            construction, and overall condition.</Body>
 
-                        <Body>Nothing is sent to another facility, and every dress receives individual attention throughout
-                            the cleaning process.</Body>
+                        <Body>After all, no two pairs are exactly the same.</Body>
+
+                        <Body>Leather, suede, canvas, and specialty materials often require different cleaning methods,
+                            which is why we don't take a one-size-fits-all approach.</Body>
                     </div>
                 </div>
             </div>

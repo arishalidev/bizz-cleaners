@@ -53,8 +53,8 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                     </div>
 
                     <div className={"mt-8 lg:mt-12 max-w-140 flex flex-col gap-2 mb-6"}>
-                        <Headline>Ready to protect your gown?</Headline>
-                        <Body subtext={true}>From post-wedding cleaning to long-term preservation, we're here to help keep your dress looking its best for years to come.</Body>
+                        <Headline>Ready to freshen up your shoes?</Headline>
+                        <Body subtext={true}>Bring in your favourite pair and we'll take a look, answer any questions, and recommend the best cleaning or repair option.</Body>
                     </div>
 
                     <div className={"mr-auto"}>

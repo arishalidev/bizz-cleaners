@@ -8,16 +8,16 @@ interface DeliveryFaqProps {
 
 const faqs = [
     {
-        question: "Should I clean my wedding dress after the wedding?",
-        answer: "Yes. Many stains are invisible at first and become more noticeable over time. Professional cleaning helps remove those stains before they permanently discolor the fabric."
+        question: "What types of shoes do you clean?",
+        answer: "We clean a variety of footwear, including dress shoes, boots, casual shoes, and other everyday footwear."
     },
     {
-        question: "Can you clean dresses with lace, beading, and embroidery?",
-        answer: "Absolutely. We regularly clean gowns with delicate fabrics and detailed embellishments, using cleaning methods selected specifically for each dress."
+        question: "Do you offer shoe repair?",
+        answer: "Yes. We work with a local shoe repair specialist to help customers with common shoe repairs and restoration work."
     },
     {
-        question: "How much does it cost to dry clean a wedding dress?",
-        answer: "Pricing varies from gown to gown. Bring your dress in for an inspection and we'll provide a quote before any work begins."
+        question: "How does your shoe cleaning service work?",
+        answer: "Every pair is inspected first so we can determine the best cleaning method based on the materials and condition of the shoe."
     }
 ];
 

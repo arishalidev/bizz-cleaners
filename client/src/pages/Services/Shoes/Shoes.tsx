@@ -6,8 +6,7 @@ import FAQSection from "./FAQSection.tsx"
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
 import WhyItMatters from "./WhyItMatters.tsx";
-import SpecializedCare from "./SpecializedCare.tsx";
-import Preservation from "./Preservation.tsx";
+import Repair from "./Repair.tsx";
 
 interface DryCleaningProps {
 
@@ -32,8 +31,7 @@ const Shoes: React.FC<DryCleaningProps> = ({}) => {
             <SecondaryHero header={"Shoe cleaning and repair"} smallSize={true}/>
             <Introduction/>
             <WhyItMatters/>
-            <SpecializedCare/>
-            <Preservation/>
+            <Repair/>
             <TurnaroundTimes/>
             <FAQSection/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>

@@ -17,10 +17,10 @@ const TurnaroundTimes: React.FC<TurnaroundTimesProps> = ({}) => {
                 <Headline>Pricing and turnaround time</Headline>
                 <div className={"mt-4 flex flex-col gap-4"}>
                     <TurnaroundTime Icon={IoPricetagOutline} text={"Pricing"}
-                                    description={"Every wedding dress is unique, so pricing is provided after we inspect the gown Factors such as fabric type, embellishments, staining, and overall condition all affect the final cost."}></TurnaroundTime>
+                                    description={"Shoe cleaning and repairs is priced by the pair, so we'll need to see them before providing a quote"}></TurnaroundTime>
 
                     <TurnaroundTime Icon={PiClock} text={"Turnaround time"}
-                                    description={"Most wedding dress cleaning and preservation orders are completed within 2–3 weeks."}></TurnaroundTime>
+                                    description={"Most shoe cleaning and repair orders are completed within 2–3 days. For specific repairs or specialty items, turnaround times may vary."}></TurnaroundTime>
                 </div>
             </div>
         </div>
