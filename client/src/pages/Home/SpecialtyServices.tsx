@@ -13,7 +13,7 @@ const specialtyServices = [
     {
         title: "Wedding dress cleaning & preservation",
         description: "From intricate beading and lace to delicate silk fabrics, we carefully clean and preserve wedding gowns so they remain beautiful for years to come.",
-        link: "",
+        link: "/wedding",
         image: specialty1 ,
         imageAlt: "Wedding Dress",
         key: 1,
@@ -21,7 +21,7 @@ const specialtyServices = [
     {
         title: "Indian garments",
         description: "Sarees, lehengas, sherwanis, and embroidered garments require specialized care. We clean and press each piece individually to protect colors, embellishments, and fine details.",
-        link: "",
+        link: "/indian-garments",
         image: specialty2,
         imageAlt: "Indian Saree",
         key: 2,

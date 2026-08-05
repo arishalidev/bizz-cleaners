@@ -20,9 +20,9 @@ function SpecialtyService({title, description, link, image, imageAlt}: Specialty
                 <Body className={"my-1"}>{description}</Body>
             </div>
             <div className={"mt-2"}>
-                <Link to={link} className={"inline-flex items-center h-full gap-1 text-primary-400 font-semibold relative"}>
+                <Link to={link} className={"inline-flex items-center h-full gap-1 text-primary-400 font-semibold relative group hover:text-primary-500"}>
                     <Body>Learn More</Body><GoArrowRight className={"md:text-xl"}/>
-                    <div className={"absolute h-1 bg-purple-200 w-full bottom-0.5"}></div>
+                    <div className={"absolute h-1 bg-purple-200 w-full bottom-0.5 group-hover:bg-purple-300"}></div>
                 </Link>
             </div>
         </div>
