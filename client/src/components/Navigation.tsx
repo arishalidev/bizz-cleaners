@@ -69,6 +69,7 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                                 <NavLink to={"/household"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Household</NavLink>
                                 <NavLink to={"/shoes"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Shoes</NavLink>
                                 <NavLink to={"/shirts"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Dress Shirts</NavLink>
+                                <NavLink to={"/indian-garments"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Indian Garments</NavLink>
                             </div>
                         </div>
                     </div>
