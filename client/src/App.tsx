@@ -69,14 +69,14 @@ function App() {
                       <Route path={"/wedding"} element={<Wedding/>} />
                       <Route path={"/household"} element={<Household/>} />
                       <Route path={"/shoes"} element={<Shoes/>} />
-                      <Route path={"/shirts"} element={<LaundryShirts/>} />
+                      <Route path={"/laundry-shirts"} element={<LaundryShirts/>} />
                       <Route path={"/indian-garments"} element={<IndianGarments/>} />
 
                   </Routes>
               </div>
             </NavbarContext.Provider>
 
-            <Footer hoursOfOperation={hoursOfOperation}/>
+            <Footer/>
 
       </BrowserRouter>
   );

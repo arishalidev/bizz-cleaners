@@ -86,27 +86,30 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                                     setIsOpen(false)
                                     setServicesActive(false)
                                 }}>Dry Cleaning</NavLink>
-                                <NavLink to={"/wash-and-fold"} className={servicesCss} onClick={() => {
+                                <NavLink to={"/laundry-shirts"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
-                                    setServicesActive(false)}}>Wash and Fold</NavLink>
+                                    setServicesActive(false)}}>Dress Shirts</NavLink>
                                 <NavLink to={"/wedding"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
                                     setServicesActive(false)}}>Wedding Dress</NavLink>
+
+                                <NavLink to={"/indian-garments"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Indian Garments</NavLink>
+
                                 <NavLink to={"/leather"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
                                     setServicesActive(false)}}>Leather</NavLink>
+                                <NavLink to={"/wash-and-fold"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Wash and Fold</NavLink>
+
                                 <NavLink to={"/household"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
                                     setServicesActive(false)}}>Household</NavLink>
                                 <NavLink to={"/shoes"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
                                     setServicesActive(false)}}>Shoes</NavLink>
-                                <NavLink to={"/shirts"} className={servicesCss} onClick={() => {
-                                    setIsOpen(false)
-                                    setServicesActive(false)}}>Dress Shirts</NavLink>
-                                <NavLink to={"/indian-garments"} className={servicesCss} onClick={() => {
-                                    setIsOpen(false)
-                                    setServicesActive(false)}}>Indian Garments</NavLink>
                             </div>
                         </div>
                     </div>
