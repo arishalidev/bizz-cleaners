@@ -43,7 +43,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({rating, userRatingCount} : T
 
             <div className={"inline-flex items-center gap-3 text-lg lg:text-xl md:mt-2"}>
                 <p className={"inline-flex gap-1 items-center"}>
-                    <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> Stars | <span className={"font-semibold"}>{userRatingCount}</span> Google Reviews
+                    <IoStar className={"text-[#fedf01] text-2xl"}/> <span className={"font-semibold"}> {rating}</span> stars | <span className={"font-semibold"}>{userRatingCount}</span> Google reviews
                 </p>
             </div>
 

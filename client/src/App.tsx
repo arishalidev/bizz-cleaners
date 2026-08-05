@@ -18,6 +18,7 @@ import Household from "./pages/Services/Household/Household.tsx";
 import Shoes from "./pages/Services/Shoes/Shoes.tsx";
 import LaundryShirts from "./pages/Services/LaundryShirts/LaundryShirts.tsx";
 import IndianGarments from "./pages/Services/IndianGarments/IndianGarments.tsx";
+import Services from "./pages/Services/Services.tsx";
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
@@ -60,7 +61,8 @@ function App() {
               <div>
                   <Routes>
                       <Route path={"/"} element={<Home/>} />
-                      <Route path={"/About"} element={<About/>} />
+                      <Route path={"/about"} element={<About/>} />
+                      <Route path={"/services"} element={<Services/>} />
                       <Route path={"/delivery"} element={<PickupAndDelivery/>} />
                       <Route path={"/contact"} element={<ContactUs hoursOfOperation={hoursOfOperation}/>} />
                       <Route path={"/dry-cleaning"} element={<DryCleaning/>} />
