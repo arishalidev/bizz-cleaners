@@ -13,7 +13,10 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
     const navbarBgColor = "bg-neutral-800"
 
     const [isOpen, setIsOpen] = useState(false);
+    const [servicesActive, setServicesActive] = useState(false);
     const { scrolledPast, scrolledPastLg } = useContext(NavbarContext);
+
+    let toggleGroup = servicesActive ? "group" : ""
 
     function selectedOnMobileCss( params : { isActive: boolean }) : string {
         const isActive = params.isActive;
@@ -22,9 +25,23 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
         if (isActive) {
             return baseCss + " bg-primary-500 text-white"
         } else {
-            return baseCss + " hover:bg-primary-300"
+            return baseCss + " hover:bg-primary-400"
         }
     }
+
+    function selectedOnMobileCssServices( params : { isActive: boolean }) : string {
+        const isActive = params.isActive;
+        const baseCss = "p-4 lg:rounded-md flex items-center gap-1";
+
+        if (isActive) {
+            return baseCss + " bg-primary-500 text-white"
+        } else {
+            return baseCss + " hover:bg-primary-400"
+        }
+    }
+
+
+    const servicesCss = "px-2 text-neutral-50 py-1 hover:bg-primary-400"
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "";
@@ -37,7 +54,7 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 
 
     return (
-        <div className={"fixed z-50 w-full" + pastHeroCss + pastHeroCssLg}>
+        <div className={"fixed z-50 w-full hover:text-neutral-50 hover:shadow-md hover:bg-neutral-800 transition-colors duration-300 " + pastHeroCss + pastHeroCssLg}>
 
             <div className={`pointer-events-none fixed inset-x-0 top-0 z-5 h-20.5 bg-linear-to-b from-neutral-900/80 to-transparent transition-opacity duration-300 opacity-100`}></div>
             <nav className={"relative z-10 px-6 py-2 flex items-center limit-size"}>
@@ -58,18 +75,38 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 
                 <div className={"ml-auto hidden lg:flex lg:gap-2"}>
                     <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
-                    <div className={"p-4 lg:rounded-md group relative"}>
-                        <NavLink to={"/services"} onClick={() => {setIsOpen(false)}}><span className={"flex items-center gap-1"}>Services <IoIosArrowDown/></span></NavLink>
+                    <div className={"lg:rounded-md relative " + toggleGroup} onMouseEnter={() => setServicesActive(true)} onMouseLeave={() => setServicesActive(false)}>
+                        <NavLink to={"/services"} onClick={() => {setIsOpen(false)}} className={selectedOnMobileCssServices}>
+                            Services <IoIosArrowDown/>
+                        </NavLink>
+
                         <div className={"absolute w-48 invisible group-hover:visible top-14 rounded-md bg-neutral-800"}>
-                            <div className={"ml-auto hidden lg:flex flex-col lg:gap-2"}>
-                                <NavLink to={"/dry-cleaning"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Dry Cleaning</NavLink>
-                                <NavLink to={"/wash-and-fold"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Wash and Fold</NavLink>
-                                <NavLink to={"/wedding"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Wedding Dress</NavLink>
-                                <NavLink to={"/leather"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Leather</NavLink>
-                                <NavLink to={"/household"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Household</NavLink>
-                                <NavLink to={"/shoes"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Shoes</NavLink>
-                                <NavLink to={"/shirts"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Dress Shirts</NavLink>
-                                <NavLink to={"/indian-garments"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Indian Garments</NavLink>
+                            <div className={"ml-auto hidden lg:flex flex-col"}>
+                                <NavLink to={"/dry-cleaning"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)
+                                }}>Dry Cleaning</NavLink>
+                                <NavLink to={"/wash-and-fold"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Wash and Fold</NavLink>
+                                <NavLink to={"/wedding"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Wedding Dress</NavLink>
+                                <NavLink to={"/leather"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Leather</NavLink>
+                                <NavLink to={"/household"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Household</NavLink>
+                                <NavLink to={"/shoes"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Shoes</NavLink>
+                                <NavLink to={"/shirts"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Dress Shirts</NavLink>
+                                <NavLink to={"/indian-garments"} className={servicesCss} onClick={() => {
+                                    setIsOpen(false)
+                                    setServicesActive(false)}}>Indian Garments</NavLink>
                             </div>
                         </div>
                     </div>
