@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import DeliveryQA from "./DeliveryQA.tsx";
 import Headline from "../../components/Headline.tsx";
+import QASection from "../Services/Household/QASection.tsx";
 
 interface DeliveryFaqProps {
 
@@ -35,7 +36,7 @@ const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
 
     return (
 
-        <div className={"bg-white"}>
+        <div className={"-mt-4 md:-mt-8"}>
             <div className={"responsive-px responsive-py limit-size-5xl pt-8"}>
 
                 <div className={"mb-3"}>
@@ -45,7 +46,7 @@ const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
                 {faqs.map((faq, i) =>
                     <div key={i}>
                         <hr className={"text-primary-500"}/>
-                        <DeliveryQA
+                        <QASection
                             question={faq.question}
                             answer={faq.answer}
                             expanded={i === openIndex}
@@ -56,6 +57,7 @@ const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
             </div>
         </div>
     );
+
 };
 
 export default DeliveryFaq;

@@ -6,10 +6,8 @@ import ServiceArea from "./ServiceArea.tsx";
 
 import React, {useEffect, useState} from "react";
 import DeliveryFaq from "./DeliveryFaq.tsx";
-import {apiBase, linkToPortal} from "../../utils/links.ts";
-import Body from "../../components/Body.tsx";
-import Button from "../../components/Button.tsx";
-import {useNavigate} from "react-router-dom";
+import {apiBase} from "../../utils/links.ts";
+import BusinessInfo from "./BusinessInfo.tsx";
 
 interface PickupAndDeliveryProps {
 
@@ -27,7 +25,17 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
             })
     }, []);
 
-    const navigate = useNavigate();
+    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
+    const [isOpen, setIsOpen] = useState<boolean | undefined>();
+
+    useEffect(() => {
+        fetch(`${apiBase}/api/get/business-information`)
+            .then(res => res.json())
+            .then(data => {
+                setHoursOfOperation(data.hoursOfOperation);
+                setIsOpen(data.isOpen);
+            })
+    }, []);
 
     return (
         <div>
@@ -41,21 +49,8 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
 
             <DeliveryFaq/>
 
-            <div className={"bg-white"}>
-                <div className={"responsive-px limit-size-5xl pb-15 -mt-9 md:-mt-12"}>
-                    <div className={"mt-10 flex flex-col gap-2"}>
+            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
 
-                        <h3 className={`font-medium text-xl md:text-2xl lg:max-w-150 lg:mr-auto`}>Ready to get started?</h3>
-                        <Body>Skip the trip to the dry cleaner and let us come to you.</Body>
-
-                    <div className={"flex gap-3 mt-2"}>
-                        <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToPortal}>Schedule pickup </Button>
-                        <Button className={"flex-1 md:flex-none md:w-56"} onClick={() => navigate("/delivery")}
-                            variant={"other"}>Learn more</Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
     );
