@@ -3,3 +3,5 @@ export const apiBase = import.meta.env.VITE_SERVER_URL ?? '';
 export const linkToPortal = () => window.open("https://cleancloudapp.com/s3/18249", "_blank", "noopener,noreferrer")
 export const linkToDirections = () => window.open("https://www.google.com/maps/dir/?api=1&destination=Bizz+Cleaners,+2201+Long+Prairie+Rd+#103,+Flower+Mound,+TX+75022", "_blank", "noopener,noreferrer")
 export const linkToCall = () => window.location.href = "tel:+19723551807";
+export const linkToAppleApp = () => window.open("https://apps.apple.com/us/app/bizz-cleaners/id1640653249")
+export const linkToGoogleApp = () => window.open("https://play.google.com/store/apps/details?id=com.cleancloudapp.bizzcleaners2&hl=en_US")
