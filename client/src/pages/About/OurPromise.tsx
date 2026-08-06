@@ -12,7 +12,7 @@ interface OurPromiseProps {
 const OurPromise: React.FC<OurPromiseProps> = ({}) => {
     return (
         <div className={"bg-white"}>
-            <div className={"limit-size-5xl responsive-px responsive-py"}>
+            <div className={"limit-size-5xl responsive-px responsive-py -mt-8 md:-mt-12"}>
                 <Headline>Our promise to you</Headline>
                 <h3 className={"text-xl md:text-2xl mt-6 lg:mt-8"}>Garment care you can feel good about</h3>
                 <div className={"flex flex-col gap-2 mt-3 lg:mt-4 max-w-150"}>

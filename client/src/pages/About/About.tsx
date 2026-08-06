@@ -6,6 +6,7 @@ import OurPromise from "./OurPromise.tsx";
 import LittleThingsMatter from "./littleThingsMatter.tsx";
 import BusinessInfo from "../About/BusinessInfo.tsx";
 import {apiBase} from "../../utils/links.ts";
+import Owners from "./Owners.tsx";
 
 interface AboutProps {
 
@@ -30,6 +31,7 @@ const About: React.FC<AboutProps> = ({}) => {
             <SecondaryHero subHeader={<>Serving Flower Mound with 30 years of experience</>} header={"About Us"} smallSize={true}></SecondaryHero>
             <Introduction/>
             <Highlights/>
+            <Owners/>
             <OurPromise/>
             <LittleThingsMatter/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
