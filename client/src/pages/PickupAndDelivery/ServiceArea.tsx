@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import Headline from "../../components/Headline.tsx";
 import Body from "../../components/Body.tsx";
 import deliveryVan from "../../assets/deliveryVan.png"
@@ -58,7 +58,15 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
         })
             .then(res => res.json())
             .then(data => setValidZip(data.valid))
+
+        scrollToResult()
     }
+
+    const resultRef = useRef<HTMLDivElement>(null);
+
+    const scrollToResult = () => {
+        resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
 
     function validateUserLocation() {
         if (!navigator.geolocation) {
@@ -80,6 +88,9 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
             },
             (err) => setLocationErrorMessage(err.message)
         );
+
+        scrollToResult()
+
     }
 
     function joinWaitlist() {
@@ -161,7 +172,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                         {locationErrorMessage && <div className={"text-red-500 mt-1"}>{locationErrorMessage}</div>}
                     </div>
 
-                    <div className={"min-h-64 bg-white mt-12 rounded-md shadow py-4 mx-auto"}>
+                    <div className={"min-h-64 bg-white mt-12 rounded-md shadow py-4 mx-auto scroll-mt-32"} ref={resultRef}>
                         {validZip === undefined ? (
                             <div className={"flex flex-col items-center lg:max-h-96"}>
                                 <img src={deliveryVan} alt={"delivery van placeholder image"} className={"opacity-65 max-w-120 px-4 w-full"}/>
