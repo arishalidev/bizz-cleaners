@@ -6,7 +6,7 @@ import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 import Footer from "./components/Footer.tsx";
 import PickupAndDelivery from "./pages/PickupAndDelivery/PickupAndDelivery.tsx";
 import {useEffect, useState} from "react";
-import ContactUs from "./pages/ContactUs.tsx";
+import ContactUs from "./pages/Contact/ContactUs.tsx";
 import {apiBase} from "./utils/links.ts";
 
 import { NavbarContext } from "./contexts/NavbarContext.tsx"
@@ -64,7 +64,7 @@ function App() {
                       <Route path={"/about"} element={<About/>} />
                       <Route path={"/services"} element={<Services/>} />
                       <Route path={"/delivery"} element={<PickupAndDelivery/>} />
-                      <Route path={"/contact"} element={<ContactUs hoursOfOperation={hoursOfOperation}/>} />
+                      <Route path={"/contact"} element={<ContactUs/>} />
                       <Route path={"/dry-cleaning"} element={<DryCleaning/>} />
                       <Route path={"/wash-and-fold"} element={<WashAndFold/>} />
                       <Route path={"/leather"} element={<Leather/>} />
