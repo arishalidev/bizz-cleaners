@@ -1,0 +1,34 @@
+import React, {useEffect, useState} from 'react';
+import SecondaryHero from "../../../components/SecondaryHero.tsx";
+import SpecialtyServices from "./SpecialtyServices.tsx";
+import {apiBase} from "../../../utils/links.ts";
+import BusinessInfo from "../Leather/BusinessInfo.tsx";
+
+interface ServicesProps {
+
+}
+
+const Services: React.FC<ServicesProps> = ({}) => {
+
+    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
+    const [isOpen, setIsOpen] = useState<boolean | undefined>();
+
+    useEffect(() => {
+        fetch(`${apiBase}/api/get/business-information`)
+            .then(res => res.json())
+            .then(data => {
+                setHoursOfOperation(data.hoursOfOperation);
+                setIsOpen(data.isOpen);
+            })
+    }, []);
+
+    return (
+        <div>
+            <SecondaryHero smallSize={true} header={"Specialty cleaning services"}/>
+            <SpecialtyServices/>
+            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
+        </div>
+    );
+};
+
+export default Services;

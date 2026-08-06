@@ -76,7 +76,10 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                 <div className={"ml-auto hidden lg:flex lg:gap-2"}>
                     <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
                     <div className={"lg:rounded-md relative " + toggleGroup} onMouseEnter={() => setServicesActive(true)} onMouseLeave={() => setServicesActive(false)}>
-                        <NavLink to={"/services"} onClick={() => {setIsOpen(false)}} className={selectedOnMobileCssServices}>
+                        <NavLink to={"/services"} onClick={() => {
+                            setIsOpen(false)
+                            setServicesActive(false)
+                        }} className={selectedOnMobileCssServices}>
                             Services <IoIosArrowDown/>
                         </NavLink>
 

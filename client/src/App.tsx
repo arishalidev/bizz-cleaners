@@ -18,7 +18,7 @@ import Household from "./pages/Services/Household/Household.tsx";
 import Shoes from "./pages/Services/Shoes/Shoes.tsx";
 import LaundryShirts from "./pages/Services/LaundryShirts/LaundryShirts.tsx";
 import IndianGarments from "./pages/Services/IndianGarments/IndianGarments.tsx";
-import Services from "./pages/Services/Services.tsx";
+import Services from "./pages/Services/Services/Services.tsx";
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
