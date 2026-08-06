@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import DeliveryQA from "./DeliveryQA.tsx";
 import Headline from "../../components/Headline.tsx";
-import QASection from "../Services/Household/QASection.tsx";
 
 interface DeliveryFaqProps {
 
@@ -46,7 +45,7 @@ const DeliveryFaq: React.FC<DeliveryFaqProps> = ({}) => {
                 {faqs.map((faq, i) =>
                     <div key={i}>
                         <hr className={"text-primary-500"}/>
-                        <QASection
+                        <DeliveryQA
                             question={faq.question}
                             answer={faq.answer}
                             expanded={i === openIndex}
