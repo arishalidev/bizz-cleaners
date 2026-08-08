@@ -1,6 +1,4 @@
 import React from "react"
-//import businessInfo from "../../assets/storefront.jpg"
-import Headline from "../../components/Headline.tsx";
 import Button from "../../components/Button.tsx";
 
 import {linkToDirections, linkToPortal} from "../../utils/links.ts";

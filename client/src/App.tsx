@@ -7,7 +7,6 @@ import Footer from "./components/Footer.tsx";
 import PickupAndDelivery from "./pages/PickupAndDelivery/PickupAndDelivery.tsx";
 import {useEffect, useState} from "react";
 import ContactUs from "./pages/Contact/ContactUs.tsx";
-import {apiBase} from "./utils/links.ts";
 
 import { NavbarContext } from "./contexts/NavbarContext.tsx"
 import DryCleaning from "./pages/Services/DryCleaning/DryCleaning.tsx";
@@ -43,15 +42,6 @@ function App() {
     // User has scrolled all the way past the hero on lg screens
     const [scrolledPastLg, setScrolledPastLg] = useState(false);
 
-    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
-
-    useEffect(() => {
-        fetch(`${apiBase}/api/get/business-information`)
-            .then(res => res.json())
-            .then(data => {
-                setHoursOfOperation(data.hoursOfOperation);
-            })
-    }, []);
     return (
       <BrowserRouter>
           <ScrollToTop/>
