@@ -65,7 +65,7 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                         <div className={"font-semibold font-[Arial_Black] text-2xl lg:text-3xl italic mt-4.5 lg:mt-5 tracking-wide"}> CLEANERS</div>
                     </div>
 
-                    <div className={"lg:text-lg text-neutral-50 font-[Arial] font-semibold"}>Dry Cleaning with Home Delivery </div>
+                    <div className={"lg:text-lg text-neutral-50 font-[Arial] font-semibold"}>Dry cleaning with home delivery </div>
 
                 </Link>
 
@@ -83,33 +83,36 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                             Services <IoIosArrowDown/>
                         </NavLink>
 
-                        <div className={"absolute w-48 invisible group-hover:visible top-14 rounded-md bg-neutral-800"}>
+                        <div className={"absolute w-48 invisible group-hover:visible top-14 rounded-md p-2 bg-neutral-800"}>
                             <div className={"ml-auto hidden lg:flex flex-col"}>
                                 <NavLink to={"/dry-cleaning"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
-                                    setServicesActive(false)
-                                }}>Dry Cleaning</NavLink>
+                                    setServicesActive(false)}}>Dry cleaning</NavLink>
+
                                 <NavLink to={"/laundry-shirts"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
-                                    setServicesActive(false)}}>Dress Shirts</NavLink>
+                                    setServicesActive(false)}}>Dress shirts</NavLink>
+
                                 <NavLink to={"/wedding"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
-                                    setServicesActive(false)}}>Wedding Dress</NavLink>
+                                    setServicesActive(false)}}>Wedding dress</NavLink>
 
                                 <NavLink to={"/indian-garments"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
-                                    setServicesActive(false)}}>Indian Garments</NavLink>
+                                    setServicesActive(false)}}>Indian garments</NavLink>
 
                                 <NavLink to={"/leather"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
                                     setServicesActive(false)}}>Leather</NavLink>
+
                                 <NavLink to={"/wash-and-fold"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
-                                    setServicesActive(false)}}>Wash and Fold</NavLink>
+                                    setServicesActive(false)}}>Wash and fold</NavLink>
 
                                 <NavLink to={"/household"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
                                     setServicesActive(false)}}>Household</NavLink>
+
                                 <NavLink to={"/shoes"} className={servicesCss} onClick={() => {
                                     setIsOpen(false)
                                     setServicesActive(false)}}>Shoes</NavLink>
@@ -117,8 +120,8 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                         </div>
                     </div>
                     <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
-                    <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
-                    <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
+                    <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and delivery</NavLink>
+                    <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact us</NavLink>
 
                 </div>
             </nav>
@@ -126,17 +129,19 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 
             {/* Mobile menu overlay */}
             <div className={`lg:hidden overflow-hidden absolute top-0 h-screen w-full bg-neutral-50 text-neutral-900 transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
-                <div className={`h-[90px] lg:h-[100px] bg ${navbarBgColor}`}></div>
+                <div className={`h-22.5 lg:h-25 bg ${navbarBgColor}`}></div>
                 <div className={"absolute bottom-0"}>
                     <div className={"text-3xl pb-8"}>
                         <nav className={"flex flex-col"}>
                             <NavLink to={"/"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Home</NavLink>
                             <hr className={"text-primary-500"}/>
+                            <NavLink to={"/services"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Services</NavLink>
+                            <hr className={"text-primary-500"}/>
                             <NavLink to={"/about"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>About</NavLink>
                             <hr className={"text-primary-500"}/>
-                            <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and Delivery</NavLink>
+                            <NavLink to={"/delivery"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Pickup and delivery</NavLink>
                             <hr className={"text-primary-500"}/>
-                            <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact Us</NavLink>
+                            <NavLink to={"/contact"} className={selectedOnMobileCss} onClick={() => {setIsOpen(false)}}>Contact us</NavLink>
                             <hr className={"text-primary-500"}/>
                         </nav>
                     </div>

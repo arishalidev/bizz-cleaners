@@ -28,7 +28,7 @@ const About: React.FC<AboutProps> = ({}) => {
 
     return (
         <div>
-            <SecondaryHero subHeader={<>Serving Flower Mound with 30 years of experience</>} header={"About Us"} smallSize={true}></SecondaryHero>
+            <SecondaryHero subHeader={<>Serving Flower Mound with 30 years of experience</>} header={"About us"} smallSize={true}></SecondaryHero>
             <Introduction/>
             <Highlights/>
             <Owners/>

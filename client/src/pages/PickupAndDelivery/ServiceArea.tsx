@@ -190,8 +190,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({apiKey} : ServiceAreaProps) =>
                                         className={"text-red-500"}><FaXmark/></span>We don't service this area</Headline>
                                     <Body>But you can let us know you're waiting!</Body>
                                 </div>
-                                <Button className={"w-56 outline-2"} variant={"secondary"} onClick={joinWaitlist}>Join
-                                    Waitlist</Button>
+                                <Button className={"w-56 outline-2"} variant={"secondary"} onClick={joinWaitlist}>Let us know</Button>
                             </div>
                         )}
 
