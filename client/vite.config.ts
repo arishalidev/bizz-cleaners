@@ -13,7 +13,7 @@ export default defineConfig({
   },
   preview: {
     host: '0.0.0.0',
-    allowedHosts: ["bizz-cleaners-client-production.up.railway.app", "bizz-cleaners-production.up.railway.app"],
+    allowedHosts: ["bizz-cleaners-client-production.up.railway.app", "bizz-cleaners-production.up.railway.app", "www.bizzclean.com", "bizzclean.com"],
     port: parseInt(process.env.PORT || '5173'),
   }
 });
