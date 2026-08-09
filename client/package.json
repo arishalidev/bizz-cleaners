@@ -11,6 +11,7 @@
     "start": "vite preview"
   },
   "dependencies": {
+    "@snaddyvitch-dispenser/react-router-sitemap": "^2.0.0",
     "@tailwindcss/vite": "^4.2.4",
     "@vis.gl/react-google-maps": "^1.8.3",
     "react": "^19.2.5",
