@@ -3,7 +3,7 @@ import ReactGA from 'react-ga4';
 export const apiBase = import.meta.env.VITE_SERVER_URL ?? '';
 
 export const linkToPortal = () => {
-    window.open("https://www.google.com", "_blank", "noopener,noreferrer")
+    window.open("https://cleancloudapp.com/s3/18249", "_blank", "noopener,noreferrer")
 
     ReactGA.event({
         category: 'User Interaction',
