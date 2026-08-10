@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = () => {
                     <NavLink to={"/services"} className={"hover:text-primary-500 hover:underline"}><Body>Services</Body></NavLink>
                     <NavLink to={"/about"} className={"hover:text-primary-500 hover:underline"}><Body>About</Body></NavLink>
                     <NavLink to={"/delivery"} className={"hover:text-primary-500 hover:underline"}><Body>Pickup and Delivery</Body></NavLink>
-                    <NavLink to={"/delivery"} className={"hover:text-primary-500 hover:underline"}><Body>Contact Us</Body></NavLink>
+                    <NavLink to={"/contact"} className={"hover:text-primary-500 hover:underline"}><Body>Contact Us</Body></NavLink>
                 </div>
 
                 <div className={"flex flex-col min-w-35"}>

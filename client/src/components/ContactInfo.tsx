@@ -13,7 +13,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({}) => {
 
             <a href={"tel:+19723551807"} className={"inline-flex gap-4"}>
                 <span className={"text-2xl mt-1"}><IoCallOutline/></span>
-                <Body>+1 972-355-180</Body>
+                <Body>+1 972-355-1807</Body>
             </a>
 
             <a href={"mailto:business@bizzclean.com"} className={"inline-flex gap-4"}>

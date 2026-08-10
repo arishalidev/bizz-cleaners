@@ -40,7 +40,7 @@ const specialtyServices = [
         link: "/dry-cleaning",
         image: specialty4,
         imageAlt: "Folded Clothes",
-        key: 3,
+        key: 4,
     },]
 
 function SpecialtyServices() {

@@ -62,7 +62,7 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
                 <Link to={"/"}>
                     <div className={"flex gap-2"} onClick={() => {setIsOpen(false)}}>
                         <img src={"/logo.png"} alt={"Bizz Cleaners Logo"} className={"w-14 lg:w-15"}/>
-                        <div className={"font-semibold font-[Arial_Black] text-2xl lg:text-3xl italic mt-4.5 lg:mt-5 tracking-wide"}> CLEANERS</div>
+                        <div className={" font-display text-2xl lg:text-3xl italic mt-4.5 lg:mt-5 tracking-wide"}> CLEANERS</div>
                     </div>
 
                     <div className={"lg:text-lg text-neutral-50 font-[Arial] font-semibold"}>Dry cleaning with home delivery </div>
