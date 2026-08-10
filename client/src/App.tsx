@@ -2,7 +2,7 @@ import Home from "./pages/Home/Home.tsx"
 import About from "./pages/About/About.tsx"
 import Navigation from "./components/Navigation.tsx"
 
-import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
+import { Routes, Route, useLocation} from "react-router-dom";
 import Footer from "./components/Footer.tsx";
 import PickupAndDelivery from "./pages/PickupAndDelivery/PickupAndDelivery.tsx";
 import {useEffect, useState} from "react";
@@ -18,6 +18,7 @@ import Shoes from "./pages/Services/Shoes/Shoes.tsx";
 import LaundryShirts from "./pages/Services/LaundryShirts/LaundryShirts.tsx";
 import IndianGarments from "./pages/Services/IndianGarments/IndianGarments.tsx";
 import Services from "./pages/Services/Services/Services.tsx";
+import ReactGA from "react-ga4"
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
@@ -33,6 +34,16 @@ function ScrollToTop() {
 
 function App() {
 
+    const location = useLocation();
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType: 'pageview',
+            page: location.pathname + location.search
+        });
+    }, [location]);
+
+
     // User has scrolled at all
     const [scrolledAny, setScrolledAny] = useState(false);
 
@@ -43,7 +54,7 @@ function App() {
     const [scrolledPastLg, setScrolledPastLg] = useState(false);
 
     return (
-      <BrowserRouter>
+      <>
           <ScrollToTop/>
             <NavbarContext.Provider value={{scrolledAny, setScrolledAny, scrolledPast, setScrolledPast, setScrolledPastLg, scrolledPastLg}}>
 
@@ -70,7 +81,7 @@ function App() {
 
             <Footer/>
 
-      </BrowserRouter>
+      </>
   );
 }
 
