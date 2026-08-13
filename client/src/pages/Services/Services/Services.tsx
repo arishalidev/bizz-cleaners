@@ -3,12 +3,15 @@ import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import SpecialtyServices from "./SpecialtyServices.tsx";
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "../Leather/BusinessInfo.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface ServicesProps {
 
 }
 
 const Services: React.FC<ServicesProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/services";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -24,6 +27,9 @@ const Services: React.FC<ServicesProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero smallSize={true} header={"Specialty cleaning services"}/>
             <SpecialtyServices/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>

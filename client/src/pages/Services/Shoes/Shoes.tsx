@@ -7,12 +7,15 @@ import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
 import WhyItMatters from "./WhyItMatters.tsx";
 import Repair from "./Repair.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface DryCleaningProps {
 
 }
 
 const Shoes: React.FC<DryCleaningProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/shoes";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -28,6 +31,9 @@ const Shoes: React.FC<DryCleaningProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero header={"Shoe cleaning and repair"} smallSize={true}/>
             <Introduction/>
             <WhyItMatters/>

@@ -11,8 +11,11 @@ import Button from "../../components/Button.tsx";
 import { linkToPortal, apiBase } from "../../utils/links.ts";
 import { useNavigate } from 'react-router-dom';
 import SatisfactionGuarantee from "./SatisfactionGuarantee.tsx";
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
+
+    const canonicalUrl = "https://www.bizzclean.com/";
 
     const [rating, setRating] = useState<number | null>(null);
     const [userRatingCount, setUserRatingCountCount] = useState<number | null>(null);
@@ -34,6 +37,9 @@ function Home() {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <Hero/>
             {/*<TrustStrip rating={rating} userRatingCount={userRatingCount}/>*/}
             <Highlights/>

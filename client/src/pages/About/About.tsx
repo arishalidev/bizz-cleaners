@@ -7,12 +7,15 @@ import LittleThingsMatter from "./littleThingsMatter.tsx";
 import BusinessInfo from "../About/BusinessInfo.tsx";
 import {apiBase} from "../../utils/links.ts";
 import Owners from "./Owners.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface AboutProps {
 
 }
 
 const About: React.FC<AboutProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/about";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -28,6 +31,9 @@ const About: React.FC<AboutProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero subHeader={<>Serving Flower Mound with 30 years of experience</>} header={"About us"} smallSize={true}></SecondaryHero>
             <Introduction/>
             <Highlights/>

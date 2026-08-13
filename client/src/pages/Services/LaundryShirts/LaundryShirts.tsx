@@ -8,12 +8,15 @@ import TurnaroundTimes from "./TurnaroundTimes.tsx";
 import FAQSection from "./FAQSection.tsx"
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface LaundryShirtsProps {
 
 }
 
 const LaundryShirts: React.FC<LaundryShirtsProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/laundry-shirts";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -29,6 +32,9 @@ const LaundryShirts: React.FC<LaundryShirtsProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero header={"Dress shirt cleaning and pressing"} smallSize={true}/>
             <Introduction/>
             <LittleThings/>

@@ -8,12 +8,15 @@ import BusinessInfo from "./BusinessInfo.tsx";
 import WhyItMatters from "./WhyItMatters.tsx";
 import SpecializedCare from "./SpecializedCare.tsx";
 import Preservation from "./Preservation.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface DryCleaningProps {
 
 }
 
 const Wedding: React.FC<DryCleaningProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/wedding";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -29,6 +32,9 @@ const Wedding: React.FC<DryCleaningProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero header={"Wedding dress cleaning and preservation"} smallSize={true}/>
             <Introduction/>
             <WhyItMatters/>

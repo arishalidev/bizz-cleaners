@@ -7,12 +7,15 @@ import FAQSection from "./FAQSection.tsx"
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
 import WhyItHelps from "./WhyItHelps.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface DryCleaningProps {
 
 }
 
 const Household: React.FC<DryCleaningProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/household";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -28,6 +31,9 @@ const Household: React.FC<DryCleaningProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero header={"Household item cleaning"} smallSize={true}/>
             <Introduction/>
             <Highlights/>

@@ -19,6 +19,7 @@ import LaundryShirts from "./pages/Services/LaundryShirts/LaundryShirts.tsx";
 import IndianGarments from "./pages/Services/IndianGarments/IndianGarments.tsx";
 import Services from "./pages/Services/Services/Services.tsx";
 import ReactGA from "react-ga4"
+import { HelmetProvider } from 'react-helmet-async';
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
@@ -60,22 +61,24 @@ function App() {
 
                 <Navigation/>
               <div>
-                  <Routes>
-                      <Route path={"/"} element={<Home/>} />
-                      <Route path={"/about"} element={<About/>} />
-                      <Route path={"/services"} element={<Services/>} />
-                      <Route path={"/delivery"} element={<PickupAndDelivery/>} />
-                      <Route path={"/contact"} element={<ContactUs/>} />
-                      <Route path={"/dry-cleaning"} element={<DryCleaning/>} />
-                      <Route path={"/wash-and-fold"} element={<WashAndFold/>} />
-                      <Route path={"/leather"} element={<Leather/>} />
-                      <Route path={"/wedding"} element={<Wedding/>} />
-                      <Route path={"/household"} element={<Household/>} />
-                      <Route path={"/shoes"} element={<Shoes/>} />
-                      <Route path={"/laundry-shirts"} element={<LaundryShirts/>} />
-                      <Route path={"/indian-garments"} element={<IndianGarments/>} />
+                  <HelmetProvider>
+                      <Routes>
+                          <Route path={"/"} element={<Home/>} />
+                          <Route path={"/about"} element={<About/>} />
+                          <Route path={"/services"} element={<Services/>} />
+                          <Route path={"/delivery"} element={<PickupAndDelivery/>} />
+                          <Route path={"/contact"} element={<ContactUs/>} />
+                          <Route path={"/dry-cleaning"} element={<DryCleaning/>} />
+                          <Route path={"/wash-and-fold"} element={<WashAndFold/>} />
+                          <Route path={"/leather"} element={<Leather/>} />
+                          <Route path={"/wedding"} element={<Wedding/>} />
+                          <Route path={"/household"} element={<Household/>} />
+                          <Route path={"/shoes"} element={<Shoes/>} />
+                          <Route path={"/laundry-shirts"} element={<LaundryShirts/>} />
+                          <Route path={"/indian-garments"} element={<IndianGarments/>} />
 
-                  </Routes>
+                      </Routes>
+                  </HelmetProvider>
               </div>
             </NavbarContext.Provider>
 

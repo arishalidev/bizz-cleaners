@@ -8,12 +8,15 @@ import React, {useEffect, useState} from "react";
 import DeliveryFaq from "./DeliveryFaq.tsx";
 import {apiBase} from "../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface PickupAndDeliveryProps {
 
 }
 
 const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/delivery";
 
     const [googleMapsApiKey, setGoogleMapsApiKey] = useState<string | undefined>();
 
@@ -39,6 +42,9 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero header={"Pickup and delivery"} subHeader={"Laundry and dry cleaning services without the extra trip"} smallSize={true}/>
             {/*<TopQuote/>*/}
             <Introduction/>

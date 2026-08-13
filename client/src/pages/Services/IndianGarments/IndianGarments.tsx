@@ -7,12 +7,15 @@ import TurnaroundTimes from "./TurnaroundTimes.tsx";
 import FAQSection from "./FAQSection.tsx"
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface IndianGarmentsProps {
 
 }
 
 const IndianGarments: React.FC<IndianGarmentsProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/indian-garments";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -28,6 +31,9 @@ const IndianGarments: React.FC<IndianGarmentsProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero header={"Indian garment cleaning"} smallSize={true}/>
             <Introduction/>
             <CleanedWithCare/>

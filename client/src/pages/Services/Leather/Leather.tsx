@@ -6,12 +6,15 @@ import TurnaroundTimes from "./TurnaroundTimes.tsx";
 import FAQSection from "./FAQSection.tsx"
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
+import { Helmet } from 'react-helmet-async';
 
 interface DryCleaningProps {
 
 }
 
 const Leather: React.FC<DryCleaningProps> = ({}) => {
+
+    const canonicalUrl = "https://www.bizzclean.com/leather";
 
     const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState<boolean | undefined>();
@@ -27,6 +30,9 @@ const Leather: React.FC<DryCleaningProps> = ({}) => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href={canonicalUrl} />
+            </Helmet>
             <SecondaryHero header={"Leather cleaning"} smallSize={true}/>
             <Introduction/>
             <Highlights/>
