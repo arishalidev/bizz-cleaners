@@ -7,9 +7,9 @@ export const linkToPortal = () => {
 
     ReactGA.event({
         category: 'User Interaction',
-        action: 'Clicked Link',
+        action: 'Schedule Pickup Button',
         label: 'Link To Schedule Pickup',
-    });
+    });     
 
 }
 export const linkToDirections = () => {
@@ -17,7 +17,7 @@ export const linkToDirections = () => {
 
     ReactGA.event({
         category: 'User Interaction',
-        action: 'Clicked Link',
+        action: 'Directions Button',
         label: 'Link To Directions',
     });
 }
@@ -26,7 +26,7 @@ export const linkToCall = () => {
 
     ReactGA.event({
         category: 'User Interaction',
-        action: 'Clicked Link',
+        action: 'Call Link',
         label: 'Link To Call',
     });
 }
@@ -35,7 +35,7 @@ export const linkToAppleApp = () => {
 
     ReactGA.event({
         category: 'User Interaction',
-        action: 'Clicked Link',
+        action: 'Download Apple app Link',
         label: 'Link To Download Apple App',
     });
 }
@@ -44,7 +44,7 @@ export const linkToGoogleApp = () => {
 
     ReactGA.event({
         category: 'User Interaction',
-        action: 'Clicked Link',
+        action: 'Download Google App Link',
         label: 'Link To Google App',
     });
 }
