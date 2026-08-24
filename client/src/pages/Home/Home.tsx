@@ -6,32 +6,19 @@ import SpecialtyServices from "./SpecialtyServices.tsx";
 import PickupAndDeliveryHome from "./PickupAndDeliveryHome.tsx";
 import Testimonials from "./Testimonials.tsx";
 import BusinessInfo from "./BusinessInfo.tsx";
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import Button from "../../components/Button.tsx";
-import { linkToPortal, apiBase } from "../../utils/links.ts";
+import { linkToPortal } from "../../utils/links.ts";
 import { useNavigate } from 'react-router-dom';
 import SatisfactionGuarantee from "./SatisfactionGuarantee.tsx";
 import { Helmet } from 'react-helmet-async';
+import { BusinessInfoContext } from "../../contexts/BusinessInfoContext.tsx";
 
 function Home() {
 
     const canonicalUrl = "https://www.bizzclean.com/";
 
-    const [rating, setRating] = useState<number | null>(null);
-    const [userRatingCount, setUserRatingCountCount] = useState<number | null>(null);
-    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
-    const [isOpen, setIsOpen] = useState<boolean | undefined>();
-
-    useEffect(() => {
-        fetch(`${apiBase}/api/get/business-information`)
-            .then(res => res.json())
-            .then(data => {
-                setRating(data.rating);
-                setUserRatingCountCount(data.userRatingCount);
-                setHoursOfOperation(data.hoursOfOperation);
-                setIsOpen(data.isOpen);
-            })
-    }, []);
+    const {rating, userRatingCount} = useContext(BusinessInfoContext);
 
     const navigate = useNavigate();
 
@@ -58,7 +45,7 @@ function Home() {
             {/*<AboutHome/>*/}
             <SatisfactionGuarantee/>
             <Testimonials rating={rating} userRatingCount={userRatingCount}/>
-            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
+            <BusinessInfo/>
         </div>
     );
 }

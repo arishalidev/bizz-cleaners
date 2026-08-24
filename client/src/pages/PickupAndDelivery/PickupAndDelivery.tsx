@@ -29,18 +29,6 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
             })
     }, []);
 
-    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
-    const [isOpen, setIsOpen] = useState<boolean | undefined>();
-
-    useEffect(() => {
-        fetch(`${apiBase}/api/get/business-information`)
-            .then(res => res.json())
-            .then(data => {
-                setHoursOfOperation(data.hoursOfOperation);
-                setIsOpen(data.isOpen);
-            })
-    }, []);
-
     return (
         <div>
             <Helmet>
@@ -56,7 +44,7 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
 
             <FAQSection faqs={faqs} className={"-mt-4 md:-mt-8"}/>
 
-            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
+            <BusinessInfo/>
 
 
         </div>

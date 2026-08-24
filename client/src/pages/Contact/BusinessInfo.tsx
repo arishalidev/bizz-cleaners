@@ -1,18 +1,20 @@
-import React from "react"
+import React, {useContext} from "react"
 import Button from "../../components/Button.tsx";
 
 import {linkToDirections, linkToPortal} from "../../utils/links.ts";
 import HoursOfOperation from "../../components/hoursOfOperation.tsx";
 import ContactInfo from "../../components/ContactInfo.tsx";
 import Body from "../../components/Body.tsx";
+import {BusinessInfoContext} from "../../contexts/BusinessInfoContext.tsx";
 
 
 interface BusinessInfoProps {
-    hoursOfOperation: string[],
-    isOpen: boolean | undefined
+
 }
 
-const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } : BusinessInfoProps) => {
+const BusinessInfo: React.FC<BusinessInfoProps> = ({}: BusinessInfoProps) => {
+
+    const {hoursOfOperation, isOpen} = useContext(BusinessInfoContext);
 
     return (
         <div className={"bg-white"}>

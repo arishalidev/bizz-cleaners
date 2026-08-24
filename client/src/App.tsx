@@ -9,6 +9,8 @@ import {useEffect, useState} from "react";
 import ContactUs from "./pages/Contact/ContactUs.tsx";
 
 import { NavbarContext } from "./contexts/NavbarContext.tsx"
+import { BusinessInfoContext } from "./contexts/BusinessInfoContext.tsx"
+import { apiBase } from "./utils/links.ts";
 import DryCleaning from "./pages/Services/DryCleaning/DryCleaning.tsx";
 import WashAndFold from "./pages/Services/WashAndFold/WashAndFold.tsx";
 import Leather from "./pages/Services/Leather/Leather.tsx";
@@ -54,10 +56,27 @@ function App() {
     // User has scrolled all the way past the hero on lg screens
     const [scrolledPastLg, setScrolledPastLg] = useState(false);
 
+    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
+    const [isOpen, setIsOpen] = useState<boolean | undefined>();
+    const [rating, setRating] = useState<number | null>(null);
+    const [userRatingCount, setUserRatingCount] = useState<number | null>(null);
+
+    useEffect(() => {
+        fetch(`${apiBase}/api/get/business-information`)
+            .then(res => res.json())
+            .then(data => {
+                setHoursOfOperation(data.hoursOfOperation);
+                setIsOpen(data.isOpen);
+                setRating(data.rating);
+                setUserRatingCount(data.userRatingCount);
+            })
+    }, []);
+
     return (
       <>
           <ScrollToTop/>
             <NavbarContext.Provider value={{scrolledAny, setScrolledAny, scrolledPast, setScrolledPast, setScrolledPastLg, scrolledPastLg}}>
+            <BusinessInfoContext.Provider value={{hoursOfOperation, isOpen, rating, userRatingCount}}>
 
                 <Navigation/>
               <div>
@@ -80,6 +99,7 @@ function App() {
                       </Routes>
                   </HelmetProvider>
               </div>
+            </BusinessInfoContext.Provider>
             </NavbarContext.Provider>
 
             <Footer/>

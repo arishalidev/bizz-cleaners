@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import Introduction from "./Introduction.tsx";
 import Highlights from "./Highlights.tsx";
@@ -7,7 +7,6 @@ import TurnaroundTimes from "../../../components/TurnaroundTimes.tsx";
 import {headline as turnaroundHeadline, variant as turnaroundVariant, items as turnaroundItems} from "./turnaroundTimes.ts";
 import FAQSection from "../../../components/FAQSection.tsx"
 import {faqs} from "./faqs.ts";
-import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "../../../components/BusinessInfo.tsx";
 import {ctaHeadline, ctaBody, primaryButtonLabel, primaryButtonAction} from "./businessInfoCta.ts";
 import { Helmet } from 'react-helmet-async';
@@ -20,18 +19,6 @@ interface DryCleaningProps {
 const DryCleaning: React.FC<DryCleaningProps> = ({}) => {
 
     const canonicalUrl = "https://www.bizzclean.com/dry-cleaning";
-
-    const [hoursOfOperation, setHoursOfOperation] = useState<string[]>([]);
-    const [isOpen, setIsOpen] = useState<boolean | undefined>();
-
-    useEffect(() => {
-        fetch(`${apiBase}/api/get/business-information`)
-            .then(res => res.json())
-            .then(data => {
-                setHoursOfOperation(data.hoursOfOperation);
-                setIsOpen(data.isOpen);
-            })
-    }, []);
 
     return (
         <div>
@@ -47,8 +34,7 @@ const DryCleaning: React.FC<DryCleaningProps> = ({}) => {
                 <img className={"rounded-md mx-auto max-w-5xl w-full mt-8 md:mt-16"} src={clothesLoaded}
                      alt={"Team Portrait of Bizz Cleaners staff."}/>
             </FAQSection>
-            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen} ctaHeadline={ctaHeadline}
-                          ctaBody={ctaBody} primaryButtonLabel={primaryButtonLabel}
+            <BusinessInfo ctaHeadline={ctaHeadline} ctaBody={ctaBody} primaryButtonLabel={primaryButtonLabel}
                           primaryButtonAction={primaryButtonAction}/>
 
         </div>

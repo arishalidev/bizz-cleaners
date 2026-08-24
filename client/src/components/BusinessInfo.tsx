@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useContext} from "react"
 import Headline from "./Headline.tsx";
 import Button from "./Button.tsx";
 
@@ -6,11 +6,10 @@ import {linkToDirections} from "../utils/links.ts";
 import HoursOfOperation from "./hoursOfOperation.tsx";
 import ContactInfo from "./ContactInfo.tsx";
 import Body from "./Body.tsx";
+import {BusinessInfoContext} from "../contexts/BusinessInfoContext.tsx";
 
 
 interface BusinessInfoProps {
-    hoursOfOperation: string[],
-    isOpen: boolean | undefined,
     ctaHeadline: string,
     ctaBody: string,
     primaryButtonLabel: string,
@@ -18,13 +17,13 @@ interface BusinessInfoProps {
 }
 
 const BusinessInfo: React.FC<BusinessInfoProps> = ({
-    hoursOfOperation,
-    isOpen,
     ctaHeadline,
     ctaBody,
     primaryButtonLabel,
     primaryButtonAction,
 }: BusinessInfoProps) => {
+
+    const {hoursOfOperation, isOpen} = useContext(BusinessInfoContext);
 
     return (
         <div className={"bg-white"}>
