@@ -1,19 +1,30 @@
 import React from "react"
-import Headline from "../../../components/Headline.tsx";
-import Button from "../../../components/Button.tsx";
+import Headline from "./Headline.tsx";
+import Button from "./Button.tsx";
 
-import {linkToCall, linkToDirections} from "../../../utils/links.ts";
-import HoursOfOperation from "../../../components/hoursOfOperation.tsx";
-import ContactInfo from "../../../components/ContactInfo.tsx";
-import Body from "../../../components/Body.tsx";
+import {linkToDirections} from "../utils/links.ts";
+import HoursOfOperation from "./hoursOfOperation.tsx";
+import ContactInfo from "./ContactInfo.tsx";
+import Body from "./Body.tsx";
 
 
 interface BusinessInfoProps {
     hoursOfOperation: string[],
-    isOpen: boolean | undefined
+    isOpen: boolean | undefined,
+    ctaHeadline: string,
+    ctaBody: string,
+    primaryButtonLabel: string,
+    primaryButtonAction: () => void,
 }
 
-const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } : BusinessInfoProps) => {
+const BusinessInfo: React.FC<BusinessInfoProps> = ({
+    hoursOfOperation,
+    isOpen,
+    ctaHeadline,
+    ctaBody,
+    primaryButtonLabel,
+    primaryButtonAction,
+}: BusinessInfoProps) => {
 
     return (
         <div className={"bg-white"}>
@@ -52,14 +63,14 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({ hoursOfOperation, isOpen } 
                         </div>
                     </div>
 
-                    <div className={"mt-8 lg:mt-12 max-w-140 flex flex-col gap-2 mb-6"}>
-                        <Headline>Ready to protect your gown?</Headline>
-                        <Body subtext={true}>From post-wedding cleaning to long-term preservation, we're here to help keep your dress looking its best for years to come.</Body>
+                    <div className={"mt-12 lg:mt-16 flex flex-col gap-2 mb-6"}>
+                        <Headline>{ctaHeadline}</Headline>
+                        <Body subtext={true} className={"max-w-140"}>{ctaBody}</Body>
                     </div>
 
                     <div className={"mr-auto"}>
                         <div className={"flex gap-8"}>
-                            <Button className={"flex-1 md:flex-none md:w-56"} onClick={linkToCall}>Request a quote </Button>
+                            <Button className={"flex-1 md:flex-none md:w-56"} onClick={primaryButtonAction}>{primaryButtonLabel}</Button>
                             <Button className={"flex-1 md:flex-none md:w-56"} variant={"other"} onClick={linkToDirections}>Find us</Button>
                         </div>
                     </div>

@@ -3,11 +3,13 @@ import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import Introduction from "./Introduction.tsx";
 import Highlights from "./Highlights.tsx";
 import CleanerApproach from "./CleanerApproach.tsx";
-import TurnaroundTimes from "./TurnaroundTimes.tsx";
+import TurnaroundTimes from "../../../components/TurnaroundTimes.tsx";
+import {headline as turnaroundHeadline, variant as turnaroundVariant, items as turnaroundItems} from "./turnaroundTimes.ts";
 import FAQSection from "../../../components/FAQSection.tsx"
 import {faqs} from "./faqs.ts";
 import {apiBase} from "../../../utils/links.ts";
-import BusinessInfo from "./BusinessInfo.tsx";
+import BusinessInfo from "../../../components/BusinessInfo.tsx";
+import {ctaHeadline, ctaBody, primaryButtonLabel, primaryButtonAction} from "./businessInfoCta.ts";
 import { Helmet } from 'react-helmet-async';
 import clothesLoaded from "../../../assets/clothesLoaded.jpg";
 
@@ -40,12 +42,14 @@ const DryCleaning: React.FC<DryCleaningProps> = ({}) => {
             <Introduction/>
             <Highlights/>
             <CleanerApproach/>
-            <TurnaroundTimes/>
+            <TurnaroundTimes headline={turnaroundHeadline} items={turnaroundItems} variant={turnaroundVariant}/>
             <FAQSection faqs={faqs}>
                 <img className={"rounded-md mx-auto max-w-5xl w-full mt-8 md:mt-16"} src={clothesLoaded}
                      alt={"Team Portrait of Bizz Cleaners staff."}/>
             </FAQSection>
-            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
+            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen} ctaHeadline={ctaHeadline}
+                          ctaBody={ctaBody} primaryButtonLabel={primaryButtonLabel}
+                          primaryButtonAction={primaryButtonAction}/>
 
         </div>
     );

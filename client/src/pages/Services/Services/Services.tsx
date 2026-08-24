@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import SpecialtyServices from "./SpecialtyServices.tsx";
 import {apiBase} from "../../../utils/links.ts";
-import BusinessInfo from "../Leather/BusinessInfo.tsx";
+import BusinessInfo from "../../../components/BusinessInfo.tsx";
+import {ctaHeadline, ctaBody, primaryButtonLabel, primaryButtonAction} from "./businessInfoCta.ts";
 import { Helmet } from 'react-helmet-async';
 
 interface ServicesProps {
@@ -32,7 +33,9 @@ const Services: React.FC<ServicesProps> = ({}) => {
             </Helmet>
             <SecondaryHero smallSize={true} header={"Specialty cleaning services"}/>
             <SpecialtyServices/>
-            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
+            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen} ctaHeadline={ctaHeadline}
+                          ctaBody={ctaBody} primaryButtonLabel={primaryButtonLabel}
+                          primaryButtonAction={primaryButtonAction}/>
         </div>
     );
 };

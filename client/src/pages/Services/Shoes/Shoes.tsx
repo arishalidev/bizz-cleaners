@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import Introduction from "./Introduction.tsx";
-import TurnaroundTimes from "./TurnaroundTimes.tsx";
+import TurnaroundTimes from "../../../components/TurnaroundTimes.tsx";
+import {headline as turnaroundHeadline, variant as turnaroundVariant, items as turnaroundItems} from "./turnaroundTimes.ts";
 import FAQSection from "../../../components/FAQSection.tsx"
 import {faqs} from "./faqs.ts";
 import {apiBase} from "../../../utils/links.ts";
-import BusinessInfo from "./BusinessInfo.tsx";
+import BusinessInfo from "../../../components/BusinessInfo.tsx";
+import {ctaHeadline, ctaBody, primaryButtonLabel, primaryButtonAction} from "./businessInfoCta.ts";
 import WhyItMatters from "./WhyItMatters.tsx";
 import Repair from "./Repair.tsx";
 import { Helmet } from 'react-helmet-async';
@@ -39,9 +41,11 @@ const Shoes: React.FC<DryCleaningProps> = ({}) => {
             <Introduction/>
             <WhyItMatters/>
             <Repair/>
-            <TurnaroundTimes/>
+            <TurnaroundTimes headline={turnaroundHeadline} items={turnaroundItems} variant={turnaroundVariant}/>
             <FAQSection faqs={faqs}/>
-            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
+            <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen} ctaHeadline={ctaHeadline}
+                          ctaBody={ctaBody} primaryButtonLabel={primaryButtonLabel}
+                          primaryButtonAction={primaryButtonAction}/>
 
         </div>
     );
