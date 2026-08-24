@@ -45,7 +45,7 @@ app.get("/api/get/business-information", async (req: Request, res: Response<Busi
     res.json({rating: businessInformationCache.rating,
         userRatingCount: businessInformationCache.userRatingCount,
         hoursOfOperation: businessInformationCache.regularOpeningHours.weekdayDescriptions,
-        isOpen: isOpenNow(businessInformationCache.regularOpeningHours.periods)});
+        isOpen: isOpenNow(businessInformationCache.regularOpeningHours.periods, "America/Chicago")});
 })
 
 interface apiKeyResponse {
