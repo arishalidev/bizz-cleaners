@@ -1,6 +1,9 @@
 import React from 'react';
 import SecondaryHero from "../../../components/SecondaryHero.tsx";
-import Introduction from "./Introduction.tsx";
+import Introduction from "../../../components/Introduction.tsx";
+import {image as introImage, imageAlt as introImageAlt, headline as introHeadline, paragraphs as introParagraphs} from "./introduction.ts";
+import shirtPressed from "../../../assets/shirtPressed.jpg";
+import shirtInspected from "../../../assets/shirtInspected.jpg";
 import LittleThings from "./LittleThings.tsx";
 import MissingButton from "./MissingButton.tsx";
 import FoldedOrHangers from "./FoldedOrHangers.tsx";
@@ -26,7 +29,18 @@ const LaundryShirts: React.FC<LaundryShirtsProps> = ({}) => {
                 <link rel="canonical" href={canonicalUrl} />
             </Helmet>
             <SecondaryHero header={"Dress shirt cleaning and pressing"} smallSize={true}/>
-            <Introduction/>
+            <Introduction image={introImage} imageAlt={introImageAlt} headline={introHeadline} paragraphs={introParagraphs}
+                          primaryButtonLabel={primaryButtonLabel} primaryButtonAction={primaryButtonAction}>
+                <div className={"flex flex-col md:flex-row gap-4"}>
+                    <div>
+                        <img className={"rounded-md"} src={shirtPressed} alt={"Dress shirt being pressed"}/>
+                    </div>
+
+                    <div>
+                        <img className={"rounded-md"} src={shirtInspected} alt={"Dress shirt being inspected"}/>
+                    </div>
+                </div>
+            </Introduction>
             <LittleThings/>
             <MissingButton/>
             <FoldedOrHangers/>

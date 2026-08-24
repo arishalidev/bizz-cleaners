@@ -1,6 +1,6 @@
 import React from 'react';
 import Headline from "../../components/Headline.tsx";
-import Highlight from "./Highlight.tsx";
+import Highlight from "../../components/Highlight.tsx";
 
 import { PiTrophy } from "react-icons/pi";
 import { PiHouse } from "react-icons/pi";

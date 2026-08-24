@@ -1,6 +1,6 @@
 import React from 'react';
 import Headline from "../../../components/Headline.tsx";
-import Highlight from "./Highlight.tsx";
+import Highlight from "../../../components/Highlight.tsx";
 
 import { PiWashingMachine } from "react-icons/pi";
 import { PiShirtFolded } from "react-icons/pi";

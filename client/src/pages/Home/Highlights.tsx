@@ -6,7 +6,7 @@ import { PiVan } from "react-icons/pi";
 import dropOffBox from "../../assets/dropOffBox.jpg"
 import vanAtFrontDoor from "../../assets/vanAtFrontDoor.jpg"
 
-import Highlight from "./Highlight.tsx";
+import Highlight from "../../components/Highlight.tsx";
 
 
 const sameDayHighlight = {icon: PiClock, text: "Same-day service", description: "Drop off qualifying items before 9:00 AM and have them ready by 3:00 PM."}
@@ -21,20 +21,22 @@ function Highlights() {
             <div className={"flex flex-col justify-center place-items-center gap-6 lg:flex-row"}>
                 <div className={"flex flex-col gap-6 flex-1 self-start"}>
                     <Highlight Icon={sameDayHighlight.icon} text={sameDayHighlight.text}
-                              description={sameDayHighlight.description}/>
+                              description={sameDayHighlight.description} descriptionClassName={"lg:h-24 md:max-w-125"}/>
 
                     <Highlight Icon={dropOffBoxHighlight.icon} image={dropOffBoxHighlight.image}
                                imageAlt={"Drop off box located at the front of our store"}
-                               text={dropOffBoxHighlight.text} description={dropOffBoxHighlight.description}/>
+                               text={dropOffBoxHighlight.text} description={dropOffBoxHighlight.description}
+                               descriptionClassName={"lg:h-24 md:max-w-125"}/>
                 </div>
 
                 <div className={"flex flex-col gap-6 flex-1 self-start"}>
                     <Highlight Icon={ecoFriendlyHighlight.icon} text={ecoFriendlyHighlight.text}
-                              description={ecoFriendlyHighlight.description}/>
+                              description={ecoFriendlyHighlight.description} descriptionClassName={"lg:h-24 md:max-w-125"}/>
 
                     <Highlight Icon={deliveryHighlight.icon} image={deliveryHighlight.image}
                                text={deliveryHighlight.text} description={deliveryHighlight.description}
-                               imageAlt={"Our signature delivery van parked outside a house"}/>
+                               imageAlt={"Our signature delivery van parked outside a house"}
+                               descriptionClassName={"lg:h-24 md:max-w-125"}/>
                 </div>
             </div>
         </div>

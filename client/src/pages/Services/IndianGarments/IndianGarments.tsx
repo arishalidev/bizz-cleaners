@@ -1,6 +1,7 @@
 import React from 'react';
 import SecondaryHero from "../../../components/SecondaryHero.tsx";
-import Introduction from "./Introduction.tsx";
+import Introduction from "../../../components/Introduction.tsx";
+import {image as introImage, imageAlt as introImageAlt, headline as introHeadline, paragraphs as introParagraphs} from "./introduction.ts";
 import CleanedWithCare from "./CleanedWithCare.tsx";
 import Pressing from "./Pressing.tsx";
 import TurnaroundTimes from "../../../components/TurnaroundTimes.tsx";
@@ -25,7 +26,8 @@ const IndianGarments: React.FC<IndianGarmentsProps> = ({}) => {
                 <link rel="canonical" href={canonicalUrl} />
             </Helmet>
             <SecondaryHero header={"Indian garment cleaning"} smallSize={true}/>
-            <Introduction/>
+            <Introduction image={introImage} imageAlt={introImageAlt} headline={introHeadline} paragraphs={introParagraphs}
+                          primaryButtonLabel={primaryButtonLabel} primaryButtonAction={primaryButtonAction}/>
             <CleanedWithCare/>
             <Pressing/>
             <TurnaroundTimes headline={turnaroundHeadline} items={turnaroundItems} variant={turnaroundVariant}/>

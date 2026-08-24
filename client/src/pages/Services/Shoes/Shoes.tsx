@@ -1,6 +1,7 @@
 import React from 'react';
 import SecondaryHero from "../../../components/SecondaryHero.tsx";
-import Introduction from "./Introduction.tsx";
+import Introduction from "../../../components/Introduction.tsx";
+import {image as introImage, imageAlt as introImageAlt, headline as introHeadline, paragraphs as introParagraphs} from "./introduction.ts";
 import TurnaroundTimes from "../../../components/TurnaroundTimes.tsx";
 import {headline as turnaroundHeadline, variant as turnaroundVariant, items as turnaroundItems} from "./turnaroundTimes.ts";
 import FAQSection from "../../../components/FAQSection.tsx"
@@ -25,7 +26,8 @@ const Shoes: React.FC<DryCleaningProps> = ({}) => {
                 <link rel="canonical" href={canonicalUrl} />
             </Helmet>
             <SecondaryHero header={"Shoe cleaning and repair"} smallSize={true}/>
-            <Introduction/>
+            <Introduction image={introImage} imageAlt={introImageAlt} headline={introHeadline} paragraphs={introParagraphs}
+                          primaryButtonLabel={primaryButtonLabel} primaryButtonAction={primaryButtonAction}/>
             <WhyItMatters/>
             <Repair/>
             <TurnaroundTimes headline={turnaroundHeadline} items={turnaroundItems} variant={turnaroundVariant}/>
