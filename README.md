@@ -1,6 +1,6 @@
 # Bizz Cleaners Website
 
-Full stack website for a dry cleaners, to help them attract customers.
+Full stack website for a local dry cleaners, to help them attract customers.
 <br>
 <b>[Link to website](https://www.bizzclean.com/)</b>
 
@@ -10,6 +10,7 @@ Full stack website for a dry cleaners, to help them attract customers.
 - Gives users a way to access the online portal
 - Displays business hours and rating information directly from Google business profile
 - Lets user validate zip code before choosing to sign up
+- Mobile first responsive design
 
 ## Impact
 - Replaced old template website solo over 6 months
@@ -21,7 +22,7 @@ Full stack website for a dry cleaners, to help them attract customers.
 React · TypeScript · Tailwind CSS · Express.js · REST API
 
 ## Process
-User testing · Design system · Usability heuristics
+UI/UX Design · User testing · Design system · Usability heuristics
 
 ## Demo
 ### Home page
