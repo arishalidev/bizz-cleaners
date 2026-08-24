@@ -5,7 +5,8 @@ import Steps from "./Steps.tsx";
 import ServiceArea from "./ServiceArea.tsx";
 
 import React, {useEffect, useState} from "react";
-import DeliveryFaq from "./DeliveryFaq.tsx";
+import FAQSection from "../../components/FAQSection.tsx";
+import {faqs} from "./faqs.ts";
 import {apiBase} from "../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
 import { Helmet } from 'react-helmet-async';
@@ -53,7 +54,7 @@ const PickupAndDelivery: React.FC<PickupAndDeliveryProps> = ({}) => {
 
             <ServiceArea apiKey={googleMapsApiKey}/>
 
-            <DeliveryFaq/>
+            <FAQSection faqs={faqs} className={"-mt-4 md:-mt-8"}/>
 
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
 

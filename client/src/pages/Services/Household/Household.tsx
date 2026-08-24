@@ -3,7 +3,8 @@ import SecondaryHero from "../../../components/SecondaryHero.tsx";
 import Introduction from "./Introduction.tsx";
 import Highlights from "./Highlights.tsx";
 import TurnaroundTimes from "./TurnaroundTimes.tsx";
-import FAQSection from "./FAQSection.tsx"
+import FAQSection from "../../../components/FAQSection.tsx"
+import {faqs} from "./faqs.ts";
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
 import WhyItHelps from "./WhyItHelps.tsx";
@@ -39,7 +40,7 @@ const Household: React.FC<DryCleaningProps> = ({}) => {
             <Highlights/>
             <WhyItHelps/>
             <TurnaroundTimes/>
-            <FAQSection/>
+            <FAQSection faqs={faqs}/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
 
         </div>

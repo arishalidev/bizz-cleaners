@@ -5,7 +5,8 @@ import LittleThings from "./LittleThings.tsx";
 import MissingButton from "./MissingButton.tsx";
 import FoldedOrHangers from "./FoldedOrHangers.tsx";
 import TurnaroundTimes from "./TurnaroundTimes.tsx";
-import FAQSection from "./FAQSection.tsx"
+import FAQSection from "../../../components/FAQSection.tsx"
+import {faqs} from "./faqs.ts";
 import {apiBase} from "../../../utils/links.ts";
 import BusinessInfo from "./BusinessInfo.tsx";
 import { Helmet } from 'react-helmet-async';
@@ -41,7 +42,7 @@ const LaundryShirts: React.FC<LaundryShirtsProps> = ({}) => {
             <MissingButton/>
             <FoldedOrHangers/>
             <TurnaroundTimes/>
-            <FAQSection/>
+            <FAQSection faqs={faqs}/>
             <BusinessInfo hoursOfOperation={hoursOfOperation} isOpen={isOpen}/>
 
         </div>
