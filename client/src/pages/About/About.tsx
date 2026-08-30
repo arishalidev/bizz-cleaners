@@ -7,6 +7,7 @@ import LittleThingsMatter from "./littleThingsMatter.tsx";
 import BusinessInfo from "../About/BusinessInfo.tsx";
 import Owners from "./Owners.tsx";
 import { Helmet } from 'react-helmet-async';
+import PromoVideo from "./PromoVideo.tsx";
 
 interface AboutProps {
 
@@ -19,14 +20,16 @@ const About: React.FC<AboutProps> = ({}) => {
     return (
         <div>
             <Helmet>
-                <link rel="canonical" href={canonicalUrl} />
+                <link rel="canonical" href={canonicalUrl}/>
             </Helmet>
-            <SecondaryHero subHeader={<>Serving Flower Mound with 30 years of experience</>} header={"About us"} smallSize={true}></SecondaryHero>
+            <SecondaryHero subHeader={<>Serving Flower Mound with 30 years of experience</>} header={"About us"}
+                           smallSize={true}></SecondaryHero>
             <Introduction/>
             <Highlights/>
             <Owners/>
             <OurPromise/>
             <LittleThingsMatter/>
+            <PromoVideo/>
             <BusinessInfo/>
         </div>
     );
